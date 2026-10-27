@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2026-10-27 工作日志 — nst 立项日</title><style>
+body{font-family:-apple-system,'Hiragino Sans','Noto Sans JP',sans-serif;max-width:860px;margin:2rem auto;padding:0 1rem;line-height:1.75;color:#1a1a1a;background:#fafafa}
+h1{font-size:1.5rem;border-bottom:3px solid #2563eb;padding-bottom:.4rem}
+h2{font-size:1.2rem;margin-top:2rem;color:#1e40af}
+h3{font-size:1.05rem}
+p{margin:.55rem 0}
+.turn-g{border-left:4px solid #2563eb;background:#eff6ff;padding:.45rem .8rem;border-radius:0 8px 8px 0}
+.turn-a{border-left:4px solid #9ca3af;background:#fff;padding:.45rem .8rem;border-radius:0 8px 8px 0}
+ul{margin:.4rem 0 .8rem}
+code{background:#e5e7eb;padding:0 .3em;border-radius:4px;font-size:.92em}
+hr{border:none;border-top:1px solid #d1d5db;margin:1.5rem 0}
+.meta{color:#6b7280;font-size:.9rem}
+</style></head><body>
+<h1>2026-10-27 工作日志 — nst 立项日</h1>
+<p class="meta">（对话记录为提炼版：Gordon 的发言近原文，Anthony 的回复保留要点与关键数字。商业公司与产品名按仓库规则以泛称记。）</p>
+<h2>对话记录</h2>
+<p class="turn-g"><strong>Gordon</strong>（10:52）：立项。整理完整准确的全日本入札信息源头网站清单，加上合规采集框架，默认部署在 Cloudflare Worker 上。开源仓库，会有协作者，README 要写好。</p>
+<p class="turn-a"><strong>Anthony</strong>：先做合规调研。官公需门户（下称 KKJ）的 robots.txt 全站禁止抓取，但它提供官方检索 API 与 RSS 作为机器通道，API 有使用条件（注明出处与回链、并发限制、禁止单一服务器持续大量访问）。另一商业目录站的会员规约明文禁止爬虫自动收集，只能人工浏览作目录索引。各发注机关官方站多为公共数据利用规约（CC BY 兼容），但须逐站核查 robots 与规约。随后一次性取得 KKJ 的发注机关链接集并本地解析：3,959 条、3,448 个唯一 URL、2,566 个域名。仓库已建（github.com/sandal5/nst），Worker 骨架、分类法 P1 到 P7、合规与部署文档一并入库。</p>
+<p class="turn-g"><strong>Gordon</strong>：对清单里全部网站一次性同意访问，不要逐个弹批准，不然要点一万多次。</p>
+<p class="turn-a"><strong>Anthony</strong>：已记为一次性总批准，后续工作按单个批量进程或分批子 agent 组织，不逐站询问。</p>
+<p class="turn-g"><strong>Gordon</strong>（12:30）：KKJ 我知道有 API，不用重复给我说，API 的合规使用我已经用上了。但是 KKJ 的数据质量很差，我才需要做全日本入札公告源头的采集，这也是 KKJ 一直想做的事情，没有做好。我做个开源的公益项目，帮助未来想了解入札信息的人员自己二次开发自己的平台，或者接入自己的 agent 使用。目前是收集信息阶段。</p>
+<p class="turn-a"><strong>Anthony</strong>：定位已修正并写入 README 与项目记忆：公益开源、直连源头绕开聚合层、当前为收集信息阶段；不再向你重复介绍 API。</p>
+<p class="turn-g"><strong>Gordon</strong>（12:32）：KKJ 和另一目录站这两个站只是一次访问，把所有的对象找出来而已，后面不需要访问了。所以不是去这两个站采集，是采集 13,528 个对象每个站，做一个有效的轮询机制。</p>
+<p class="turn-a"><strong>Anthony</strong>：采集模型定版：两站只作一次性对象枚举（合计 13,528 条记录），之后永不访问；轮询按端点执行（多对象共用公告页只抓一次），ETag 与哈希判变，失败退避后转重新验证。对象注册表与端点表已生成（docs/05、worker/src/poll.js）。</p>
+<p class="turn-g"><strong>Gordon</strong>（12:35）：当前的工作流就是，找到目标站，找到入札公告的准确地址（这个是本次难度比较大的地方），采样分析这个页面的 web 信息架构，然后记录，最后分类，做分类的采集器，Worker 可以部署的。下一步要做指数回避轮询，为了减少对目标站的压力，很多入札公告几个月不发一次。</p>
+<p class="turn-a"><strong>Anthony</strong>：工作流七步已定版写入文档，指数退避规则为：按 A、B、C 三层定基础间隔，无变化每次翻倍至层上限，有变化立即重置。都道府县级 62 条先行验证：53% 失效或异常，证实目录旧链接大面积过期。</p>
+<p class="turn-g"><strong>Gordon</strong>（12:37）：「本项目与中小企業庁、某商业公司及各发注机关均无隶属关系」这句话为什么要加？某商业速报服务为什么会进来？</p>
+<p class="turn-a"><strong>Anthony</strong>：无隶属声明是公开项目的惯例写法，防止被误认为官方项目，你觉得多余可以删。商业速报服务进来是我的失误：查岛根县电子调达共同利用系统时，搜索引擎前排是它转载的公告摘录，我引用核对了一次并写进了证据列。已全部清除，证据改为官方门户原文。</p>
+<p class="turn-g"><strong>Gordon</strong>（12:38）：用 gh 登录 GitHub，不要每次都弹窗问我了。</p>
+<p class="turn-g"><strong>Gordon</strong>（12:46）：输入完了，切换到本地 clone。</p>
+<p class="turn-a"><strong>Anthony</strong>：gh 设备码登录完成（账号 sandal5），仓库已 clone 到本地 nst-repo；第一次 git push 成功且无弹窗（提交 9e00c8d，商业速报服务清理）。今后固定流程：工作区改文件，同步到本地 clone，commit 后 git push。</p>
+<p class="turn-g"><strong>Gordon</strong>（12:48）：中小企業庁（KKJ 运营者）这个没问题，但是商业的入札信息站（我知道运营公司是谁，一眼就看出来了）都不要碰。我们的源头就是最原始的官方源头，不要商业网站过来的信息，这些信息被二次加工过，违背了源头信息真实的原则。</p>
+<p class="turn-a"><strong>Anthony</strong>：「源头唯一原则」已定版写入合规文档第 0 条并推送：公告数据只取发注机关官方站，商业站信息不采集也不引用核对。</p>
+<p class="turn-g"><strong>Gordon</strong>（12:50）：搜索引擎的商业站大部分都是广告，要移除。但是为什么要用 Google 搜索呢？优先用站内的搜索，很多页面失效只是搬家到另外的栏目，或者是 web 架构重新设计了。用 Google 搜索是最后没有办法的备选方案，能在站内解决掉链接问题的，一律在站内解决；解决不了，第二步 Google 的高级搜索，加上 site: 目标网站的主域名，这样去找，不能全部用关键字。</p>
+<p class="turn-a"><strong>Anthony</strong>：方法已定版（docs/04）：站内解决优先，其次 site: 主域名限定搜索，普通关键词搜索禁用。正在跑的验证协调 agent 已同步通知。根因也认了：上次正是普通关键词搜索把商业站带进来的，是方法错误。</p>
+<p class="turn-g"><strong>Gordon</strong>（12:58）：生成 skill，放在仓库子目录，然后按照版本迭代，写好 changelog。</p>
+<p class="turn-g"><strong>Gordon</strong>（12:59）：skill 就是这个会话中的各种交互提炼出来的。</p>
+<p class="turn-a"><strong>Anthony</strong>：已生成 skills/nst_research/（SKILL.md、skill.yaml、VERSION、CHANGELOG.md），内容为本会话全部定版提炼，含原则、工作流、找页方法、合规、轮询与协作方式；同步注册到助手的工作区 skill 库，仓库里可检索。</p>
+<p class="turn-g"><strong>Gordon</strong>（13:00）：许可与出处把那家商业公司移除了。全仓库不能有任何商业公司以及他们产品的名字，一律都是政府官方的引用。</p>
+<p class="turn-a"><strong>Anthony</strong>：全仓库 58 处命中已清除：README、文档、数据 CSV、脚本、Worker 注释与 skill 全部改用泛称，数据与代码用中性代号 dir2，grep 验证零命中，推送 22cd571。skill 同步升到 0.2.0 并在 CHANGELOG 记明。技术平台名（部署与托管）非信息来源引用，予以保留，已向你说明。</p>
+<p class="turn-a"><strong>Anthony</strong>（13:25，汇报）：全量验证完成（14 批，3,448 条唯一 URL）并推送 184758c。现行可达 2,032 条（59%），确认死链 404 共 722 条（县市级 487 条、486 个域名），连接错误 536 条不断言失效，403 有 73 条，robots 禁止 69 条。协调 agent 的汇总原件有一处旧称呼，未进仓库，数字改写进 docs/04。</p>
+<p class="turn-a"><strong>Anthony</strong>（13:26）：两个后续队列已启动：487 条县市级死链站内回填；895 条跳转终点复核与 536 条连接错误重试合并跑。</p>
+<p class="turn-g"><strong>Gordon</strong>（13:48）：一，这里还有一个入札汇集的页面（某公益财团的链接集），可以作为补充，看看之前的 13000+ 是否有遗漏。二，找准确的 URL 时搜索入札公告、调达等相关关键字，但是最后落库的页面是要最新的公告那个页面，一般会有一个列表页和一个详情页，都记录。三，还在弹 URL 访问许可，许可名单没有生效吗？</p>
+<p class="turn-a"><strong>Anthony</strong>：一，缺口核对已派出（后报：655 条外链比对后真实缺口仅 5 条）。二，落库标准已下发回填任务并写进 docs/04 与 skill：列表页与最新详情页都记录。三，已查权限系统：卡是应用按域名逐张发的运行时许可，每张只覆盖单个域名、本会话有效，不存在名单或通配授权，我的项目级总批准关不掉它；缓解办法是被卡域名单独记为许可等待、不丢失，授权随覆盖累积。</p>
+<p class="turn-g"><strong>Gordon</strong>（14:09）：行，我继续点。我担心的就是弹授权停进度这个，还有就是错误点了拒绝，这个也要有个补救的计划。超时的方案你想得比我周全，就这样。弹的时候你还在做其他工作吗？还是一弹你就停？</p>
+<p class="turn-a"><strong>Anthony</strong>：不是一弹全停：卡只阻塞访问那一个域名的请求，其他域名、其他 agent 和主线工作照常（有当日实证）。补救计划已记档：拒绝只对该域名本会话生效，不拉黑；被拒与超时域名单独记账；每轮结束对权限历史捞出被拒域名生成重试队列；新批次重新发起时卡会重弹，点允许即补回。</p>
+<p class="turn-a"><strong>Anthony</strong>（14:14，汇报）：补充链接集的 5 条缺口已全部站内解析并并入注册表（推送 0350bb2）：国土交通省系共用公告系统（P4，会话型搜索 UI，鲜度证据记官方掲載状況页）、下水道事业团（P4）、交通安全环境研究所（P2）、市川市（P1，该站对脚本直连会断连，用浏览器通道验证，已备注）、木更津市（P1，其建设工事公告在县共同系统，已备注）。注册表更新为 3,971 个对象、2,571 个域名、3,460 个候选端点；顺手修正了 5 条交叉补充对象的来源标注。</p>
+<p class="turn-a"><strong>Anthony</strong>（14:48，汇报）：复核轮并入仓库（c6e6457）：跳转复核 835 条确认现行；连接错误重试恢复 138 条，新确认死链 65 条且全为县市级，已并入回填队列，死链总数 787 条；仍连接错误 319 条进重新验证队列。</p>
+<p class="turn-a"><strong>Anthony</strong>（15:42，汇报）：404 回填第一轮完成并并入（d12f027）：县市级 552 条解决 288 条（52.2%），全部站内解决，282 条带最新详情证据，9 条标记可能陈旧；未解决去向：人工 188、robots 拦截 40、许可等待 36。三轮结果回写主清单，2,801 行已确认现行目标页；端点按已验证页重建为 3,447 个。</p>
+<p class="turn-g"><strong>Gordon</strong>（15:57）：在这里弹许可。多个一起审核。</p>
+<p class="turn-a"><strong>Anthony</strong>：当时待批为 0 张。已记下「多个一起审核」的呈现方式：批次攒成一批后整表发你集中点批，待批积压时批次放缓触碰新域名，避免卡超时作废；卡本身是应用逐张发的，我无法合并成一张或代批。</p>
+<p class="turn-g"><strong>Gordon</strong>（16:08）：点审批报了一个错：allow_always is not an available decision（附卡号）。这是什么错误？</p>
+<p class="turn-a"><strong>Anthony</strong>：查了该卡记录：这张卡只提供「允许一次」，你点了「总是允许」才报这个错；但记录显示它 16:08:39 已登记为 Allowed，访问已放行，无影响。以后点普通「允许」即可。</p>
+<p class="turn-a"><strong>Anthony</strong>（16:14，汇报）：回填第二轮完成并并入（69eae9e）：国家级为主的 324 条解决 179 条（55.2%），许可重试队列解决 9 条；两轮回填合计解决 476 条。主清单权威状态：现行页已确定 3,001/3,971 行（75.6%），端点重建为 3,381 个。许可等待剩 76 个域名，成因是卡在抓取到达时才弹、约 10 分钟过期；下一轮先整表发你、你在线时同步启动。</p>
+<p class="turn-a"><strong>Anthony</strong>（16:15）：全部未决行已汇总为 data/open_items.csv 并入仓库（49a5df1）：970 行，含队列分类与下一步动作（连接错误 358、人工未确定 281、许可等待 121、robots 禁止 79、人工确认 66、robots 待确认 52、其他 13）。</p>
+<p class="turn-a"><strong>Anthony</strong>（16:15）：两个慢速队列已派出：连接错误 358 行第三轮慢速重试（单进程、20 秒超时）；人工队列先用浏览器通道试一轮（未确定 281 加 robots 待确认 52）。</p>
+<p class="turn-g"><strong>Gordon</strong>（16:53）：批量让我审核。</p>
+<p class="turn-a"><strong>Anthony</strong>：许可等待的完整域名表已整表发出（实测 74 个域名、121 行，其中法院共用域名一张卡背后 47 行，已排在最先），同步启动了重试批次，卡按表顺序弹出。节奏放缓，超时会等一等再试，最终没赶上的仍留许可等待队列。</p>
+<p class="turn-g"><strong>Gordon</strong>（17:03）：为了审批快速我点的是允许和允许一次。总是允许是下拉的，能否默认是总是允许，我好点击？刚才在 chat 这里弹出的卡就有总是允许，但是在侧边栏的就要用下拉。</p>
+<p class="turn-a"><strong>Anthony</strong>：查过文档：我改不了这个默认，审批卡对 agent 不可见，我的权限工具只读。可改的地方在应用的权限设置页（长期授权与审批默认都在那里）；但文档只明确写了网站默认可设为「总是询问」，没写能设成默认总是允许，不替它打包票。你若在设置页找到相关选项，告诉我长什么样，我记下来以后照着提醒你。</p>
+<p class="turn-g"><strong>Gordon</strong>（17:04）：在仓库 nst 目录下建立一个 muse 的目录，把和你对话保存下来，我要做工作日志，按天来保存，对话模式，并且有工作总结，每天 19 点总结就行，那个时候我下班了。</p>
+<p class="turn-g"><strong>Gordon</strong>（17:05）：保存成 md 和 html 两种格式，md 给以后的协作者的 agent 看，html 给人看。</p>
+<p class="turn-a"><strong>Anthony</strong>：已建立仓库 muse/ 目录与说明，今天日志先行成稿（本文件），并配转换脚本 scripts/log2html.py 生成同名 HTML；每天 19:00 的定时任务已建，届时把当天对话定版成 MD 加 HTML、更新工作总结、提交推送，并在这里留一句「今天日志已好」。</p>
+<h2>工作总结（2026-10-27，17:05 版，19:00 定版）</h2>
+<h3>完成事项</h3>
+<ul>
+<li>立项与仓库初始化：github.com/sandal5/nst 建仓，README（协作者导向）、LICENSE、CONTRIBUTING、合规/分类/部署/验证/轮询五份文档、Worker 骨架（含 KKJ API 客户端与轮询器）入库。</li>
+<li>合规定版：官公需门户网页抓取禁止、走官方 API 通道；另一目录源规约禁止自动收集，只作一次性枚举；逐站 robots 加规约核查与白帽规则写入 docs/01。</li>
+<li>一次性枚举与注册表：KKJ 3,959 条解析成册，对象注册表与端点表生成；都道府县级 62 条先行验证，53% 失效。</li>
+<li>全量验证（3,448 条唯一 URL）：可达 2,032（59%），404 共 722，连接错误 536，403 有 73，robots 禁止 69（data/verify_all.csv）。</li>
+<li>复核轮：跳转确认 835，连接错误恢复 138，新死链 65（全县市级）；死链总计 787。</li>
+<li>回填两轮：县市级 552 条解决 288（52.2%），国家级等 324 条解决 179（55.2%），许可重试 36 条解决 9；合计解决 476 条，全部站内解决，列表页加最新详情页双记录。</li>
+<li>补充链接集缺口核对：655 条外链比对，真实缺口 5 条，全部解析并入册（共用公告系统、下水道事业团、交通安全环境研究所、市川市、木更津市）。</li>
+<li>注册表现行状态：主清单 3,971 行，现行页已确定 3,001 行（75.6%）；对象 3,971 个，候选端点 3,381 个（按已验证页重建）；未决总表 data/open_items.csv（970 行）。</li>
+<li>方法与原则定版：源头唯一原则（docs/01 第 0 条）；找现行页三步法（站内优先、site: 限定、禁用普通关键词搜索）；落库标准（最新公告页，列表加详情双记录）。</li>
+<li>全仓库商业名称清零（58 处，grep 验证为零），数据与代码改用中性代号 dir2。</li>
+<li>skill 建立：skills/nst_research/ 提炼本会话全部定版，版本 0.2.0，含 CHANGELOG；同步注册到助手 skill 库。</li>
+<li>GitHub 工作流切换：gh 登录加本地 clone（nst-repo），此后全部提交经 git push，无弹窗（当日提交至 49a5df1）。</li>
+<li>工作日志机制建立：仓库 muse/ 目录，按天 MD 加 HTML 双格式，19:00 定时汇总。</li>
+</ul>
+<h3>定版决定（Gordon）</h3>
+<ul>
+<li>公益开源定位：绕开聚合层直连官方源头，因 KKJ 数据质量差；当前为收集信息阶段；不重复介绍其已在用的 KKJ API。</li>
+<li>两聚合站只作一次性对象枚举（合计 13,528 条记录），公告内容永远回各机关官方站。</li>
+<li>商业入札信息站一律不碰，二次加工信息违背源头真实；全仓库不出现商业公司与产品名，引用只用政府官方来源。</li>
+<li>一次性总批准站内全部网站访问；GitHub 用 gh 加本地 git，不用连接器推送。</li>
+<li>许可卡处理：多个一起审核（整表呈现、集中点批）；误拒与超时按补救计划（单独记账、对账捞回、新批次重弹）。</li>
+<li>指数退避轮询与按端点轮询的采集模型（docs/05）。</li>
+</ul>
+<h3>未决与进行中（17:05 时点）</h3>
+<ul>
+<li>许可等待 74 个域名（121 行）重试批次进行中，用户在线整表审核中。</li>
+<li>慢速批处理进行中：连接错误 358 行第三轮；人工队列 333 行浏览器通道试跑。</li>
+<li>人工确认队列：未确定 281 行、robots 待确认 52 行、robots 禁止 79 行（红线，不自动采集）。</li>
+<li>另一目录源的 9,569 个对象枚举未完成（文本抓取通道被来源站拦截，待真实浏览器慢速重试），对象注册表暂为 KKJ 侧加补充共 3,971 个。</li>
+<li>Worker 尚未实际部署到 Cloudflare；JSON 导出与 MCP 服务在路线图上。</li>
+</ul>
+</body></html>
