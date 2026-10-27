@@ -73,6 +73,8 @@
 
 代码在 [`worker/`](worker/)，部署说明见 [docs/03_worker_deployment.md](docs/03_worker_deployment.md)。
 
+**轮询对象是 13,528 个发注对象在各自官网站上的公告页**（KKJ 3,959 + nsearch 9,569，均只做一次性枚举、之后不再访问）。轮询按「端点」执行而非按对象：多个对象共用的公告页只抓一次，再按机关名归属公告。端点分 A/B/C 三层频率（日/3日/周，自适应升降），先用 ETag/哈希判变、未变不解析，失败按 1→3→7 天退避后转重新验证。详见 [docs/05_polling.md](docs/05_polling.md)。
+
 ```
 Cron (每日 08:00 JST) ──► 按都道府县分片 ──► Queue（每片一个任务）
                                                     │ 每片一个 consumer 调用
