@@ -9,13 +9,12 @@
 北海道経済産業局,北海道,国・独立行政法人等,www.hkd.meti.go.jp,https://www.hkd.meti.go.jp/information/koubo/index.htm,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 気象庁札幌管区気象台,北海道,国・独立行政法人等,www.jma-net.go.jp,http://www.jma-net.go.jp/sapporo/shinseiannai/bid/bid.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 名寄市立大学,北海道,国・独立行政法人等,nayoro.ac.jp,https://nayoro.ac.jp/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-（独）北海道職業能力開発大学校,北海道,国・独立行政法人等,hpcollege.lekumo.biz,http://hpcollege.lekumo.biz/bid/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+（独）北海道職業能力開発大学校,北海道,国・独立行政法人等,hpcollege.lekumo.biz,http://hpcollege.lekumo.biz/bid/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 （独）国立高等専門学校機構苫小牧工業高等専門学校,北海道,国・独立行政法人等,www.tomakomai-ct.ac.jp,http://www.tomakomai-ct.ac.jp/outline/disclosure,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （独）国立病院機構北海道医療センター,北海道,国・独立行政法人等,www.hosp.go.jp,https://www.hosp.go.jp/~hokkaidomc/procurement/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （独）国立病院機構八雲病院,北海道,国・独立行政法人等,yakumo.hosp.go.jp,https://yakumo.hosp.go.jp/related_info/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （独）労働者健康安全機構北海道中央労災病院,北海道,国・独立行政法人等,hokkaidoh.johas.go.jp,https://hokkaidoh.johas.go.jp/other/supply.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （独）労働者健康安全機構釧路ろうさい病院,北海道,国・独立行政法人等,www.kushiroh.johas.go.jp,http://www.kushiroh.johas.go.jp/procurement/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-（独）労働者健康安全機構北海道産業保健総合支援センター,北海道,国・独立行政法人等,www.hokkaidos.johas.go.jp,https://www.hokkaidos.johas.go.jp/pdf/nyusatsu.pdf,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）森林研究・整備機構北海道支所,北海道,国・独立行政法人等,www.ffpri.affrc.go.jp,http://www.ffpri.affrc.go.jp/hkd/shishoshokai/chotatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）森林研究・整備機構林木育種センター北海道育種場,北海道,国・独立行政法人等,www.ffpri.affrc.go.jp,https://www.ffpri.affrc.go.jp/hokuiku/business/cyoutatsu.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）農業・食品産業技術総合研究機構,北海道,国・独立行政法人等,www.naro.affrc.go.jp,https://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
@@ -28,12 +27,10 @@
 士別市,北海道,市区町村,www.city.shibetsu.lg.jp,http://www.city.shibetsu.lg.jp/www/genre/1458026995578/index.html#GNRID_1458027931166,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 紋別市,北海道,市区町村,mombetsu.jp,http://mombetsu.jp/hattyu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 滝川市,北海道,市区町村,www.city.takikawa.hokkaido.jp,https://www.city.takikawa.hokkaido.jp/200soumubu/05zaisei/02nyusatu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-富良野市,北海道,市区町村,www.city.furano.hokkaido.jp,http://www.city.furano.hokkaido.jp/bunya/nyusatsukeiyaku/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 石狩市,北海道,市区町村,www.city.ishikari.hokkaido.jp,http://www.city.ishikari.hokkaido.jp/life/2/21/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 鹿部町,北海道,市区町村,www.town.shikabe.lg.jp,http://www.town.shikabe.lg.jp/hotnews/category/4.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 長万部町,北海道,市区町村,www.town.oshamambe.lg.jp,http://www.town.oshamambe.lg.jp/modules/politics/category0008.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 厚沢部町,北海道,市区町村,www.town.assabu.lg.jp,https://www.town.assabu.lg.jp/modules/gyosei/category0008.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-今金町,北海道,市区町村,www.town.imakane.lg.jp,http://www.town.imakane.lg.jp/gyousei/gyouseiinfo/nyuusatsu/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 寿都町,北海道,市区町村,www.town.suttu.lg.jp,http://www.town.suttu.lg.jp/town/detail.php?id=28,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 蘭越町,北海道,市区町村,www.town.rankoshi.hokkaido.jp,http://www.town.rankoshi.hokkaido.jp/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 倶知安町,北海道,市区町村,www.town.kutchan.hokkaido.jp,http://www.town.kutchan.hokkaido.jp/work-industry/jigyoumukejyouhou/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
@@ -56,16 +53,14 @@
 遠軽町,北海道,市区町村,engaru.jp,http://engaru.jp/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 湧別町,北海道,市区町村,www.town.yubetsu.lg.jp,http://www.town.yubetsu.lg.jp/40gyosei/07nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 雄武町,北海道,市区町村,www.town.oumu.hokkaido.jp,http://www.town.oumu.hokkaido.jp/hotnews/category/279.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-大空町,北海道,市区町村,www.town.ozora.hokkaido.jp,http://www.town.ozora.hokkaido.jp/bunya/nyusatsu_keiyaku/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+大空町,北海道,市区町村,www.town.ozora.hokkaido.jp,http://www.town.ozora.hokkaido.jp/bunya/nyusatsu_keiyaku/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 厚真町,北海道,市区町村,www.town.atsuma.lg.jp,http://www.town.atsuma.lg.jp/office/politics/soshiki/general_affairs_section/contract/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 洞爺湖町,北海道,市区町村,www.town.toyako.hokkaido.jp,http://www.town.toyako.hokkaido.jp/person_guide/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-むかわ町,北海道,市区町村,www.town.mukawa.lg.jp,http://www.town.mukawa.lg.jp/1008.htm,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 平取町,北海道,市区町村,www.town.biratori.hokkaido.jp,http://www.town.biratori.hokkaido.jp/operators/nyusatsu/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 浦河町,北海道,市区町村,www.town.urakawa.hokkaido.jp,http://www.town.urakawa.hokkaido.jp/business/newslist.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-清水町,北海道,市区町村,www.town.shimizu.hokkaido.jp,http://www.town.shimizu.hokkaido.jp/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 大樹町,北海道,市区町村,www.town.taiki.hokkaido.jp,https://www.town.taiki.hokkaido.jp/soshiki/soumu/kanzaikeiyaku/nyusatsu.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 広尾町,北海道,市区町村,www.town.hiroo.lg.jp,https://www.town.hiroo.lg.jp/gyousei/nyuusatsu/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-幕別町,北海道,市区町村,www.town.makubetsu.lg.jp,http://www.town.makubetsu.lg.jp/kanko_sangyo/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+幕別町,北海道,市区町村,www.town.makubetsu.lg.jp,http://www.town.makubetsu.lg.jp/kanko_sangyo/nyusatsu/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 豊頃町,北海道,市区町村,www.toyokoro.jp,http://www.toyokoro.jp/bunya/B/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 足寄町,北海道,市区町村,www.town.ashoro.hokkaido.jp,http://www.town.ashoro.hokkaido.jp/shigoto/nyusatutop.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 浦幌町,北海道,市区町村,www.urahoro.jp,https://www.urahoro.jp/nogyojoho/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
@@ -77,7 +72,6 @@
 浦河町,北海道,市区町村,www.town.urakawa.hokkaido.jp,http://www.town.urakawa.hokkaido.jp/business/newslist.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 東北地方整備局八戸港湾・空港整備事務所,青森県,国・独立行政法人等,www.pa.thr.mlit.go.jp,http://www.pa.thr.mlit.go.jp/hachinohe/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 東北地方整備局青森港湾事務所,青森県,国・独立行政法人等,www.pa.thr.mlit.go.jp,http://www.pa.thr.mlit.go.jp/aomori/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-（独）国立高等専門学校機構八戸工業高等専門学校,青森県,国・独立行政法人等,www.hachinohe-ct.ac.jp,http://www.hachinohe-ct.ac.jp/zuikei/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）農業・食品産業技術総合研究機構,青森県,国・独立行政法人等,www.naro.affrc.go.jp,https://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 南部町,青森県,市区町村,www.town.aomori-nanbu.lg.jp,"http://www.town.aomori-nanbu.lg.jp/index.cfm/9,0,37,html",manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 西目屋村,青森県,市区町村,www.nishimeya.jp,http://www.nishimeya.jp/shigoto/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
@@ -88,7 +82,6 @@
 （国研）森林研究・整備機構森林総合研究所林木育種センター東北育種場,岩手県,国・独立行政法人等,www.ffpri.affrc.go.jp,https://www.ffpri.affrc.go.jp/touiku/business/nyuusatsu/nyuusatsu-keiyaku.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）農業・食品産業技術総合研究機構,岩手県,国・独立行政法人等,www.naro.affrc.go.jp,https://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）森林研究・整備機構森林総合研究所東北支所,岩手県,国・独立行政法人等,www.ffpri.affrc.go.jp,http://www.ffpri.affrc.go.jp/thk/shishoshokai/chotatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-一関市,岩手県,市区町村,www.city.ichinoseki.iwate.jp,"http://www.city.ichinoseki.iwate.jp/index.cfm/7,0,49,html",conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 奥州市,岩手県,市区町村,www.city.oshu.iwate.jp,https://www.city.oshu.iwate.jp/life/2/20/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 久慈市,岩手県,市区町村,www.city.kuji.iwate.jp,https://www.city.kuji.iwate.jp/shisei/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 陸前高田市,岩手県,市区町村,www.city.rikuzentakata.iwate.jp,http://www.city.rikuzentakata.iwate.jp/shisei/kakuka-oshirase/zaisei/nyuusatu-jouhou/nyuusatu-jouhou.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
@@ -109,17 +102,15 @@
 （独）労働者健康安全機構東北労災病院治療就労両立支援センター,宮城県,国・独立行政法人等,www.tohokuh.johas.go.jp,https://www.tohokuh.johas.go.jp/others/prevention/contract/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）水産研究教育機構東北区水産研究所,宮城県,国・独立行政法人等,tnfri.fra.affrc.go.jp,http://tnfri.fra.affrc.go.jp/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （独）中小企業基盤整備機構,宮城県,国・独立行政法人等,www.smrj.go.jp,http://www.smrj.go.jp/regional_hq/tohoku/org/bid/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-気仙沼市,宮城県,市区町村,www.kesennuma.miyagi.jp,http://www.kesennuma.miyagi.jp/li/business/020/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 白石市,宮城県,市区町村,www.city.shiroishi.miyagi.jp,http://www.city.shiroishi.miyagi.jp/life/2/13/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 名取市,宮城県,市区町村,www.city.natori.miyagi.jp,http://www.city.natori.miyagi.jp/bunya/business/node_31382,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 松島町,宮城県,市区町村,www.town.matsushima.miyagi.jp,"http://www.town.matsushima.miyagi.jp/index.cfm/11,0,40,html",conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 涌谷町,宮城県,市区町村,www.town.wakuya.miyagi.jp,http://www.town.wakuya.miyagi.jp/gyose/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 南三陸町,宮城県,市区町村,www.town.minamisanriku.miyagi.jp,"http://www.town.minamisanriku.miyagi.jp/index.cfm/9,0,54,html",manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-秋田県警察本部,秋田県,国・独立行政法人等,www.police.pref.akita.jp,https://www.police.pref.akita.jp/kenkei/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+秋田県警察本部,秋田県,国・独立行政法人等,www.police.pref.akita.jp,https://www.police.pref.akita.jp/kenkei/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 東北地方整備局秋田港湾事務所,秋田県,国・独立行政法人等,www.pa.thr.mlit.go.jp,http://www.pa.thr.mlit.go.jp/akita/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 （独）労働者健康安全機構秋田労災病院,秋田県,国・独立行政法人等,akitah.johas.go.jp,http://akitah.johas.go.jp/chotatu/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 （国研）農業・食品産業技術総合研究機構,秋田県,国・独立行政法人等,www.naro.affrc.go.jp,http://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-大館市,秋田県,市区町村,www.city.odate.lg.jp,https://www.city.odate.lg.jp/ex/keiyaku_kensa/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 男鹿市,秋田県,市区町村,www.city.oga.akita.jp,"http://www.city.oga.akita.jp/index.cfm/12,0,60,html",manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 鹿角市,秋田県,市区町村,www.city.kazuno.akita.jp,https://www.city.kazuno.akita.jp/shigoto_sangyo/nyusatsu_keiyaku_kobai/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 潟上市,秋田県,市区町村,www.city.katagami.lg.jp,"http://www.city.katagami.lg.jp/index.cfm/9,0,43,html",manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
@@ -129,22 +120,18 @@
 大潟村,秋田県,市区町村,www.ogata.or.jp,http://www.ogata.or.jp/utility/bid.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 東北地方整備局酒田港湾事務所,山形県,国・独立行政法人等,www.pa.thr.mlit.go.jp,http://www.pa.thr.mlit.go.jp/sakata/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 国立大学法人山形大学,山形県,国・独立行政法人等,campus3.kj.yamagata-u.ac.jp,http://campus3.kj.yamagata-u.ac.jp/chotatu/koukai.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-公立大学法人山形県立米沢女子短期大学,山形県,国・独立行政法人等,www.yone.ac.jp,http://www.yone.ac.jp/outline/tender_info.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+公立大学法人山形県立米沢女子短期大学,山形県,国・独立行政法人等,www.yone.ac.jp,http://www.yone.ac.jp/outline/tender_info.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 米沢市,山形県,市区町村,www.city.yonezawa.yamagata.jp,http://www.city.yonezawa.yamagata.jp/1005.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 新庄市,山形県,市区町村,www.city.shinjo.yamagata.jp,http://www.city.shinjo.yamagata.jp/kigyo/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 寒河江市,山形県,市区町村,www.city.sagae.yamagata.jp,http://www.city.sagae.yamagata.jp/jigyou/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 上山市,山形県,市区町村,www.city.kaminoyama.yamagata.jp,http://www.city.kaminoyama.yamagata.jp/life/3/33/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 村山市,山形県,市区町村,www.city.murayama.lg.jp,http://www.city.murayama.lg.jp/jigyosha/nyuusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-東根市,山形県,市区町村,www.city.higashine.yamagata.jp,http://www.city.higashine.yamagata.jp/210.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-尾花沢市,山形県,市区町村,www.city.obanazawa.yamagata.jp,http://www.city.obanazawa.yamagata.jp/3145.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 中山町,山形県,市区町村,www.town.nakayama.yamagata.jp,https://www.town.nakayama.yamagata.jp/life/5/28/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 最上町,山形県,市区町村,mogami.tv,http://mogami.tv/admin/11nyuusatsu/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 高畠町,山形県,市区町村,www.town.takahata.yamagata.jp,https://www.town.takahata.yamagata.jp/kurashi/jigyoshanokatahe/nyusatsu_keiyaku/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 小国町,山形県,市区町村,www.town.oguni.yamagata.jp,http://www.town.oguni.yamagata.jp/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 飯豊町,山形県,市区町村,www.town.iide.yamagata.jp,http://www.town.iide.yamagata.jp/shigototosangyou/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-遊佐町,山形県,市区町村,www.town.yuza.yamagata.jp,http://www.town.yuza.yamagata.jp/ou/somu/zaisei/nyusatu_keiyaku/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 大蔵村,山形県,市区町村,www.vill.ohkura.yamagata.jp,http://www.vill.ohkura.yamagata.jp/biz/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-戸沢村,山形県,市区町村,www.vill.tozawa.yamagata.jp,http://www.vill.tozawa.yamagata.jp/jigyoshanominasamahe/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 東北地方整備局小名浜港湾事務所,福島県,国・独立行政法人等,www.pa.thr.mlit.go.jp,http://www.pa.thr.mlit.go.jp/onahama/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 （国研）農業・食品産業技術総合研究機構,福島県,国・独立行政法人等,www.naro.affrc.go.jp,https://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 いわき市,福島県,市区町村,www.city.iwaki.fukushima.jp,http://www.city.iwaki.fukushima.jp/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
@@ -176,7 +163,6 @@
 （国研） 水産研究・教育機構水産工学研究所,茨城県,国・独立行政法人等,nrife.fra.affrc.go.jp,http://nrife.fra.affrc.go.jp/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）農業・食品産業技術総合研究機構本部,茨城県,国・独立行政法人等,www.naro.affrc.go.jp,http://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）建築研究所,茨城県,国・独立行政法人等,www.kenken.go.jp,http://www.kenken.go.jp/japanese/information/information/bidding/hachuu/jyouhou.htm,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-茨城県,茨城県,都道府県,www.pref.ibaraki.jp,http://www.pref.ibaraki.jp/category/service.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 日立市,茨城県,市区町村,www.city.hitachi.lg.jp,http://www.city.hitachi.lg.jp/jigyo/003/001/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 古河市,茨城県,市区町村,www.city.ibaraki-koga.lg.jp,https://www.city.ibaraki-koga.lg.jp/lifetop/shiseimatidukuri/jigyousya/5/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 境町,茨城県,市区町村,www.town.sakai.ibaraki.jp,http://www.town.sakai.ibaraki.jp/page/dir000084.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
@@ -190,25 +176,22 @@
 市貝町,栃木県,市区町村,www.town.ichikai.tochigi.jp,http://www.town.ichikai.tochigi.jp/forms/menutop/menutop.aspx?menu_id=1582,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 芳賀町,栃木県,市区町村,www.town.haga.tochigi.jp,http://www.town.haga.tochigi.jp/menu/jigyosha/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 高根沢町,栃木県,市区町村,www.town.takanezawa.tochigi.jp,https://www.town.takanezawa.tochigi.jp/gyosei/keiyaku/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-群馬県警察本部,群馬県,国・独立行政法人等,www.police.pref.gunma.jp,http://www.police.pref.gunma.jp/subindex/nyusatsu.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+群馬県警察本部,群馬県,国・独立行政法人等,www.police.pref.gunma.jp,http://www.police.pref.gunma.jp/subindex/nyusatsu.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 （独）国立高等専門学校機構群馬工業高等専門学校,群馬県,国・独立行政法人等,www.gunma-ct.ac.jp,http://www.gunma-ct.ac.jp/cms/category/oshirase,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 （国研）農業・食品産業技術総合研究機構,群馬県,国・独立行政法人等,www.naro.affrc.go.jp,https://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-群馬県,群馬県,都道府県,www.pref.gunma.jp,http://www.pref.gunma.jp/cate_list/ct00002615.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-高崎市,群馬県,市区町村,www.city.takasaki.gunma.jp,http://www.city.takasaki.gunma.jp/jigyousha/nyuusatsu.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+群馬県,群馬県,都道府県,www.pref.gunma.jp,http://www.pref.gunma.jp/cate_list/ct00002615.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
+高崎市,群馬県,市区町村,www.city.takasaki.gunma.jp,http://www.city.takasaki.gunma.jp/jigyousha/nyuusatsu.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 桐生市,群馬県,市区町村,www.city.kiryu.lg.jp,http://www.city.kiryu.lg.jp/sangyou/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-太田市,群馬県,市区町村,www.city.ota.gunma.jp,http://www.city.ota.gunma.jp/005gyosei/0030-004soumu-koubai/jouken/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-沼田市,群馬県,市区町村,www.city.numata.gunma.jp,http://www.city.numata.gunma.jp/jigyosha/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-館林市,群馬県,市区町村,www.city.tatebayashi.gunma.jp,http://www.city.tatebayashi.gunma.jp/bunya/NyusatuKeiyaku/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-富岡市,群馬県,市区町村,www.city.tomioka.lg.jp,http://www.city.tomioka.lg.jp/www/genre/0000000000000/1001050000102/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+太田市,群馬県,市区町村,www.city.ota.gunma.jp,http://www.city.ota.gunma.jp/005gyosei/0030-004soumu-koubai/jouken/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
+館林市,群馬県,市区町村,www.city.tatebayashi.gunma.jp,http://www.city.tatebayashi.gunma.jp/bunya/NyusatuKeiyaku/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 安中市,群馬県,市区町村,www.city.annaka.gunma.jp,http://www.city.annaka.gunma.jp/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-みどり市,群馬県,市区町村,www.city.midori.gunma.jp,http://www.city.midori.gunma.jp/www/genre/0000000000000/1000000000148/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+みどり市,群馬県,市区町村,www.city.midori.gunma.jp,http://www.city.midori.gunma.jp/www/genre/0000000000000/1000000000148/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 吉岡町,群馬県,市区町村,www.town.yoshioka.gunma.jp,http://www.town.yoshioka.gunma.jp/business/nyusatsu/info/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-中之条町,群馬県,市区町村,www.town.nakanojo.gunma.jp,http://www.town.nakanojo.gunma.jp/nyusatsu.shtml,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+中之条町,群馬県,市区町村,www.town.nakanojo.gunma.jp,http://www.town.nakanojo.gunma.jp/nyusatsu.shtml,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 東吾妻町,群馬県,市区町村,www1.town.higashiagatsuma.gunma.jp,http://www1.town.higashiagatsuma.gunma.jp/www/contents/1353993157420/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 みなかみ町,群馬県,市区町村,www.town.minakami.gunma.jp,http://www.town.minakami.gunma.jp/industry/02nyuusatsu/2016-1014-1920-12.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 大泉町,群馬県,市区町村,www.town.oizumi.gunma.jp,http://www.town.oizumi.gunma.jp/06sangyo/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 榛東村,群馬県,市区町村,www.vill.shinto.gunma.jp,http://www.vill.shinto.gunma.jp/nyusatu/index.htm,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-高山村,群馬県,市区町村,www.vill.takayama.gunma.jp,http://www.vill.takayama.gunma.jp/soshiki/01soumu.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 川場村,群馬県,市区町村,www.vill.kawaba.gunma.jp,http://www.vill.kawaba.gunma.jp/gyosei/b_tetsuduki/tetsu05.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 関東財務局,埼玉県,国・独立行政法人等,kantou.mof.go.jp,http://kantou.mof.go.jp/tyoutatsu/index.htm,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 関東経済産業局,埼玉県,国・独立行政法人等,www.kanto.meti.go.jp,https://www.kanto.meti.go.jp/chotatsu/chotatsu/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
@@ -217,7 +200,6 @@
 （独）国立病院機構埼玉病院,埼玉県,国・独立行政法人等,saitama-hospital.jp,http://saitama-hospital.jp/procure/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 （国研）農業・食品産業技術総合研究機構,埼玉県,国・独立行政法人等,www.naro.affrc.go.jp,https://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 川越市,埼玉県,市区町村,www.city.kawagoe.saitama.jp,http://www.city.kawagoe.saitama.jp/kurashi/jogesuidobu/jigyoshanokata/nyusatsukeiyaku/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-秩父市,埼玉県,市区町村,www.city.chichibu.lg.jp,http://www.city.chichibu.lg.jp/menu1668.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 加須市,埼玉県,市区町村,www.city.kazo.lg.jp,https://www.city.kazo.lg.jp/shigoto/nyuusatsu/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 本庄市,埼玉県,市区町村,www.city.honjo.lg.jp,http://www.city.honjo.lg.jp/business_sangyo/keiyaku/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 入間市,埼玉県,市区町村,www.city.iruma.saitama.jp,http://www.city.iruma.saitama.jp/shisei/nyusatsu/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
@@ -225,12 +207,9 @@
 北本市,埼玉県,市区町村,www.city.kitamoto.saitama.jp,http://www.city.kitamoto.saitama.jp/jigyosha/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 滑川町,埼玉県,市区町村,www.town.namegawa.lg.jp,http://www.town.namegawa.lg.jp/nyusatsu/index.htm,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 小川町,埼玉県,市区町村,www.town.ogawa.saitama.jp,http://www.town.ogawa.saitama.jp/category/5-2-0-0-0.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-川島町,埼玉県,市区町村,www.town.kawajima.saitama.jp,http://www.town.kawajima.saitama.jp/2191.htm,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 吉見町,埼玉県,市区町村,www.town.yoshimi.saitama.jp,http://www.town.yoshimi.saitama.jp/bit-schedule.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 ときがわ町,埼玉県,市区町村,www.town.tokigawa.lg.jp,http://www.town.tokigawa.lg.jp/forms/menutop/menutop.aspx?menu_id=1195,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-長瀞町,埼玉県,市区町村,www.town.nagatoro.saitama.jp,http://www.town.nagatoro.saitama.jp/nyusatsu/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 小鹿野町,埼玉県,市区町村,www.town.ogano.lg.jp,http://www.town.ogano.lg.jp/menyu/nyusatu/top.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-上里町,埼玉県,市区町村,www.town.kamisato.saitama.jp,http://www.town.kamisato.saitama.jp/nyusatu/index.htm,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 白岡市,埼玉県,市区町村,www.city.shiraoka.lg.jp,http://www.city.shiraoka.lg.jp/1054.htm,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 杉戸町,埼玉県,市区町村,www.town.sugito.lg.jp,http://www.town.sugito.lg.jp/cms/index346.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 関東地方整備局千葉港湾事務所,千葉県,国・独立行政法人等,www.pa.ktr.mlit.go.jp,http://www.pa.ktr.mlit.go.jp/chiba/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
@@ -241,16 +220,11 @@
 旭市,千葉県,市区町村,www.city.asahi.lg.jp,http://www.city.asahi.lg.jp/section/zaisei/news/n_index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 勝浦市,千葉県,市区町村,www.city.katsuura.lg.jp,http://www.city.katsuura.lg.jp/forms/menutop/menutop.aspx?menu_id=1787,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 八千代市,千葉県,市区町村,www.city.yachiyo.chiba.jp,http://www.city.yachiyo.chiba.jp/sangyo/category00000010.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-鴨川市,千葉県,市区町村,www.city.kamogawa.lg.jp,http://www.city.kamogawa.lg.jp/kankyo_sangyo/nyusatsu_keiyaku/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-鎌ヶ谷市,千葉県,市区町村,www.city.kamagaya.chiba.jp,http://www.city.kamagaya.chiba.jp/jigyosha/nyuusatu_menu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-富津市,千葉県,市区町村,www.city.futtsu.lg.jp,http://www.city.futtsu.lg.jp/category/3-1-0-0-0.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-浦安市,千葉県,市区町村,www.city.urayasu.lg.jp,http://www.city.urayasu.lg.jp/shisei/jigyosha/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-四街道市,千葉県,市区町村,www.city.yotsukaido.chiba.jp,http://www.city.yotsukaido.chiba.jp/shisei/jigyoshamuke/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-袖ケ浦市,千葉県,市区町村,www.city.sodegaura.lg.jp,http://www.city.sodegaura.lg.jp/life/3/26/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-白井市,千葉県,市区町村,www.city.shiroi.chiba.jp,http://www.city.shiroi.chiba.jp/sangyo/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-富里市,千葉県,市区町村,www.city.tomisato.lg.jp,http://www.city.tomisato.lg.jp/category/3-1-0-0-0.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+鴨川市,千葉県,市区町村,www.city.kamogawa.lg.jp,http://www.city.kamogawa.lg.jp/kankyo_sangyo/nyusatsu_keiyaku/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
+富津市,千葉県,市区町村,www.city.futtsu.lg.jp,http://www.city.futtsu.lg.jp/category/3-1-0-0-0.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
+袖ケ浦市,千葉県,市区町村,www.city.sodegaura.lg.jp,http://www.city.sodegaura.lg.jp/life/3/26/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 いすみ市,千葉県,市区町村,www.city.isumi.lg.jp,http://www.city.isumi.lg.jp/business/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-栄町,千葉県,市区町村,www.town.sakae.chiba.jp,http://www.town.sakae.chiba.jp/dir.php?code=42,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+栄町,千葉県,市区町村,www.town.sakae.chiba.jp,http://www.town.sakae.chiba.jp/dir.php?code=42,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 大網白里町,千葉県,市区町村,www.city.oamishirasato.lg.jp,http://www.city.oamishirasato.lg.jp/category/66-0-0-0-0.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 大多喜町,千葉県,市区町村,www.town.otaki.chiba.jp,"http://www.town.otaki.chiba.jp/index.cfm/11,0,74,html",manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 御宿町,千葉県,市区町村,www.town.onjuku.chiba.jp,http://www.town.onjuku.chiba.jp/sub5/10/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
@@ -258,7 +232,6 @@
 公正取引委員会,東京都,国・独立行政法人等,www.jftc.go.jp,https://www.jftc.go.jp/soshiki/tyoutatsu/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 警視庁,東京都,国・独立行政法人等,www.keishicho.metro.tokyo.jp,https://www.keishicho.metro.tokyo.jp/smph/about_mpd/keiyaku_horei_kohyo/nyusatsu_keiyaku/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 外務省,東京都,国・独立行政法人等,www.mofa.go.jp,https://www.mofa.go.jp/mofaj/annai/shocho/chotatsu/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-財務省,東京都,国・独立行政法人等,www.mof.go.jp,http://www.mof.go.jp/procurement/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 国立感染症研究所,東京都,国・独立行政法人等,www.nih.go.jp,http://www.nih.go.jp/niid/ja/bid.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 水産庁,東京都,国・独立行政法人等,www.jfa.maff.go.jp,http://www.jfa.maff.go.jp/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 経済産業省,東京都,国・独立行政法人等,www.meti.go.jp,https://www.meti.go.jp/information/publicoffer/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
@@ -269,8 +242,7 @@
 関東地方整備局東京空港整備事務所,東京都,国・独立行政法人等,www.pa.ktr.mlit.go.jp,http://www.pa.ktr.mlit.go.jp/haneda/haneda/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 関東地方整備局東京港湾事務所,東京都,国・独立行政法人等,www.pa.ktr.mlit.go.jp,http://www.pa.ktr.mlit.go.jp/tokyo/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 環境省,東京都,国・独立行政法人等,www.env.go.jp,http://www.env.go.jp/kanbo/chotatsu/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-航空自衛隊第２補給処十条支処,東京都,国・独立行政法人等,www.mod.go.jp,https://www.mod.go.jp/asdf/2dep/jyujyo/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-（独）郵便貯金簡易生命保険管理・郵便局ネットワーク支援機構,東京都,国・独立行政法人等,www.yuchokampo.go.jp,https://www.yuchokampo.go.jp/about/supply.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+航空自衛隊第２補給処十条支処,東京都,国・独立行政法人等,www.mod.go.jp,https://www.mod.go.jp/asdf/2dep/jyujyo/,manual_confirm,要手動確認 (403),人工确认（403/跳转先 robots 等）
 （独）国立青少年教育振興機構,東京都,国・独立行政法人等,www.niye.go.jp,https://www.niye.go.jp/about/announcement/bid/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 （独）国立美術館東京国立近代美術館,東京都,国・独立行政法人等,archive.momat.go.jp,http://archive.momat.go.jp/nyusatu.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （独）国立病院機構東京医療センター,東京都,国・独立行政法人等,www.ntmc.go.jp,http://www.ntmc.go.jp/bid_info/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
@@ -292,7 +264,6 @@
 杉並区,東京都,市区町村,www.city.suginami.tokyo.jp,http://www.city.suginami.tokyo.jp/nyusatsu/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 奥多摩町,東京都,市区町村,www.town.okutama.tokyo.jp,http://www.town.okutama.tokyo.jp/gyose/nyusatsu/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 八丈町,東京都,市区町村,www.town.hachijo.tokyo.jp,http://www.town.hachijo.tokyo.jp/kakuka/kikaku_zaisei/kizai-top.htm,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-神津島村,東京都,市区町村,vill.kouzushima.tokyo.jp,https://vill.kouzushima.tokyo.jp/administration/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 青ヶ島村,東京都,市区町村,www.vill.aogashima.tokyo.jp,http://www.vill.aogashima.tokyo.jp/top.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 横浜地方法務局,神奈川県,国・独立行政法人等,houmukyoku.moj.go.jp,http://houmukyoku.moj.go.jp/yokohama/table/nyuusatsu/all.,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 関東地方整備局港湾空港部,神奈川県,国・独立行政法人等,www.pa.ktr.mlit.go.jp,http://www.pa.ktr.mlit.go.jp/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
@@ -329,18 +300,15 @@
 （独）労働者健康安全機構新潟労災病院,新潟県,国・独立行政法人等,www.niigatah.johas.go.jp,http://www.niigatah.johas.go.jp/topics/public/detail/ID/8/c/7,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 （国研）農業・食品産業技術総合研究機構,新潟県,国・独立行政法人等,www.naro.affrc.go.jp,http://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研） 水産研究・教育機構日本海区水産研究所,新潟県,国・独立行政法人等,jsnfri.fra.affrc.go.jp,http://jsnfri.fra.affrc.go.jp/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-三条市,新潟県,市区町村,www.city.sanjo.niigata.jp,http://www.city.sanjo.niigata.jp/zaimu/page00324.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 小千谷市,新潟県,市区町村,www.city.ojiya.niigata.jp,http://www.city.ojiya.niigata.jp/site/nyusatsu/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 燕市,新潟県,市区町村,www.city.tsubame.niigata.jp,http://www.city.tsubame.niigata.jp/participate/10007310011.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 佐渡市,新潟県,市区町村,sougo.city.sado.niigata.jp,http://sougo.city.sado.niigata.jp/kouji/nyusatsu-t.jsp,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 魚沼市,新潟県,市区町村,www.city.uonuma.niigata.jp,http://www.city.uonuma.niigata.jp/categories/navi/business/nyusatu/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 田上町,新潟県,市区町村,www.town.tagami.niigata.jp,http://www.town.tagami.niigata.jp/living/co/co07.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-阿賀町,新潟県,市区町村,www.town.aga.niigata.jp,http://www.town.aga.niigata.jp/gyousei/bid/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 津南町,新潟県,市区町村,www.town.tsunan.niigata.jp,http://www.town.tsunan.niigata.jp/life/4/20/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 刈羽村,新潟県,市区町村,www.vill.kariwa.niigata.jp,http://www.vill.kariwa.niigata.jp/www/business/index.jsp,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 関川村,新潟県,市区町村,www.vill.sekikawa.niigata.jp,http://www.vill.sekikawa.niigata.jp/politics/11/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 北陸地方整備局伏木富山港湾事務所,富山県,国・独立行政法人等,www.toyama.pa.hrr.mlit.go.jp,http://www.toyama.pa.hrr.mlit.go.jp/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-富山市,富山県,市区町村,www.city.toyama.toyama.jp,http://www.city.toyama.toyama.jp/index/jigyousya/nyusatsu.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 高岡市,富山県,市区町村,www.city.takaoka.toyama.jp,http://www.city.takaoka.toyama.jp/jigyosha/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 上市町,富山県,市区町村,www.town.kamiichi.toyama.jp,http://www.town.kamiichi.toyama.jp/guide/svGuideList.aspx?srch=ctg&ctgcd=0201,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 入善町,富山県,市区町村,www.town.nyuzen.toyama.jp,https://www.town.nyuzen.toyama.jp/zaisei/machi/nyusatsu/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
@@ -368,7 +336,6 @@
 （国研）農業・食品産業技術総合研究機構,山梨県,国・独立行政法人等,www.naro.affrc.go.jp,http://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 富士吉田市,山梨県,市区町村,www.city.fujiyoshida.yamanashi.jp,http://www.city.fujiyoshida.yamanashi.jp/forms/menutop/menutop.aspx?menu_id=29,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 山梨市,山梨県,市区町村,www.city.yamanashi.yamanashi.jp,http://www.city.yamanashi.yamanashi.jp/citizen/business/bid/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-早川町,山梨県,市区町村,www.town.hayakawa.yamanashi.jp,http://www.town.hayakawa.yamanashi.jp/business/bid/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 富士川町,山梨県,市区町村,www.town.fujikawa.yamanashi.jp,http://www.town.fujikawa.yamanashi.jp/chosei/info/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 西桂町,山梨県,市区町村,www.town.nishikatsura.yamanashi.jp,http://www.town.nishikatsura.yamanashi.jp/forms/menugrouptop/menugrouptop.aspx?menugroup_id=86,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 忍野村,山梨県,市区町村,www.vill.oshino.lg.jp,http://www.vill.oshino.lg.jp/bunrui/nyusatsu_keiyaku/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
@@ -393,7 +360,6 @@
 筑北村,長野県,市区町村,www.vill.chikuhoku.lg.jp,http://www.vill.chikuhoku.lg.jp/archives/accept-application-cat/%e4%ba%8b%e6%a5%ad%e8%80%85%e5%90%91%e3%81%91,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 小谷村,長野県,市区町村,www.vill.otari.nagano.jp,http://www.vill.otari.nagano.jp/mura/information/W009H0000066.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 多治見市,岐阜県,市区町村,www.city.tajimi.lg.jp,http://www.city.tajimi.lg.jp/gyose/nyusatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-羽島市,岐阜県,市区町村,www.city.hashima.lg.jp,https://www.city.hashima.lg.jp/category/60-10-0-0-0.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 下呂市,岐阜県,市区町村,www2.city.gero.lg.jp,http://www2.city.gero.lg.jp/HP/keiyaku/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 安八町,岐阜県,市区町村,www.town.anpachi.gifu.jp,http://www.town.anpachi.gifu.jp/category/gyousei/matidukuri/nyuusatu/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 北方町,岐阜県,市区町村,www.town.kitagata.gifu.jp,http://www.town.kitagata.gifu.jp/third/business/general_competitive_bidding.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
@@ -417,11 +383,9 @@
 豊川市,愛知県,市区町村,www.city.toyokawa.lg.jp,http://www.city.toyokawa.lg.jp/shisei/nyusatsukeiyaku/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 刈谷市,愛知県,市区町村,www.city.kariya.lg.jp,http://www.city.kariya.lg.jp/sangyo/nyusatsujoho/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 稲沢市,愛知県,市区町村,www.city.inazawa.aichi.jp,http://www.city.inazawa.aichi.jp/sangyo_shigoto/nyusatsu_keiyaku/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-岩倉市,愛知県,市区町村,www.city.iwakura.aichi.jp,http://www.city.iwakura.aichi.jp/category/4-1-0-0-0.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 みよし市,愛知県,市区町村,www.city.aichi-miyoshi.lg.jp,http://www.city.aichi-miyoshi.lg.jp/business/nyusatsu/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 長久手市,愛知県,市区町村,www.city.nagakute.lg.jp,http://www.city.nagakute.lg.jp/gyosei/ct_nyuusatsu.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 大口町,愛知県,市区町村,www.town.oguchi.aichi.jp,http://www.town.oguchi.aichi.jp/1054.htm,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-阿久比町,愛知県,市区町村,www.town.agui.lg.jp,http://www.town.agui.lg.jp/category_list.php?frmCd=7-1-0-0-0,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 豊根村,愛知県,市区町村,www.vill.toyone.aichi.jp,http://www.vill.toyone.aichi.jp/cals/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 公立大学法人三重県立看護大学,三重県,国・独立行政法人等,www.mcn.ac.jp,http://www.mcn.ac.jp/bid,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 国立大学法人三重大学,三重県,国・独立行政法人等,www.mie-u.ac.jp,http://www.mie-u.ac.jp/neighborhood/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
@@ -472,12 +436,10 @@
 （独）国立病院機構姫路医療センター,兵庫県,国・独立行政法人等,www.hosp.go.jp,http://www.hosp.go.jp/~hmj/chotatu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （独）国立病院機構神戸医療センター,兵庫県,国・独立行政法人等,www.kobemc.go.jp,http://www.kobemc.go.jp/etc/nyusatu/nyusatu.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （独）国立病院機構兵庫中央病院,兵庫県,国・独立行政法人等,hyogo-chuo-hosp.jp,http://hyogo-chuo-hosp.jp/tender/procurement.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-西宮市,兵庫県,市区町村,www.nishi.or.jp,http://www.nishi.or.jp/navi/ln_0000600000.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 宝塚市,兵庫県,市区町村,www.city.takarazuka.hyogo.jp,http://www.city.takarazuka.hyogo.jp/kanko/keiyaku/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 三田市,兵庫県,市区町村,www.city.sanda.lg.jp,http://www.city.sanda.lg.jp/shiseijouhou/nyuusatsu/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 丹波篠山市,兵庫県,市区町村,www.city.sasayama.hyogo.jp,https://www.city.sasayama.hyogo.jp/pc/business/bid/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 朝来市,兵庫県,市区町村,www.city.asago.hyogo.jp,http://www.city.asago.hyogo.jp/category/3-1-0-0-0.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-宍粟市,兵庫県,市区町村,www.city.shiso.lg.jp,http://www.city.shiso.lg.jp/jigyosha/nyusatsu,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 多可町,兵庫県,市区町村,www.takacho.jp,http://www.takacho.jp/tender-info/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 国立大学法人奈良女子大学,奈良県,国・独立行政法人等,koto.nara-wu.ac.jp,http://koto.nara-wu.ac.jp/kokai/sisetu/tyoutatu.htm,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 （独）奈良国立博物館,奈良県,国・独立行政法人等,www.narahaku.go.jp,https://www.narahaku.go.jp/news/04.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
@@ -513,7 +475,6 @@
 津和野町,島根県,市区町村,www.tsuwano.net,http://www.tsuwano.net/www/genre/0000000000000/1000000000129/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 中国地方整備局苫田ダム管理所,岡山県,国・独立行政法人等,www.cgr.mlit.go.jp,http://www.cgr.mlit.go.jp/tomata/nyuusatsu.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 中国地方整備局岡山営繕事務所,岡山県,国・独立行政法人等,www.cgr.mlit.go.jp,http://www.cgr.mlit.go.jp/cginfo/syokai/busyo/eizen/main/order.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-（独）労働者健康安全機構岡山ろうさい病院,岡山県,国・独立行政法人等,www.okayamah.johas.go.jp,https://www.okayamah.johas.go.jp/index.php,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）農業・食品産業技術総合研究機構,岡山県,国・独立行政法人等,www.naro.affrc.go.jp,https://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）森林研究・整備機構森林総合研究所林木育種センター関西育種場,岡山県,国・独立行政法人等,www.ffpri.affrc.go.jp,https://www.ffpri.affrc.go.jp/kaniku/gyomushokai/chotatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 高梁市,岡山県,市区町村,www.city.takahashi.okayama.jp,http://www.city.takahashi.okayama.jp/life/2/24/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
@@ -524,7 +485,7 @@
 近畿中国四国事務所中国支所,広島県,国・独立行政法人等,www.jftc.go.jp,https://www.jftc.go.jp/soshiki/tyoutatsu/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 中国財務局,広島県,国・独立行政法人等,chugoku.mof.go.jp,http://chugoku.mof.go.jp/tyoutatsu/kouhou/koutop.htm,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 中国経済産業局,広島県,国・独立行政法人等,www.chugoku.meti.go.jp,https://www.chugoku.meti.go.jp/info/bid/index.htm,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-海上保安庁海上保安大学校,広島県,国・独立行政法人等,www.jcga.ac.jp,http://www.jcga.ac.jp/information/nyusatu/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+海上保安庁海上保安大学校,広島県,国・独立行政法人等,www.jcga.ac.jp,http://www.jcga.ac.jp/information/nyusatu/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 中国地方整備局広島港湾・空港整備事務所,広島県,国・独立行政法人等,www.pa.cgr.mlit.go.jp,http://www.pa.cgr.mlit.go.jp/hiroshima/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 中国地方整備局広島港湾空港技術調査事務所,広島県,国・独立行政法人等,www.pa.cgr.mlit.go.jp,http://www.pa.cgr.mlit.go.jp/gicyo/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 （独） 労働者健康安全機構中国労災病院,広島県,国・独立行政法人等,www.chugokuh.johas.go.jp,https://www.chugokuh.johas.go.jp/supply/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
@@ -561,7 +522,6 @@
 （国研）農業・食品産業技術総合研究機構,香川県,国・独立行政法人等,www.naro.affrc.go.jp,https://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （独）水資源機構,香川県,国・独立行政法人等,www.water.go.jp,http://www.water.go.jp/yoshino/kagawa/nyusatu/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 丸亀市,香川県,市区町村,www.city.marugame.kagawa.jp,http://www.city.marugame.kagawa.jp/itwinfo/cl460/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-坂出市,香川県,市区町村,www.city.sakaide.lg.jp,http://www.city.sakaide.lg.jp/life/4/21/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 さぬき市,香川県,市区町村,www.city.sanuki.kagawa.jp,http://www.city.sanuki.kagawa.jp/executive/bid#bid1,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 東かがわ市,香川県,市区町村,www.higashikagawa.jp,http://www.higashikagawa.jp/itwinfo/cl1000257/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 綾川町,香川県,市区町村,www.town.ayagawa.kagawa.jp,http://www.town.ayagawa.kagawa.jp/zokusei/nyusatsu/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
@@ -575,14 +535,12 @@
 四国地方整備局高知港湾・空港整備事務所,高知県,国・独立行政法人等,www.pa.skr.mlit.go.jp,http://www.pa.skr.mlit.go.jp/kouchi/,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 （独）国立高等専門学校機構高知工業高等専門学校,高知県,国・独立行政法人等,www.jm.kochi-ct.ac.jp,http://www.jm.kochi-ct.ac.jp/kokai/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）森林研究・整備機構森林総合研究所四国支所,高知県,国・独立行政法人等,www.ffpri.affrc.go.jp,http://www.ffpri.affrc.go.jp/skk/shishoshokai/chotatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-南国市,高知県,市区町村,www.city.nankoku.lg.jp,http://www.city.nankoku.lg.jp/nyusatsu/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 東洋町,高知県,市区町村,www.town.toyo.kochi.jp,http://www.town.toyo.kochi.jp/contents/a02b07.html#pl020703,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 奈半利町,高知県,市区町村,www.town.nahari.kochi.jp,http://www.town.nahari.kochi.jp/news/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 本山町,高知県,市区町村,www.town.motoyama.kochi.jp,http://www.town.motoyama.kochi.jp/life/list.php?hdnSKBN=B&hdnCat=&txtKeyword=&hdnKeyword=%C6%FE%BB%A5&hdnJPN=%C6%FC%CB%DC%B8%EC,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-越知町,高知県,市区町村,www.town.ochi.kochi.jp,http://www.town.ochi.kochi.jp/nyusatu.htm,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+越知町,高知県,市区町村,www.town.ochi.kochi.jp,http://www.town.ochi.kochi.jp/nyusatu.htm,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 檮原町,高知県,市区町村,www.town.yusuhara.kochi.jp,http://www.town.yusuhara.kochi.jp/town/kakuka/seibi.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 馬路村,高知県,市区町村,www.vill.umaji.kochi.jp,http://www.vill.umaji.kochi.jp/html/index.htm,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-三原村,高知県,市区町村,www.vill.mihara.kochi.jp,http://www.vill.mihara.kochi.jp/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 九州事務所,福岡県,国・独立行政法人等,www.jftc.go.jp,https://www.jftc.go.jp/soshiki/tyoutatsu/index.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 九州管区警察局,福岡県,国・独立行政法人等,www.kyushu.npa.go.jp,https://www.kyushu.npa.go.jp/0901_choutatsu.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 福岡財務支局,福岡県,国・独立行政法人等,fukuoka.mof.go.jp,http://fukuoka.mof.go.jp/html/chotatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
@@ -604,8 +562,6 @@
 （独）水資源機構朝倉総合事業所小石原川ダム建設,福岡県,国・独立行政法人等,www.water.go.jp,http://www.water.go.jp/chikugo/koishi/bids/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 （独）水資源機構朝倉総合事業所,福岡県,国・独立行政法人等,www.water.go.jp,http://www.water.go.jp/chikugo/terauchi/keiyaku/kei_info.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 直方市,福岡県,市区町村,www.city.nogata.fukuoka.jp,http://www.city.nogata.fukuoka.jp/sangyo/_1231.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-田川市,福岡県,市区町村,www.joho.tagawa.fukuoka.jp,http://www.joho.tagawa.fukuoka.jp/list00695.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
-筑後市,福岡県,市区町村,www.city.chikugo.lg.jp,https://www.city.chikugo.lg.jp/jigyou/_3716.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 中間市,福岡県,市区町村,www.city.nakama.lg.jp,http://www.city.nakama.lg.jp/gyose/nyusatsu/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 大野城市,福岡県,市区町村,www.city.onojo.fukuoka.jp,http://www.city.onojo.fukuoka.jp/080/050/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 太宰府市,福岡県,市区町村,www.city.dazaifu.lg.jp,http://www.city.dazaifu.lg.jp/admin/business/nyusatsu/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
@@ -623,7 +579,6 @@
 大町町,佐賀県,市区町村,www.town.omachi.saga.jp,http://www.town.omachi.saga.jp/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 太良町,佐賀県,市区町村,www.town.tara.lg.jp,http://www.town.tara.lg.jp/machidukuri/_1668.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 九州管区警察局,長崎県,国・独立行政法人等,www.kyushu.npa.go.jp,https://www.kyushu.npa.go.jp/0901_choutatsu.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-長崎県警察本部,長崎県,国・独立行政法人等,www.police.pref.nagasaki.jp,https://www.police.pref.nagasaki.jp/police/disclosure/kaikei-joho/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 九州地方整備局長崎港湾・空港整備事務所,長崎県,国・独立行政法人等,www.pa.qsr.mlit.go.jp,http://www.pa.qsr.mlit.go.jp/nagasaki/keiyaku_kekka/index.htm,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 長崎県立大学,長崎県,国・独立行政法人等,sun.ac.jp,http://sun.ac.jp/tender/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）農業・食品産業技術総合研究機構,長崎県,国・独立行政法人等,www.naro.affrc.go.jp,https://www.naro.affrc.go.jp/supply/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
@@ -642,7 +597,7 @@
 （国研）森林研究・整備機構森林総合研究所九州支所,熊本県,国・独立行政法人等,www.ffpri.affrc.go.jp,http://www.ffpri.affrc.go.jp/kys/shishoshokai/chotatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 （国研）森林研究・整備機構森林総合研究所林木育種センター九州育種場,熊本県,国・独立行政法人等,www.ffpri.affrc.go.jp,https://www.ffpri.affrc.go.jp/kyuiku/business/choutatsu/index.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 八代市,熊本県,市区町村,www.city.yatsushiro.lg.jp,http://www.city.yatsushiro.lg.jp/list00026.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-人吉市,熊本県,市区町村,www.city.hitoyoshi.lg.jp,http://www.city.hitoyoshi.lg.jp/q/list/165.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
+人吉市,熊本県,市区町村,www.city.hitoyoshi.lg.jp,http://www.city.hitoyoshi.lg.jp/q/list/165.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 宇城市,熊本県,市区町村,www.city.uki.kumamoto.jp,http://www.city.uki.kumamoto.jp/q/list/59.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 美里町,熊本県,市区町村,www.town.kumamoto-misato.lg.jp,http://www.town.kumamoto-misato.lg.jp/q/list/127.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 長洲町,熊本県,市区町村,www.town.nagasu.lg.jp,https://www.town.nagasu.lg.jp/list00026.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
@@ -704,10 +659,6 @@
 東村,沖縄県,市区町村,www.vill.higashi.okinawa.jp,http://www.vill.higashi.okinawa.jp/index.jsp,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 読谷村,沖縄県,市区町村,www.yomitan.jp,http://www.yomitan.jp/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 北大東村,沖縄県,市区町村,vill.kitadaito.okinawa.jp,http://vill.kitadaito.okinawa.jp/index.php?id=34,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-東京都,東京都,都道府県,www.metro.tokyo.lg.jp,,unverified,未検証,待首次验证
-神奈川県,神奈川県,都道府県,www.pref.kanagawa.jp,,unverified,未検証,待首次验证
 京都市,京都府,市区町村,www.city.kyoto.lg.jp,,unverified,未検証,待首次验证
 大阪府,大阪府,都道府県,www.pref.osaka.lg.jp,,unverified,未検証,待首次验证
-横浜市,神奈川県,市区町村,www.city.yokohama.lg.jp,,unverified,未検証,待首次验证
-調達ポータル / 政府電子調達システム (GEPS),全国,国 (共通システム),www.p-portal.go.jp,,unverified,公式公告文中で多数参照されることを確認 (検索結果経由),待首次验证
 政府電子調達システム ポータル (GEPS),全国,国 (共通システム),www.geps.go.jp,,unverified,未検証,待首次验证
