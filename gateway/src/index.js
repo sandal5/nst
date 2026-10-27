@@ -11,12 +11,24 @@
 //     (Worker secret GATEWAY_KEY).
 //  2. The target host must be in the project allowlist (allowlist.js,
 //     generated from the registry domain list). Anything else is refused.
-// Politeness rules (robots-first, per-host pacing, identifiable UA) stay
-// enforced by the calling client, exactly as with direct fetches.
+// Politeness rules (robots-first, per-host pacing) stay enforced by the
+// calling client, exactly as with direct fetches. Outbound requests use a
+// rotating pool of common browser User-Agents (project decision 2026-10-27);
+// a 403/429 from a target still stops that host — rotation is the uniform
+// default identity, never a per-block evasion retry.
 
 import { ALLOWED_HOSTS } from "./allowlist.js";
 
 const MAX_BODY = 8 * 1024 * 1024;
+
+// Common desktop browser User-Agents, rotated per request.
+const UA_POOL = [
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0",
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0",
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Safari/605.1.15",
+];
 
 function json(obj, status = 200) {
   return new Response(JSON.stringify(obj), {
@@ -59,8 +71,9 @@ export default {
         method: "GET",
         redirect: "follow",
         headers: {
-          "User-Agent": "nst-research/0.1 (+https://github.com/sandal5/nst)",
-          Accept: "*/*",
+          "User-Agent": UA_POOL[Math.floor(Math.random() * UA_POOL.length)],
+          Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "Accept-Language": "ja,en-US;q=0.7,en;q=0.3",
         },
       });
     } catch (e) {
