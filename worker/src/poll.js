@@ -1,66 +1,90 @@
 /**
- * nst polling engine — polls ENDPOINTS, not objects.
+ * nst polling engine — polls ENDPOINTS, not objects, with EXPONENTIAL
+ * BACKOFF on silence (指数回避轮询).
  *
- * The registry holds 13,528 issuer objects (one-time enumeration from the two
- * directories; the directories themselves are never polled). Each object
- * resolves to one polling endpoint on an official site. Many objects share an
- * endpoint (ministry procurement page, prefectural joint e-procurement system,
- * parent-organization page), so the poll unit is the endpoint and notices are
- * attributed back to objects by issuer-name matching.
+ * Why: most issuers publish bid notices rarely — some only once in several
+ * months. Polling every endpoint daily would mean ~3,500 requests/day,
+ * almost all of them finding nothing, and would put pointless pressure on
+ * small municipal servers. Instead each endpoint carries its own interval:
  *
- * Effectiveness rules:
- *  - Tiered cadence: A = daily, B = every 3 days, C = weekly. Tiers adapt:
- *    an endpoint that produced changes in the last 30 days is promoted,
- *    one silent for 90 days is demoted (never below C, never above A).
- *  - Cheap change detection first: conditional GET (ETag / Last-Modified)
- *    and a SHA-256 body hash. Unchanged => heartbeat only, no parsing.
- *  - Per-host politeness: >= MIN_INTERVAL between requests to one host,
- *    one in-flight request per host (enforced by the shard planner sending
- *    a host at most once per consumer batch).
- *  - Failure backoff: 404/5xx => 1d, 3d, 7d, then the endpoint moves to the
- *    re-verify queue (find its new page) instead of being hammered.
- *    403/429 => stop that host for the rest of the day.
- *  - Gates: robots-disallowed paths and terms-unverified endpoints are
- *    never fetched; they surface in the result as skips for human review.
+ *   - interval starts at the tier base (A: 12h, B: 1d, C: 2d);
+ *   - every poll that finds NO change doubles the interval (×2), up to the
+ *     tier cap (A: 2d, B: 8d, C: 32d), with ±10% jitter so endpoints do not
+ *     synchronize into thundering herds;
+ *   - any change resets the interval to base immediately.
+ *
+ * Example, a C endpoint that publishes quarterly, after its last notice:
+ * polls on day 0, 2, 6, 14, 30, 62, 94… ≈ 12 polls/year instead of 365 —
+ * ~97% fewer requests — while an active A endpoint is still checked twice
+ * a day at its most frequent. Worst-case detection delay is bounded by the
+ * tier cap; tiers are assigned when the endpoint is classified (framework
+ * + observed publication frequency) and can be overridden per endpoint.
+ *
+ * Other rules (unchanged):
+ *  - Cheap change detection first: conditional GET (ETag/Last-Modified)
+ *    + SHA-256 body hash; unchanged => heartbeat only, no parsing.
+ *  - Per-host politeness: a host appears at most once per shard; consumers
+ *    keep >=2s between requests to the same host.
+ *  - Failures (404/5xx/network): exponential backoff 1d, 2d, 4d, then the
+ *    endpoint moves to the re-verify queue (find its new page on the
+ *    official site). 403/429: stop that host for the rest of the day.
+ *  - Gates: robots-disallowed, terms-unverified and P6-unresolved
+ *    endpoints are never fetched; they are reported as skips.
  */
 
-export const TIERS = { A: 1, B: 3, C: 7 }; // days between polls
+export const DAY = 86400_000;
+export const TIER_PARAMS = {
+  A: { base: 0.5, cap: 2 },   // active systems / large issuers
+  B: { base: 1, cap: 8 },     // default
+  C: { base: 2, cap: 32 },    // rare publishers (a few notices a year)
+};
+const FACTOR = 2;
 
-export function nextDue(ep, now = Date.now()) {
-  const days = TIERS[ep.poll_tier] || TIERS.B;
-  return (ep.last_polled_at || 0) + days * 86400_000 + (ep.backoff_until ? ep.backoff_until - now > 0 ? ep.backoff_until - (ep.last_polled_at || 0) - days * 86400_000 : 0 : 0);
+export function params(ep) { return TIER_PARAMS[ep.poll_tier] || TIER_PARAMS.B; }
+
+export function currentIntervalMs(ep) {
+  const p = params(ep);
+  const days = ep.interval_days ?? p.base;
+  return Math.min(days, p.cap) * DAY;
 }
 
 export function isDue(ep, now = Date.now()) {
   if (ep.status === "reverify" || ep.status === "disabled") return false;
   if (ep.backoff_until && now < ep.backoff_until) return false;
-  return now >= (ep.last_polled_at || 0) + (TIERS[ep.poll_tier] || TIERS.B) * 86400_000;
+  if (ep.stop_host_until && now < ep.stop_host_until) return false;
+  return now >= (ep.last_polled_at || 0) + currentIntervalMs(ep);
 }
 
-/** Plan one cron tick: pick due endpoints, shard them so no host repeats in a shard. */
+/** Plan one cron tick: due endpoints, sharded so no host repeats in a shard. */
 export function planShards(endpoints, { shardSize = 25 } = {}) {
-  const due = endpoints.filter(ep => isDue(ep));
-  const shards = [];
-  const hostInShard = [];
-  for (const ep of due.sort((a, b) => (a.last_polled_at || 0) - (b.last_polled_at || 0))) {
+  const due = endpoints.filter(ep => isDue(ep)).sort((a, b) => (a.last_polled_at || 0) - (b.last_polled_at || 0));
+  const shards = [], hosts = [];
+  for (const ep of due) {
     let placed = false;
     for (let i = 0; i < shards.length; i++) {
-      if (shards[i].length < shardSize && !hostInShard[i].has(ep.host)) {
-        shards[i].push(ep); hostInShard[i].add(ep.host); placed = true; break;
-      }
+      if (shards[i].length < shardSize && !hosts[i].has(ep.host)) { shards[i].push(ep); hosts[i].add(ep.host); placed = true; break; }
     }
-    if (!placed) { shards.push([ep]); hostInShard.push(new Set([ep.host])); }
+    if (!placed) { shards.push([ep]); hosts.push(new Set([ep.host])); }
   }
   return shards;
 }
 
-export function adaptTier(ep, now = Date.now()) {
-  const changed30 = ep.last_changed_at && now - ep.last_changed_at < 30 * 86400_000;
-  const silent90 = !ep.last_changed_at || now - ep.last_changed_at > 90 * 86400_000;
-  if (changed30 && ep.poll_tier !== "A") return "A";
-  if (silent90 && ep.poll_tier === "A") return "B";
-  if (silent90 && ep.poll_tier === "B" && ep.silent_polls >= 10) return "C";
-  return ep.poll_tier;
+function jitter(ms) { return ms * (0.9 + Math.random() * 0.2); }
+
+/** Silence: grow the interval exponentially (called after an unchanged poll). */
+export function growInterval(ep) {
+  const p = params(ep);
+  ep.silent_streak = (ep.silent_streak || 0) + 1;
+  ep.interval_days = Math.min(p.cap, p.base * FACTOR ** ep.silent_streak);
+  ep.next_interval_ms = jitter(currentIntervalMs(ep));
+}
+
+/** Change detected: reset to base cadence. */
+export function resetInterval(ep) {
+  const p = params(ep);
+  ep.silent_streak = 0;
+  ep.interval_days = p.base;
+  ep.next_interval_ms = jitter(currentIntervalMs(ep));
 }
 
 async function sha256(text) {
@@ -68,14 +92,10 @@ async function sha256(text) {
   return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2, "0")).join("");
 }
 
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-
 /**
- * Poll one endpoint. `io` injects storage so this stays testable:
- *   io.getRobots(origin) -> rules[]   ( robotsAllow() lives in index.js logic;
- *                                       here we accept io.robotsAllow(url) )
- *   io.saveNotice(notice), io.saveEndpointState(ep)
- * Returns a result record; never throws for HTTP-level failures.
+ * Poll one endpoint. `io` injects storage & robots:
+ *   io.robotsAllow(url) -> bool, io.saveNotice(n), io.saveEndpointState(ep)
+ * parseListing(html, url) -> notices[] (from index.js / framework adapters)
  */
 export async function pollEndpoint(env, ep, io, parseListing) {
   const now = Date.now();
@@ -90,35 +110,46 @@ export async function pollEndpoint(env, ep, io, parseListing) {
 
   let res;
   try { res = await fetch(ep.url, { headers }); }
-  catch (e) { return backoff(ep, base, `network:${e.message}`); }
+  catch (e) { return failure(ep, io, base, `network:${e.message}`); }
 
-  if (res.status === 304) { ep.last_polled_at = now; ep.silent_polls = (ep.silent_polls || 0) + 1; ep.poll_tier = adaptTier(ep, now); await io.saveEndpointState(ep); return { ...base, unchanged: "304" }; }
-  if (res.status === 403 || res.status === 429) { ep.stop_host_until = now + 86400_000; await io.saveEndpointState(ep); return { ...base, stop_host: res.status }; }
-  if (res.status >= 400) return backoff(ep, base, `http-${res.status}`);
+  if (res.status === 304) {
+    ep.last_polled_at = now; growInterval(ep); await io.saveEndpointState(ep);
+    return { ...base, unchanged: "304", next_in_days: (currentIntervalMs(ep) / DAY).toFixed(1) };
+  }
+  if (res.status === 403 || res.status === 429) {
+    ep.stop_host_until = now + DAY; ep.last_polled_at = now; await io.saveEndpointState(ep);
+    return { ...base, stop_host: res.status };
+  }
+  if (res.status >= 400) return failure(ep, io, base, `http-${res.status}`);
 
   const body = await res.text();
   const hash = await sha256(body);
   ep.etag = res.headers.get("etag") || ep.etag;
   ep.last_modified = res.headers.get("last-modified") || ep.last_modified;
   ep.last_polled_at = now;
-  if (hash === ep.body_hash) { ep.silent_polls = (ep.silent_polls || 0) + 1; ep.poll_tier = adaptTier(ep, now); await io.saveEndpointState(ep); return { ...base, unchanged: "hash" }; }
+  if (hash === ep.body_hash) {
+    growInterval(ep); await io.saveEndpointState(ep);
+    return { ...base, unchanged: "hash", next_in_days: (currentIntervalMs(ep) / DAY).toFixed(1) };
+  }
 
-  ep.body_hash = hash; ep.last_changed_at = now; ep.silent_polls = 0; ep.failures = 0; ep.backoff_until = 0;
-  ep.poll_tier = adaptTier(ep, now);
+  ep.body_hash = hash; ep.last_changed_at = now; ep.failures = 0; ep.backoff_until = 0;
+  resetInterval(ep);
   const notices = parseListing ? await parseListing(body, ep.url) : [];
-  // Attribute each notice to the objects registered on this endpoint by issuer name.
-  const attributed = notices.map(n => ({ ...n, endpoint_id: ep.endpoint_id, objects: (ep.object_names || []).filter(name => !n.issuer || n.issuer.includes(name) || name.includes(n.issuer)) }));
+  const attributed = notices.map(n => ({
+    ...n, endpoint_id: ep.endpoint_id,
+    objects: (ep.object_names || []).filter(name => !n.issuer || n.issuer.includes(name) || name.includes(n.issuer)),
+  }));
   for (const n of attributed) await io.saveNotice(n);
   await io.saveEndpointState(ep);
   return { ...base, changed: true, notices: attributed.length };
 }
 
-async function backoff(ep, base, why) {
+async function failure(ep, io, base, why) {
   const now = Date.now();
   ep.failures = (ep.failures || 0) + 1;
-  const steps = [1, 3, 7];
-  if (ep.failures > steps.length) { ep.status = "reverify"; }
-  else ep.backoff_until = now + steps[ep.failures - 1] * 86400_000;
   ep.last_error = why; ep.last_polled_at = now;
+  if (ep.failures > 3) ep.status = "reverify"; // 1d, 2d, 4d backoff exhausted -> find the new page
+  else ep.backoff_until = now + (2 ** (ep.failures - 1)) * DAY;
+  await io.saveEndpointState(ep);
   return { ...base, error: why, failures: ep.failures, status: ep.status || "backoff" };
 }
