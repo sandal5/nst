@@ -17,7 +17,7 @@ rows=list(csv.DictReader(open("data/master_source_list.csv",encoding="utf-8-sig"
 for i,r in enumerate(rows,1):
     objects.append({"object_id":f"OBJ-K{i:04d}","org_name":r["org_name"],"prefecture":r["prefecture"],
       "level":r["level"],"official_domain":r["official_domain"],
-      "candidate_endpoint_url":r["source_url_kkj"] or (("https://"+r["official_domain"]+"/") if r["official_domain"] else ""),
+      "candidate_endpoint_url":(r["daily_collection_target"] if r["daily_collection_target"].startswith("http") else (r["source_url_kkj"] or (("https://"+r["official_domain"]+"/") if r["official_domain"] else ""))),
       "framework":r["framework_guess_by_url"],"source":("kkj (one-time enumeration)" if not r["in_kkj"].startswith("no") else "supplement (one-time cross-check)")})
 dir2_path="data/dir2_objects.csv"
 n_dir2=0
