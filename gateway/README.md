@@ -20,13 +20,25 @@ robots 先行、单站限速、署名 UA 等礼貌规则仍由调用端执行，
 - `status`、`final_url`（跳转后终点）、`content_type`、`etag`、`last_modified`
 - `body_base64`：响应体（上限 8 MB，兼容 PDF 等二进制详情页）
 
-## 部署
+## 部署（推荐：GitHub 绑定，自动 CI/CD）
+
+不依赖任何本地 Cloudflare 环境：在 Cloudflare 控制台把本仓库绑定到 Worker，push 到 main 即自动构建部署，构建记录在 Cloudflare 控制台与 GitHub checks 里都可见。
+
+一次性设置（仓库所有者在 Cloudflare 控制台完成）：
+
+1. Workers & Pages → Create / Import → 连接 GitHub，选择本仓库。
+2. Root directory 填 `gateway`，部署命令用默认的 `npx wrangler deploy`。
+3. Worker 的 Settings → Variables and Secrets 里加 Secret：`GATEWAY_KEY`（值自定，调用端本地配置持有，不进仓库）。
+
+之后改 `gateway/` 或白名单后 push 即可自动上线。
+
+本地部署（备选）：
 
 ```bash
 cd gateway
-npx wrangler login          # 一次性，项目所有者本人登录
+npx wrangler login
 npx wrangler secret put GATEWAY_KEY
 npx wrangler deploy
 ```
 
-白名单更新：注册表域名清单变化后重跑 `python3 scripts/gen_allowlist.py` 并重新 deploy。
+白名单更新：注册表域名清单变化后重跑 `python3 scripts/gen_allowlist.py` 并 push（绑定部署会自动上线）。
