@@ -1,0 +1,37 @@
+name = "nst"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+workers_dev = true
+
+# Daily collection: 23:00 UTC = 08:00 JST next day.
+# One cron run does NOT fetch all sources in one invocation (Workers
+# subrequest/CPU limits): it enqueues one Queue message per verified
+# source shard (prefecture), and consumer invocations collect 1 shard each.
+[triggers]
+crons = ["0 23 * * *"]
+
+[vars]
+COLLECTOR_UA = "nst-collector/0.1 (+https://github.com/sandal5/nst)"
+MIN_INTERVAL_MS_PER_HOST = "2000"
+# Only sources whose terms_status is verified in the source list are collected.
+COLLECT_ONLY_VERIFIED = "true"
+
+# --- Bindings: fill in after `wrangler kv namespace create` / `wrangler d1 create` ---
+# [[kv_namespaces]]
+# binding = "KV"
+# id = "<kv-id>"
+#
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "nst"
+# database_id = "<d1-id>"
+#
+# [[queues.producers]]
+# binding = "JOBS"
+# queue = "nst-collect"
+#
+# [[queues.consumers]]
+# queue = "nst-collect"
+# max_batch_size = 1
+#
+# Secrets (never commit):  wrangler secret put ADMIN_TOKEN

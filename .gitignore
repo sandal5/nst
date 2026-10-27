@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.log
+data/kkj_cal1.html
+data/batches/
+data/*_partial.csv
+worker/node_modules/
+.wrangler/
+.DS_Store
