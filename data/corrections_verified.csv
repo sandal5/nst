@@ -3,4 +3,4 @@ prefecture,org_name,old_url_in_kkj,new_official_url_found,evidence,framework
 東京都,東京都 (電子調達システム),http://www.e-procurement.metro.tokyo.jp/index.jsp,https://www.e-procurement.metro.tokyo.lg.jp/,東京都公式ポータル My TOKYO の「入札・契約」案内および水道局公式ページの Tender Information Service 案内 (ドメインが .lg.jp 化),電子調達システム型
 神奈川県,神奈川県 (かながわ電子入札共同システム),http://nyusatsu.e-kanagawa.lg.jp/,https://nyusatsu.e-kanagawa.lg.jp/,KKJ掲載URLのhttps化が現行入口 (要・実地確認),電子入札共同システム型
 全国,各府省 (警察庁等の公告),調達ポータル案内URLとして公告PDFに旧表記 www.p-portal.go.jp / pportal.go.jp が混在,https://www.p-portal.go.jp/pps-web-biz/UAA01/OAA0101,警察庁公式公告PDF (npa.go.jp) が調達ポータルURLを案内,電子調達システム型
-島根県,島根県＋県内市町村 (共同利用),機関別に分散,島根県電子調達共同利用システム ポータル (電子入札システム／入札情報サービスPPI／資格申請システム),島根県電子調達共同利用システムの公式説明 (NJSS掲載の公告抜粋経由で確認),共同利用システム型 (1入口で県＋市町村をカバー)
+島根県,島根県＋県内市町村 (共同利用),機関別に分散,島根県電子調達共同利用システム ポータル (電子入札システム／入札情報サービスPPI／資格申請システム),公式ポータル https://choutatsuweb.pref.shimane.lg.jp/portal/ 及び参加自治体の公式手引きで確認,共同利用システム型 (1入口で県＋市町村をカバー)
