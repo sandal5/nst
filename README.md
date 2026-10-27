@@ -47,8 +47,8 @@
 
 | 文件 | 内容 | 规模 |
 |---|---|---|
-| [`data/master_source_list.csv`](data/master_source_list.csv) | 源头主清单：都道府县 / 层级（国・独法等・都道府县・市区町村）/ 机关名 / 所属省厅 / KKJ 掲載 URL / 官方域名 / 框架初判 / 验证状态 | **3,966 行**（KKJ 目录 3,959 + 另一目录源上位机关交叉补充 + 调达门户等共通系统） |
-| [`data/domains.csv`](data/domains.csv) / [`data/domains.txt`](data/domains.txt) | 域名名单：域名、类型（go.jp / lg.jp / ac.jp 等）、该域名下 URL 数与机关数、示例机关 | **2,566 个唯一域名**（对应 3,448 个唯一 URL） |
+| [`data/master_source_list.csv`](data/master_source_list.csv) | 源头主清单：都道府县 / 层级（国・独法等・都道府县・市区町村）/ 机关名 / 所属省厅 / KKJ 掲載 URL / 官方域名 / 框架初判 / 验证状态 | **3,971 行**（KKJ 目录 3,959 + 交叉补充 5 + 调达门户等共通系统 2 + 补充链接集缺口补入 5） |
+| [`data/domains.csv`](data/domains.csv) / [`data/domains.txt`](data/domains.txt) | 域名名单：域名、类型（go.jp / lg.jp / ac.jp 等）、该域名下 URL 数与机关数、示例机关 | **2,571 个唯一域名**（对应 3,448 个唯一 URL，另有 5 个缺口补入域名） |
 | [`data/corrections_verified.csv`](data/corrections_verified.csv) | 已核实的「旧链接失效 → 官方现行页面」订正记录（例：大阪府旧 `pref.osaka.jp` → 現行電子契約システム） | 持续更新 |
 
 覆盖概览：47 都道府县齐全；市区町村 1,737 行；国・独立行政法人等 2,160 行。域名构成：go.jp 486、lg.jp 704、ac.jp 224、其他 .jp 等 1,148。
@@ -96,12 +96,10 @@ Cron (每日 08:00 JST) ──► 按都道府县分片 ──► Queue（每片
 
 欢迎协作者认领一个都道府县：沿该县机关官网把 P6 行逐条定位到真正的入札公告页，回填 `verified_bidding_url`、框架类型与该站规约状态（`terms_status`），并附官方依据链接。规范见 [CONTRIBUTING.md](CONTRIBUTING.md)。**红线：不要提交对 kkj.go.jp 的任何自动化抓取代码，也不要提交针对任何商业聚合站的自动化抓取代码或其站内数据的批量复制。**
 
-本项目的调研与采集方法已提炼为 agent skill：[skills/nst_research/](skills/nst_research/)（SKILL.md，按语义化版本迭代，变更见其 CHANGELOG.md）。让 agent 参与本项目工作前，先让它读这份 skill。
-
 ## 路线图 / Roadmap
 
 - [x] 合规调研与白帽规则定版（docs/01）
-- [x] 源头主清单 v1（3,966 行）与域名名单（2,566）
+- [x] 源头主清单 v1（3,971 行）与域名名单（2,571）
 - [x] 框架分类 v1（P1–P7）与 Worker 骨架
 - [ ] 全量 URL 分批验证（14 批）并发布验证结果
 - [ ] 47 都道府县级源头全部回填现行公告页（P6 清零到县级）
