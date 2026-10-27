@@ -1,0 +1,8 @@
+name = "nst-fetch-gateway"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+workers_dev = true
+
+# Before first deploy, set the shared secret:
+#   npx wrangler secret put GATEWAY_KEY
+# The calling clients send it as the X-Gateway-Key header.
