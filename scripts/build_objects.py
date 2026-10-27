@@ -5,7 +5,7 @@ directories). Endpoints = the actual URLs to poll. Many objects share one
 endpoint (a ministry procurement page, a prefectural joint e-procurement
 system, a parent org page) — polling is per-endpoint, never per-object.
 Sources: data/master_source_list.csv (KKJ-derived, 3,966 rows incl. 2 central
-systems) and data/nsearch_objects.csv (when the one-time nsearch enumeration
+systems) and data/dir2_objects.csv (when the one-time dir2 enumeration
 lands: columns org_name,prefecture,official_url).
 """
 import csv, json, os
@@ -19,15 +19,15 @@ for i,r in enumerate(rows,1):
       "level":r["level"],"official_domain":r["official_domain"],
       "candidate_endpoint_url":r["source_url_kkj"] or (("https://"+r["official_domain"]+"/") if r["official_domain"] else ""),
       "framework":r["framework_guess_by_url"],"source":"kkj (one-time enumeration)"})
-nsr_path="data/nsearch_objects.csv"
-n_nsr=0
-if os.path.exists(nsr_path):
-    for j,r in enumerate(csv.DictReader(open(nsr_path,encoding="utf-8-sig")),1):
-        n_nsr+=1
-        objects.append({"object_id":f"OBJ-N{j:05d}","org_name":r.get("org_name",""),"prefecture":r.get("prefecture",""),
+dir2_path="data/dir2_objects.csv"
+n_dir2=0
+if os.path.exists(dir2_path):
+    for j,r in enumerate(csv.DictReader(open(dir2_path,encoding="utf-8-sig")),1):
+        n_dir2+=1
+        objects.append({"object_id":f"OBJ-D{j:05d}","org_name":r.get("org_name",""),"prefecture":r.get("prefecture",""),
           "level":"","official_domain":urlparse(r.get("official_url","")).netloc if r.get("official_url") else "",
-          "candidate_endpoint_url":r.get("official_url",""),"framework":"","source":"nsearch (one-time enumeration)"})
-print("objects:", len(objects), "(nsearch included:", n_nsr, ")")
+          "candidate_endpoint_url":r.get("official_url",""),"framework":"","source":"dir2 (one-time enumeration)"})
+print("objects:", len(objects), "(dir2 included:", n_dir2, ")")
 # endpoints: group by candidate URL
 by_url=defaultdict(list)
 for o in objects:

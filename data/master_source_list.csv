@@ -1,4 +1,4 @@
-﻿prefecture,level,org_name,group_ministry,source_url_kkj,official_domain,framework_guess_by_url,in_kkj,in_nsearch_top,verification_status,daily_collection_target,source_note
+﻿prefecture,level,org_name,group_ministry,source_url_kkj,official_domain,framework_guess_by_url,in_kkj,in_dir2_top,verification_status,daily_collection_target,source_note
 北海道,国・独立行政法人等,人事院北海道事務局,人事院,https://www.jinji.go.jp/hokaido/seihutyotatsu.html,www.jinji.go.jp,P6 機関トップ/汎用ページ型 (要・サイト内探索),yes,,未検証 (v1はKKJ掲載URLをそのまま収録),このURL自体ではなく、検証後に確定する公式の入札公告一覧/電子調達システム,KKJ 発注機関へのリンク集 (手動閲覧で参照; KKJ自体はrobots Disallow:/ のため自動収集対象外)
 北海道,国・独立行政法人等,北海道事務所,公正取引委員会,https://www.jftc.go.jp/soshiki/tyoutatsu/index.html,www.jftc.go.jp,P2 調達情報型 (chotatsuパス),yes,,未検証 (v1はKKJ掲載URLをそのまま収録),このURL自体ではなく、検証後に確定する公式の入札公告一覧/電子調達システム,KKJ 発注機関へのリンク集 (手動閲覧で参照; KKJ自体はrobots Disallow:/ のため自動収集対象外)
 北海道,国・独立行政法人等,北海道警察情報通信部,警察庁,https://www.police.pref.hokkaido.lg.jp/joutuu/johotusin/nyusatu-kokuji/nyusatu-kokuji.html,www.police.pref.hokkaido.lg.jp,P1 入札情報一覧型 (nyusatsuパス),yes,,未検証 (v1はKKJ掲載URLをそのまま収録),このURL自体ではなく、検証後に確定する公式の入札公告一覧/電子調達システム,KKJ 発注機関へのリンク集 (手動閲覧で参照; KKJ自体はrobots Disallow:/ のため自動収集対象外)
@@ -3958,10 +3958,10 @@
 沖縄県,市区町村,伊平屋村,独立行政法人等,http://www.vill.iheya.okinawa.jp/index.jsp,www.vill.iheya.okinawa.jp,P6 機関トップ/汎用ページ型 (要・サイト内探索),yes,,未検証 (v1はKKJ掲載URLをそのまま収録),このURL自体ではなく、検証後に確定する公式の入札公告一覧/電子調達システム,KKJ 発注機関へのリンク集 (手動閲覧で参照; KKJ自体はrobots Disallow:/ のため自動収集対象外)
 沖縄県,市区町村,伊是名村,独立行政法人等,https://vill.izena.okinawa.jp/,vill.izena.okinawa.jp,P6 機関トップ/汎用ページ型 (要・サイト内探索),yes,,未検証 (v1はKKJ掲載URLをそのまま収録),このURL自体ではなく、検証後に確定する公式の入札公告一覧/電子調達システム,KKJ 発注機関へのリンク集 (手動閲覧で参照; KKJ自体はrobots Disallow:/ のため自動収集対象外)
 沖縄県,市区町村,多良間村,独立行政法人等,http://www.vill.tarama.okinawa.jp/?cat=108,www.vill.tarama.okinawa.jp,P6 機関トップ/汎用ページ型 (要・サイト内探索),yes,,未検証 (v1はKKJ掲載URLをそのまま収録),このURL自体ではなく、検証後に確定する公式の入札公告一覧/電子調達システム,KKJ 発注機関へのリンク集 (手動閲覧で参照; KKJ自体はrobots Disallow:/ のため自動収集対象外)
-東京都,都道府県,東京都,,,www.metro.tokyo.lg.jp,P6 機関トップ (nsearch掲載の公式トップ),no (同一ドメインなし),yes,未検証,公式トップから入札・契約カテゴリを辿って確定する,nsearch 発注機関一覧 (ブラウザで手動閲覧した上位機関のみ; nsearch規約で自動収集禁止のため一括取得はしない). URLは機関公式トップ
-神奈川県,都道府県,神奈川県,,,www.pref.kanagawa.jp,P6 機関トップ (nsearch掲載の公式トップ),no (同一ドメインなし),yes,未検証,公式トップから入札・契約カテゴリを辿って確定する,nsearch 発注機関一覧 (ブラウザで手動閲覧した上位機関のみ; nsearch規約で自動収集禁止のため一括取得はしない). URLは機関公式トップ
-京都府,市区町村,京都市,,,www.city.kyoto.lg.jp,P6 機関トップ (nsearch掲載の公式トップ),no (同一ドメインなし),yes,未検証,公式トップから入札・契約カテゴリを辿って確定する,nsearch 発注機関一覧 (ブラウザで手動閲覧した上位機関のみ; nsearch規約で自動収集禁止のため一括取得はしない). URLは機関公式トップ
-大阪府,都道府県,大阪府,,,www.pref.osaka.lg.jp,P6 機関トップ (nsearch掲載の公式トップ),no (同一ドメインなし),yes,未検証,公式トップから入札・契約カテゴリを辿って確定する,nsearch 発注機関一覧 (ブラウザで手動閲覧した上位機関のみ; nsearch規約で自動収集禁止のため一括取得はしない). URLは機関公式トップ
-神奈川県,市区町村,横浜市,,,www.city.yokohama.lg.jp,P6 機関トップ (nsearch掲載の公式トップ),no (同一ドメインなし),yes,未検証,公式トップから入札・契約カテゴリを辿って確定する,nsearch 発注機関一覧 (ブラウザで手動閲覧した上位機関のみ; nsearch規約で自動収集禁止のため一括取得はしない). URLは機関公式トップ
+東京都,都道府県,東京都,,,www.metro.tokyo.lg.jp,P6 機関トップ (dir2掲載の公式トップ),no (同一ドメインなし),yes,未検証,公式トップから入札・契約カテゴリを辿って確定する,dir2 発注機関一覧 (ブラウザで手動閲覧した上位機関のみ; dir2規約で自動収集禁止のため一括取得はしない). URLは機関公式トップ
+神奈川県,都道府県,神奈川県,,,www.pref.kanagawa.jp,P6 機関トップ (dir2掲載の公式トップ),no (同一ドメインなし),yes,未検証,公式トップから入札・契約カテゴリを辿って確定する,dir2 発注機関一覧 (ブラウザで手動閲覧した上位機関のみ; dir2規約で自動収集禁止のため一括取得はしない). URLは機関公式トップ
+京都府,市区町村,京都市,,,www.city.kyoto.lg.jp,P6 機関トップ (dir2掲載の公式トップ),no (同一ドメインなし),yes,未検証,公式トップから入札・契約カテゴリを辿って確定する,dir2 発注機関一覧 (ブラウザで手動閲覧した上位機関のみ; dir2規約で自動収集禁止のため一括取得はしない). URLは機関公式トップ
+大阪府,都道府県,大阪府,,,www.pref.osaka.lg.jp,P6 機関トップ (dir2掲載の公式トップ),no (同一ドメインなし),yes,未検証,公式トップから入札・契約カテゴリを辿って確定する,dir2 発注機関一覧 (ブラウザで手動閲覧した上位機関のみ; dir2規約で自動収集禁止のため一括取得はしない). URLは機関公式トップ
+神奈川県,市区町村,横浜市,,,www.city.yokohama.lg.jp,P6 機関トップ (dir2掲載の公式トップ),no (同一ドメインなし),yes,未検証,公式トップから入札・契約カテゴリを辿って確定する,dir2 発注機関一覧 (ブラウザで手動閲覧した上位機関のみ; dir2規約で自動収集禁止のため一括取得はしない). URLは機関公式トップ
 全国,国 (共通システム),調達ポータル / 政府電子調達システム (GEPS),デジタル庁・各府省共通,,www.p-portal.go.jp,P4 電子入札/電子調達システム型,,,公式公告文中で多数参照されることを確認 (検索結果経由),調達ポータルの調達案件検索 (利用規約を個別確認後に方法決定),各府省の入札公告PDFが一貫して案内する中央政府の公式入口. KKJの機関別リンクとは別枠の共通基盤として追加
 全国,国 (共通システム),政府電子調達システム ポータル (GEPS),各府省共通,,www.geps.go.jp,P4 電子入札/電子調達システム型,,,未検証,同上,GEPS案内サイト. 実案件検索は調達ポータル側

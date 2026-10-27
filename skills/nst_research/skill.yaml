@@ -1,0 +1,6 @@
+name: "nst_research"
+title: "nst 源头调研与采集方法"
+description: "全日本入札公告源头清单的调研、验证、回填与合规采集方法，含源头唯一原则、站内优先找现行页、指数退避轮询与本项目定版的协作方式，做 nst 项目工作时使用。"
+category: "Work and knowledge"
+include_in_prompt: false
+version: "0.2.0"

@@ -6,7 +6,7 @@
  *     is never fetched automatically; it is reported as manual-check.
  *  2. Terms first: only sources with terms_status = "verified" in the source
  *     list are collected. Aggregators that ban automated collection
- *     (kkj.go.jp robots Disallow:/, nsearch.jp terms) are NEVER targets —
+ *     (kkj.go.jp robots Disallow:/, the commercial directory's terms) are NEVER targets —
  *     collection goes directly to each issuer's official site.
  *  3. Polite: identifiable UA, >=2s per host, stop the host for the day on 403/429.
  *  4. Facts only: title / issuer / publish date / deadline / source URL.
