@@ -110,6 +110,7 @@ CSS = """
   .chip.ok { background: #e5f4ea; color: #1d7a3a; }
   .chip.ok.undoable { cursor: pointer; text-decoration: underline dotted; }
   .chip.re { background: #fdf0e2; color: #b3541e; }
+  .chip.retc { background: #e3ecfd; color: #2f6fed; }
   .notebox { flex: none; display: inline-flex; gap: 6px; }
   .notebox[hidden] { display: none; }
   .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
@@ -232,10 +233,11 @@ def build_tpl_pages(p_counts, n_templates, n_sampled):
 OBJ_SCRIPT = """
 <script>
 (function () {
-  var KEY = "nst-obj-check-v2", OLDKEY = "nst-obj-check-v1";
-  var st = {};
-  try { st = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { st = {}; }
-  function persist() { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} }
+  var LSKEY = "nst-obj-check-v2", OLDKEY = "nst-obj-check-v1";
+  var API = "/sandal/api/", TOK = "nst-check-2026";
+  var st = {}, server = false, ready = false;
+  function lsGet(k) { try { return JSON.parse(localStorage.getItem(k) || "{}"); } catch (e) { return {}; } }
+  function lsSet() { try { localStorage.setItem(LSKEY, JSON.stringify(st)); } catch (e) {} }
   function now() { return new Date().toISOString(); }
   function fmt(iso) {
     if (!iso) return "";
@@ -246,77 +248,166 @@ OBJ_SCRIPT = """
   var rows = Array.prototype.slice.call(document.querySelectorAll(".row[data-k]"));
   var byKey = {};
   rows.forEach(function (r) { (byKey[r.getAttribute("data-k")] = byKey[r.getAttribute("data-k")] || []).push(r); });
-  // Rows returned from re-verification (panel B) supersede a stale re-flag.
-  document.querySelectorAll(".row[data-ret]").forEach(function (r) {
-    var k = r.getAttribute("data-k");
-    if (st[k] && st[k].s === "re") { delete st[k]; }
-  });
-  // Migrate v1 plain checkmarks to v2 "ok".
-  try {
-    var old = JSON.parse(localStorage.getItem(OLDKEY) || "{}");
+  // v1 checkmarks migrate to v2 ok (local only; server import handles the rest).
+  (function () {
+    var old = lsGet(OLDKEY);
+    var v2 = lsGet(LSKEY);
     rows.forEach(function (r) {
       var k1 = r.getAttribute("data-k1"), k = r.getAttribute("data-k");
-      if (k1 && old[k1] && !st[k]) st[k] = { s: "ok", at: now(), round: 1 };
+      if (k1 && old[k1] && !v2[k]) v2[k] = { s: "ok", at: now(), round: 1, v: 1 };
     });
-  } catch (e) {}
+    try { localStorage.setItem(LSKEY, JSON.stringify(v2)); } catch (e) {}
+  })();
+  function api(path, opts) {
+    return fetch(API + path, opts).then(function (r) {
+      if (!r.ok) throw new Error("api " + r.status);
+      return r.json();
+    });
+  }
+  function post(body) {
+    return api("mark", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Check-Token": TOK },
+      body: JSON.stringify(body)
+    });
+  }
+  function act(key, action, note, round) {
+    if (server) {
+      return post({ key: key, action: action, note: note || "", round: round || 1 }).then(function (d) {
+        st = d.marks || {}; renderAll();
+      }).catch(function () { alert("保存失败，请检查网络后重试。"); });
+    }
+    // Local fallback (identical transition rules; ack is always false).
+    var cur = st[key];
+    if (action === "undo") {
+      if (cur && (cur.s === "ok" || (cur.s === "re" && !cur.ack))) delete st[key];
+    } else if (action === "ok" || action === "re") {
+      if (!cur) st[key] = { s: action, note: note || "", at: now(), v: 1, round: round || 1 };
+      else if (cur.s === "ret" && action === "ok") delete st[key];
+      else if (cur.s === "ret" && action === "re") st[key] = { s: "re", note: note || "", at: now(), v: (cur.v || 1) + 1, round: (cur.round || 1) + 1 };
+    }
+    lsSet(); renderAll();
+    return Promise.resolve();
+  }
+  function actBulk(keys) {
+    if (!keys.length) return Promise.resolve();
+    if (server) {
+      return post({ keys: keys, action: "ok" }).then(function (d) { st = d.marks || {}; renderAll(); })
+        .catch(function () { alert("保存失败，请检查网络后重试。"); });
+    }
+    keys.forEach(function (k) {
+      var cur = st[k];
+      if (!cur) st[k] = { s: "ok", note: "", at: now(), v: 1, round: 1 };
+      else if (cur.s === "ret") delete st[k];
+    });
+    lsSet(); renderAll();
+    return Promise.resolve();
+  }
   function renderRow(r) {
     var k = r.getAttribute("data-k"), e = st[k];
-    var acts = r.querySelector(".acts"), chip = r.querySelector(".chip"), nb = r.querySelector(".notebox");
+    var acts = r.querySelector(".acts"), chip = r.querySelector(".chip"),
+        nb = r.querySelector(".notebox"), ret = r.querySelector(".retinfo");
     if (nb) nb.hidden = true;
-    if (!e) { if (acts) acts.hidden = false; if (chip) { chip.hidden = true; chip.textContent = ""; } return; }
+    if (ret) {
+      if (e && e.s === "ret") {
+        ret.hidden = false;
+        ret.innerHTML = esc(fmt(e.processed_at)) + " 已复核：" + esc(e.result || "") +
+          (e.new_target ? ' → <a href="' + esc(e.new_target) + '" target="_blank" rel="noopener">新公告页 ↗</a>' : "") +
+          (e.agent_note ? "｜" + esc(e.agent_note) : "");
+      } else { ret.hidden = true; ret.innerHTML = ""; }
+    }
+    if (!e) {
+      if (acts) acts.hidden = false;
+      if (chip) { chip.hidden = true; chip.textContent = ""; chip.className = "chip"; chip.title = ""; }
+      return;
+    }
     if (acts) acts.hidden = true;
     if (chip) {
       chip.hidden = false;
-      chip.className = "chip " + (e.s === "ok" ? "ok undoable" : "re");
-      chip.title = e.s === "ok" ? "误点可撤销：点击此标记取消「正确」" : "";
-      chip.textContent = e.s === "ok"
-        ? "\\u2713 正确 " + fmt(e.at)
-        : "\\u21bb 再确认 第" + (e.round || 1) + "轮 " + fmt(e.at) + (e.note ? "（" + e.note + "）" : "");
+      if (e.s === "ok") {
+        chip.className = "chip ok undoable";
+        chip.title = "误点可撤销：点击此标记取消「正确」";
+        chip.textContent = "\\u2713 正确 " + fmt(e.at);
+      } else if (e.s === "re") {
+        chip.className = "chip re" + (e.ack ? "" : " undoable");
+        chip.title = e.ack ? "已被接收处理，不可撤销" : "尚未被接收：点击可撤销";
+        chip.textContent = "\\u21bb 再确认 第" + (e.round || 1) + "轮 " + fmt(e.at) + (e.ack ? "（处理中）" : "（待接收）") + (e.note ? "：" + e.note : "");
+      } else if (e.s === "ret") {
+        chip.className = "chip retc";
+        chip.title = "";
+        chip.textContent = "\\u21a9 已复核返回（见页面上方「再核对」区）";
+      }
     }
   }
-  function renderAll() { rows.forEach(renderRow); renderQueue(); refreshCounts(); }
+  function renderQueue() {
+    var qa = document.getElementById("queueA"), qb = document.getElementById("queueB");
+    var reKeys = Object.keys(st).filter(function (k) { return st[k].s === "re"; });
+    var retKeys = Object.keys(st).filter(function (k) { return st[k].s === "ret"; });
+    var qc = document.getElementById("qaCount"); if (qc) qc.textContent = reKeys.length;
+    var bc = document.getElementById("qbCount"); if (bc) bc.textContent = retKeys.length;
+    if (qa) {
+      qa.innerHTML = reKeys.length ? reKeys.map(function (k) {
+        var e = st[k], r = (byKey[k] || [])[0];
+        var name = r ? r.getAttribute("data-name") : k;
+        var url = r ? r.getAttribute("data-target") : "";
+        return '<div class="qrow"><span class="org">' + esc(name) + "</span> " +
+          (url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener">现公告页 \\u2197</a>' : "") +
+          ' <span class="bd ng">第' + (e.round || 1) + "轮</span>" +
+          (e.ack ? ' <span class="bd ok">处理中</span>' : ' <span class="bd ng">待接收</span>') +
+          (e.note ? ' <span class="sub">备注：' + esc(e.note) + "</span>" : ' <span class="sub">未备注（默认按 skill 方式）</span>') +
+          ' <span class="sub">' + fmt(e.at) + "</span></div>";
+      }).join("") : '<div class="note">暂无。点某行「再确认」后会进入这里。</div>';
+    }
+    if (qb) {
+      qb.innerHTML = retKeys.length ? retKeys.map(function (k) {
+        var e = st[k], r = (byKey[k] || [])[0];
+        var name = r ? r.getAttribute("data-name") : k;
+        return '<div class="qrow"><span class="org">' + esc(name) + "</span> " +
+          '<span class="sub">' + esc(fmt(e.processed_at)) + " 复核：" + esc(e.result || "") + "</span> " +
+          (e.new_target ? '<a href="' + esc(e.new_target) + '" target="_blank" rel="noopener">新公告页 \\u2197</a> ' : "") +
+          (e.agent_note ? '<span class="sub">' + esc(e.agent_note) + "</span> " : "") +
+          '<span class="acts"><button type="button" class="bok" data-qk="' + esc(k) + '">正确</button>' +
+          '<button type="button" class="bre" data-qk="' + esc(k) + '">再确认</button></span></div>';
+      }).join("") : '<div class="note">暂无返回项。再确认队列被处理后，结果会出现在这里。</div>';
+      qb.querySelectorAll(".bok").forEach(function (b) {
+        b.addEventListener("click", function () { act(b.getAttribute("data-qk"), "ok"); });
+      });
+      qb.querySelectorAll(".bre").forEach(function (b) {
+        b.addEventListener("click", function () {
+          var note = window.prompt("备注核对方向（可空，不填则默认按 skill 方式）", "");
+          if (note === null) return;
+          act(b.getAttribute("data-qk"), "re", note);
+        });
+      });
+    }
+  }
   function refreshCounts() {
-    var ok = 0, re = 0;
-    Object.keys(st).forEach(function (k) { if (st[k].s === "ok") ok++; else if (st[k].s === "re") re++; });
+    var ok = 0;
+    Object.keys(st).forEach(function (k) { if (st[k].s === "ok") ok++; });
     var t = document.getElementById("chkTotal"); if (t) t.textContent = ok;
-    var q = document.getElementById("qaCount"); if (q) q.textContent = re;
     document.querySelectorAll("details[data-sec]").forEach(function (d) {
       var n = 0;
       d.querySelectorAll(".row[data-k]").forEach(function (r) { var e = st[r.getAttribute("data-k")]; if (e && e.s === "ok") n++; });
       var el = d.querySelector(":scope > summary .chkd"); if (el) el.textContent = n;
     });
   }
-  function renderQueue() {
-    var box = document.getElementById("queueA"); if (!box) return;
-    var items = Object.keys(st).filter(function (k) { return st[k].s === "re"; });
-    if (!items.length) { box.innerHTML = '<div class="note">暂无。点某行「再确认」后会进入这里。</div>'; return; }
-    box.innerHTML = items.map(function (k) {
-      var e = st[k], r = (byKey[k] || [])[0];
-      var name = r ? r.getAttribute("data-name") : k;
-      var url = r ? r.getAttribute("data-target") : "";
-      return '<div class="qrow"><span class="org">' + esc(name) + "</span> " +
-        (url ? '<a href="' + url + '" target="_blank" rel="noopener">现公告页 \\u2197</a>' : "") +
-        ' <span class="bd ng">第' + (e.round || 1) + "轮</span>" +
-        (e.note ? ' <span class="sub">备注：' + esc(e.note) + "</span>" : ' <span class="sub">未备注（默认按 skill 方式）</span>') +
-        ' <span class="sub">' + fmt(e.at) + "</span></div>";
-    }).join("");
-  }
+  function renderAll() { rows.forEach(renderRow); renderQueue(); refreshCounts(); }
   rows.forEach(function (r) {
     var k = r.getAttribute("data-k");
     var chipEl = r.querySelector(".chip");
     if (chipEl) chipEl.addEventListener("click", function (ev) {
       ev.preventDefault(); ev.stopPropagation();
-      if (st[k] && st[k].s === "ok" && confirm("撤销这条「正确」标记？该行将回到未核对状态。")) {
-        delete st[k]; persist(); renderAll();
-      }
+      var e = st[k];
+      if (!e) return;
+      if (e.s === "ok" && confirm("撤销这条「正确」标记？该行将回到未核对状态。")) act(k, "undo");
+      else if (e.s === "re" && !e.ack && confirm("撤销这条「再确认」？它还没有被接收处理。")) act(k, "undo");
+      else if (e.s === "re" && e.ack) alert("这条已被接收、正在处理中，不能撤销；处理结果会回到「再核对」区由你终判。");
     });
     var bok = r.querySelector(".bok"), bre = r.querySelector(".bre"),
         nb = r.querySelector(".notebox"), bin = r.querySelector(".notein"), bc = r.querySelector(".bnote");
     if (bok) bok.addEventListener("click", function (ev) {
       ev.preventDefault(); ev.stopPropagation();
-      if (st[k]) return;
-      st[k] = { s: "ok", at: now(), round: parseInt(r.getAttribute("data-round") || "1", 10) };
-      persist(); renderAll();
+      if (!st[k]) act(k, "ok", "", parseInt(r.getAttribute("data-round") || "1", 10));
     });
     if (bre) bre.addEventListener("click", function (ev) {
       ev.preventDefault(); ev.stopPropagation();
@@ -325,21 +416,26 @@ OBJ_SCRIPT = """
     });
     if (bc) bc.addEventListener("click", function (ev) {
       ev.preventDefault(); ev.stopPropagation();
-      if (st[k]) return;
-      st[k] = { s: "re", at: now(), note: bin ? bin.value.trim() : "", round: parseInt(r.getAttribute("data-round") || "1", 10) };
-      persist(); renderAll();
+      if (!st[k]) act(k, "re", bin ? bin.value.trim() : "", parseInt(r.getAttribute("data-round") || "1", 10));
     });
   });
   document.querySelectorAll(".bbatch").forEach(function (b) {
     b.addEventListener("click", function (ev) {
       ev.preventDefault(); ev.stopPropagation();
+      if (b.getAttribute("data-batch") === "ret") {
+        var rks = Object.keys(st).filter(function (k) { return st[k].s === "ret"; });
+        if (!rks.length) { alert("再核对区现在是空的。"); return; }
+        if (!confirm("把再核对区的 " + rks.length + " 件全部标为「正确」并关闭？")) return;
+        actBulk(rks);
+        return;
+      }
       var d = b.closest("details"); if (!d) return;
-      var targets = Array.prototype.slice.call(d.querySelectorAll(".row[data-k]")).filter(function (r) { return !st[r.getAttribute("data-k")]; });
+      var targets = Array.prototype.slice.call(d.querySelectorAll(".row[data-k]"))
+        .filter(function (r) { return !st[r.getAttribute("data-k")]; })
+        .map(function (r) { return r.getAttribute("data-k"); });
       if (!targets.length) { alert("本节没有未标记的行了。"); return; }
-      if (!confirm("把本节 " + targets.length + " 行未标记的全部标为「正确」？标记后不可撤销。")) return;
-      var t = now();
-      targets.forEach(function (r) { st[r.getAttribute("data-k")] = { s: "ok", at: t, round: parseInt(r.getAttribute("data-round") || "1", 10) }; });
-      persist(); renderAll();
+      if (!confirm("把本节 " + targets.length + " 行未标记的全部标为「正确」？（「正确」之后仍可逐行撤销）")) return;
+      actBulk(targets);
     });
   });
   var exp = document.getElementById("expA");
@@ -367,7 +463,29 @@ OBJ_SCRIPT = """
       if (any) d.open = true;
     });
   });
+  // Boot: server state first (marks sync across devices); local marks are
+  // imported once if the server has none of them, else local is fallback.
+  st = lsGet(LSKEY);
   renderAll();
+  api("state").then(function (d) {
+    server = true;
+    var local = lsGet(LSKEY);
+    var localKeys = Object.keys(local);
+    st = d.marks || {};
+    ready = true;
+    renderAll();
+    if (localKeys.length) {
+      return api("import", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "X-Check-Token": TOK },
+        body: JSON.stringify({ marks: local })
+      }).then(function (d2) {
+        st = d2.marks || st;
+        try { localStorage.removeItem(LSKEY); } catch (e) {}
+        renderAll();
+      });
+    }
+  }).catch(function () { server = false; ready = true; });
 })();
 </script>"""
 
@@ -410,19 +528,8 @@ def build_objects_page(master, open_items):
                     if dom else "")
             reason = REASON_LABELS.get(bucket_of.get((r["org_name"], r["prefecture"]), ""), ("未决", ""))[0]
             badge = f'<span class="bd ng">{html.escape(reason)}</span>'
-        ret = ""
-        ret_attr = ""
-        if ret_info:
-            ret_attr = ' data-ret="1"'
-            newt = (ret_info.get("new_target") or "").strip()
-            res = html.escape(ret_info.get("result") or "")
-            note = html.escape(ret_info.get("agent_note") or "")
-            changed = ""
-            if newt and newt != target:
-                changed = f' → <a href="{html.escape(newt, quote=True)}" target="_blank" rel="noopener">新公告页 ↗</a>'
-            ret = (f'<span class="retinfo">{html.escape(ret_info.get("processed_at") or "")} 处理：{res}{changed}'
-                   f'{"｜" + note if note else ""}</span>')
-        return (f'<div class="row" data-k="{key}" data-k1="{key1}" data-round="{round_no}"{ret_attr} '
+        ret = '<span class="retinfo" hidden></span>'
+        return (f'<div class="row" data-k="{key}" data-k1="{key1}" data-round="{round_no}" '
                 f'data-name="{html.escape(r["org_name"], quote=True)}" data-pref="{html.escape(r["prefecture"], quote=True)}" '
                 f'data-domain="{html.escape(dom, quote=True)}" data-target="{html.escape(target, quote=True)}">'
                 f'<span class="org">{name}</span>{link}{badge}{ret}'
@@ -505,31 +612,20 @@ def build_objects_page(master, open_items):
     total = len(master)
     confirmed = sum(1 for r in master if (r.get("verification_status") or "").startswith("検証済"))
 
-    # Returned (re-verified) items panel: server-rendered from
-    # output/checking/returned.csv, maintained by the re-check processing.
-    master_by_key = {}
-    for r in master:
-        master_by_key[(r["org_name"], r["prefecture"], (r.get("official_domain") or "").strip())] = r
-    ret_rows = ""
-    n_ret = 0
-    for rr in load_returned():
-        m = master_by_key.get((rr.get("org_name", ""), rr.get("prefecture", ""), (rr.get("official_domain") or "").strip()))
-        if not m:
-            continue
-        n_ret += 1
-        ret_rows += row_html(m, round_no=int(rr.get("round") or 1) + 1, ret_info=rr)
-    panel_b = (f'<details class="panel ret" data-sec><summary>再核对（已重新核对完返回，集中在这里确认）'
-               f'<span class="cnt">{n_ret} 件</span>'
-               f'<button type="button" class="bbatch">本批全部正确</button></summary>'
-               f'{ret_rows if ret_rows else "<div class=\"note\">暂无返回项。你导出的再确认队列被处理后，结果会出现在这里。</div>"}'
-               f'</details>')
+    # Returned (re-verified) items panel: rendered client-side from the
+    # check-state API (KV); see OBJ_SCRIPT renderQueue.
+    panel_b = ('<details class="panel ret" id="panelB"><summary>再核对（已重新核对完返回，集中在这里确认）'
+               '<span class="cnt"><span id="qbCount">0</span> 件</span>'
+               '<button type="button" class="bbatch" data-batch="ret">本批全部正确</button></summary>'
+               '<div id="queueB"></div>'
+               '</details>')
 
     body = ""
     body += (f'<details class="panel" open><summary>再确认队列（待重新核对）'
              f'<span class="cnt"><span id="qaCount">0</span> 件</span></summary>'
              f'<div id="queueA"></div>'
-             f'<div class="qfoot"><button type="button" id="expA">导出再确认队列（CSV）</button>'
-             f'<span class="sub">导出后把文件发给我即可。未备注的默认按 skill 方式核对：{DEFAULT_RECHECK_METHOD}。</span></div>'
+             f'<div class="qfoot"><button type="button" id="expA">导出再确认队列（CSV，备用）</button>'
+             f'<span class="sub">标记已实时同步到服务器，我会定期取回处理；CSV 导出保留作备用。未备注的默认按 skill 方式核对：{DEFAULT_RECHECK_METHOD}。</span></div>'
              f'</details>')
     body += panel_b
     body += section("国の機関・省庁（本省等）", grouped(ministries, lambda r: r.get("group_ministry") or "(未分类)"), ministries)
@@ -562,7 +658,7 @@ def build_objects_page(master, open_items):
     <span class="prog">已标正确 <b id="chkTotal">0</b> / {total:,}</span>
   </div>
   {body}
-  <div class="note">用法：逐行点「公告页」打开核对 → 对了点「正确」，存疑点「再确认」（可备注核对方向，不备注则默认：{DEFAULT_RECHECK_METHOD}；若备注本身是一个 URL，即视为你已找到的正确公告地址）。「正确」误点可撤销（点绿色标记条确认即可）；「再确认」点下即入队、不可反选。每层标题旁有「本节全部正确」可批量标记（只作用于未标记行）。标记都存在本浏览器里，每小时数据刷新不清；「再确认」的行汇总在页面顶部队列里，导出 CSV 发我处理，处理完的回到「再核对」区等你集中确认。目录源对象待去重核实后并入本清单。</div>
+  <div class="note">用法：逐行点「公告页」打开核对 → 对了点「正确」，存疑点「再确认」（可备注核对方向，不备注则默认：{DEFAULT_RECHECK_METHOD}；若备注本身是一个 URL，即视为你已找到的正确公告地址）。标记实时保存到服务器、多设备同步（连不上时暂存本浏览器）。撤销规则：「正确」随时可点标记条撤销；「再确认」在被接收前可撤销，被接收处理中则锁定，处理完回到「再核对」区由你终判。每层标题旁有「本节全部正确」可批量标记（只作用于未标记行）。目录源对象待去重核实后并入本清单。</div>
 </div>
 {OBJ_SCRIPT}
 </body>

@@ -91,6 +91,169 @@ function hostAllowed(hostname) {
   return ALLOWED_HOSTS.has(alt);
 }
 
+// ---------------------------------------------------------------------------
+// Manual-check state sync (owner's objects-page checking workflow).
+//
+// Marks live in a Cloudflare KV namespace (binding CHECK_KV) as ONE JSON
+// object under the key "marks_v1": { "<org|pref|domain>": mark }, where a
+// mark is { s: "ok" | "re" | "ret", note, at, v, round, ack?, result?,
+// new_target?, agent_note?, processed_at? }. Alignment is by (at, v):
+// every mutation bumps v and stamps at; the assistant pulls with the
+// gateway key, acks what it takes into processing (acked "re" marks lock),
+// and writes results back as "ret" marks for the owner's final judgement.
+//
+// If the CHECK_KV binding is absent the API answers 501 and the objects
+// page falls back to browser-local marks (CSV export) — nothing breaks.
+//
+// The write token below is NOT a secret (this repo is public); it only
+// stops casual drive-by bots. Real protection is procedural: marks are
+// leads, and every mark is verified before it can touch the registry.
+// ---------------------------------------------------------------------------
+const CHECK_TOKEN = "nst-check-2026";
+const MARKS_KEY = "marks_v1";
+
+async function loadMarks(env) {
+  try {
+    const raw = await env.CHECK_KV.get(MARKS_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch {
+    return {};
+  }
+}
+
+async function saveMarks(env, marks) {
+  await env.CHECK_KV.put(MARKS_KEY, JSON.stringify(marks));
+}
+
+function keyGuard(request, env) {
+  return env.GATEWAY_KEY && request.headers.get("X-Gateway-Key") === env.GATEWAY_KEY;
+}
+
+async function checkApi(request, env, action) {
+  if (!env.CHECK_KV) return json({ error: "kv_pending" }, 501);
+  const marks = await loadMarks(env);
+  if (action === "state") return json({ ok: true, marks });
+  if (action === "pull") {
+    if (!keyGuard(request, env)) return json({ error: "unauthorized" }, 401);
+    return json({ ok: true, marks });
+  }
+  let body = {};
+  try {
+    body = await request.json();
+  } catch {
+    return json({ error: "bad json" }, 400);
+  }
+  // Assistant-side operations (gateway key).
+  if (action === "ack") {
+    if (!keyGuard(request, env)) return json({ error: "unauthorized" }, 401);
+    const now = new Date().toISOString();
+    for (const k of body.keys || []) {
+      const m = marks[k];
+      if (m && m.s === "re" && !m.ack) {
+        m.ack = true;
+        m.ack_at = now;
+        m.v = (m.v || 1) + 1;
+      }
+    }
+    await saveMarks(env, marks);
+    return json({ ok: true, marks });
+  }
+  if (action === "return") {
+    if (!keyGuard(request, env)) return json({ error: "unauthorized" }, 401);
+    const m = marks[body.key];
+    if (!m) return json({ error: "no such mark" }, 404);
+    marks[body.key] = {
+      s: "ret",
+      note: m.note || "",
+      round: m.round || 1,
+      v: (m.v || 1) + 1,
+      at: m.at,
+      result: body.result || "",
+      new_target: body.new_target || "",
+      agent_note: body.agent_note || "",
+      processed_at: new Date().toISOString(),
+    };
+    await saveMarks(env, marks);
+    return json({ ok: true, marks });
+  }
+  // Owner-side operations (write token from the checking page).
+  if (request.headers.get("X-Check-Token") !== CHECK_TOKEN) {
+    return json({ error: "unauthorized" }, 401);
+  }
+  if (action === "import") {
+    const incoming = body.marks || {};
+    for (const [k, m] of Object.entries(incoming)) {
+      const cur = marks[k];
+      if (!cur || (m.at || "") > (cur.at || "")) {
+        marks[k] = {
+          s: m.s === "re" ? "re" : "ok",
+          note: m.note || "",
+          at: m.at || new Date().toISOString(),
+          v: m.v || 1,
+          round: m.round || 1,
+        };
+      }
+    }
+    await saveMarks(env, marks);
+    return json({ ok: true, marks });
+  }
+  if (action === "mark") {
+    const now = new Date().toISOString();
+    // Bulk "ok" (batch buttons): apply the ok transition to every key
+    // where it is allowed (unmarked -> ok, returned -> closed).
+    if (Array.isArray(body.keys)) {
+      for (const k of body.keys) {
+        const cur = marks[k];
+        if (!cur) {
+          marks[k] = { s: "ok", note: "", at: now, v: 1, round: 1 };
+        } else if (cur.s === "ret") {
+          delete marks[k];
+        }
+      }
+      await saveMarks(env, marks);
+      return json({ ok: true, marks });
+    }
+    const k = body.key;
+    if (!k) return json({ error: "missing key" }, 400);
+    const cur = marks[k];
+    if (body.action === "undo") {
+      if (!cur) return json({ ok: true, marks });
+      if (cur.s === "ok" || (cur.s === "re" && !cur.ack)) {
+        delete marks[k];
+      } else {
+        return json({ error: "locked", marks }, 409);
+      }
+    } else if (body.action === "ok" || body.action === "re") {
+      if (!cur) {
+        marks[k] = {
+          s: body.action,
+          note: body.note || "",
+          at: now,
+          v: 1,
+          round: body.round || 1,
+        };
+      } else if (cur.s === "ret" && body.action === "ok") {
+        delete marks[k]; // returned item judged correct: closed
+      } else if (cur.s === "ret" && body.action === "re") {
+        marks[k] = {
+          s: "re",
+          note: body.note || "",
+          at: now,
+          v: (cur.v || 1) + 1,
+          round: (cur.round || 1) + 1,
+        };
+      } else {
+        return json({ error: "already_marked", marks }, 409);
+      }
+    } else {
+      return json({ error: "bad action" }, 400);
+    }
+    await saveMarks(env, marks);
+    return json({ ok: true, marks });
+  }
+  return json({ error: "unknown action" }, 404);
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -130,6 +293,12 @@ export default {
       return htmlPage(TPL_PAGES[tplMatch[1]], {
         "x-robots-tag": "noindex, nofollow, noarchive",
       });
+    }
+    // Manual-check state API (see checkApi). Must precede the /sandal/
+    // catch-all redirect below.
+    const apiMatch = url.pathname.match(/^\/sandal\/api\/(state|mark|ack|return|pull|import)$/);
+    if (apiMatch) {
+      return checkApi(request, env, apiMatch[1]);
     }
     if (url.pathname.startsWith("/sandal/")) {
       return new Response(null, { status: 301, headers: { location: "/sandal" } });

@@ -3,6 +3,13 @@ main = "src/index.js"
 compatibility_date = "2025-01-01"
 workers_dev = true
 
+# Manual-check state store (objects-page checking workflow). Namespace
+# created by the account owner 2026-10-28; the id is an identifier, not a
+# credential.
+[[kv_namespaces]]
+binding = "CHECK_KV"
+id = "1a9b6a1a90054af29171e82cf897ee54"
+
 # Before first deploy, set the shared secret:
 #   npx wrangler secret put GATEWAY_KEY
 # The calling clients send it as the X-Gateway-Key header.
