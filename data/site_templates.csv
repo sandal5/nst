@@ -1088,7 +1088,7 @@ org_name,domain,list_url,p_class,list_structure,detail_pattern,pagination,detail
 檜原村,www.vill.hinohara.tokyo.jp,https://www.vill.hinohara.tokyo.jp/category/5-1-0-0-0-0-0-0-0-0.html,P6,evidence_only,,unknown,,recorded_fields; subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
 利島村,www.toshimamura.org,https://www.toshimamura.org/,P6,pdf_index,pdf_direct,none_detected,pdf,gateway_sample (2026-10-28); subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
 新島村,www.niijima.com,http://www.niijima.com/gyousei/nyuusatsu/index.html,P1,link_list,static_html,none_detected,html,gateway_sample
-三宅町,www.town.miyake.lg.jp,https://www.town.miyake.lg.jp/life/2/16/,P6,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28); subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
+三宅村,www.town.miyake.lg.jp,https://www.town.miyake.lg.jp/life/2/16/,P6,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28); subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
 御蔵島村,www.mikurasima.jp,https://www.vill.mikurasima.tokyo.jp/section/jigyosha/nyusatsu.html,P1,evidence_only,,unknown,,recorded_fields
 小笠原村,www.vill.ogasawara.tokyo.jp,https://www.vill.ogasawara.tokyo.jp/,P6,evidence_only,,unknown,,recorded_fields; subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
 神奈川県警察本部,www.police.pref.kanagawa.jp,https://www.police.pref.kanagawa.jp/tetsuzuki/nyusatsu_kobo/nyusatu_kekka.html,P1,ul_list,static_html,none_detected,mixed,gateway_sample (2026-10-28)

@@ -51,6 +51,13 @@ def collect_hosts():
                 h = host_of(r.get(col) or "")
                 if h:
                     hosts.add(h)
+    extra = os.path.join(JP, "data/allowlist_extra.txt")
+    if os.path.exists(extra):
+        with open(extra, encoding="utf-8") as f:
+            for line in f:
+                h = line.strip().lower()
+                if h and not h.startswith("#"):
+                    hosts.add(h)
     verify = os.path.join(JP, "data/verify_all.csv")
     if os.path.exists(verify):
         with open(verify, encoding="utf-8-sig") as f:

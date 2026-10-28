@@ -1,4 +1,4 @@
-﻿object_id,org_name,prefecture,level,official_domain,candidate_endpoint_url,framework,source
+object_id,org_name,prefecture,level,official_domain,candidate_endpoint_url,framework,source
 OBJ-K0001,人事院北海道事務局,北海道,国・独立行政法人等,www.jinji.go.jp,https://www.jinji.go.jp/hokaido/oshirase/seihutyotatsu.html,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
 OBJ-K0002,北海道事務所,北海道,国・独立行政法人等,www.jftc.go.jp,https://www.jftc.go.jp/soshiki/tyoutatsu/index.html,P2 調達情報型 (chotatsuパス),kkj (one-time enumeration)
 OBJ-K0003,北海道警察情報通信部,北海道,国・独立行政法人等,www.police.pref.hokkaido.lg.jp,https://www.police.pref.hokkaido.lg.jp/joutuu/johotusin/nyusatu-kokuji/nyusatu-kokuji.html,P1 入札情報一覧型 (nyusatsuパス),kkj (one-time enumeration)
@@ -1208,7 +1208,7 @@ OBJ-K1206,栄町,千葉県,市区町村,www.town.sakae.chiba.jp,http://www.town.
 OBJ-K1207,神崎町,千葉県,市区町村,www.town.kozaki.chiba.jp,https://www.town.kozaki.chiba.jp/business/nyusatsu/kokoku.html,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
 OBJ-K1208,多古町,千葉県,市区町村,www.town.tako.chiba.jp,https://www.town.tako.chiba.jp/category/kubun/tender/,P1 入札情報一覧型 (英語パス),kkj (one-time enumeration)
 OBJ-K1209,東庄町,千葉県,市区町村,www.town.tohnosho.chiba.jp,https://www.town.tohnosho.chiba.jp/shigoto_sangyo/nyusatsu_keiyaku/2214.html,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
-OBJ-K1210,大網白里町,千葉県,市区町村,www.city.oamishirasato.lg.jp,http://www.city.oamishirasato.lg.jp/category/66-0-0-0-0.html,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
+OBJ-K1210,大網白里市,千葉県,市区町村,www.city.oamishirasato.lg.jp,http://www.city.oamishirasato.lg.jp/category/66-0-0-0-0.html,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
 OBJ-K1211,九十九里町,千葉県,市区町村,www.town.kujukuri.chiba.jp,https://www.town.kujukuri.chiba.jp/category/5-2-0-0-0.html,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
 OBJ-K1212,芝山町,千葉県,市区町村,www.town.shibayama.lg.jp,https://www.town.shibayama.lg.jp/category/27-1-0-0-0-0-0-0-0-0.html,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
 OBJ-K1213,横芝光町,千葉県,市区町村,www.town.yokoshibahikari.chiba.jp,https://www.town.yokoshibahikari.chiba.jp/life/2/12/,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
@@ -1506,7 +1506,7 @@ OBJ-K1504,檜原村,東京都,市区町村,www.vill.hinohara.tokyo.jp,https://ww
 OBJ-K1505,利島村,東京都,市区町村,www.toshimamura.org,https://www.toshimamura.org/,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
 OBJ-K1506,新島村,東京都,市区町村,www.niijima.com,http://www.niijima.com/gyousei/nyuusatsu/index.html,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
 OBJ-K1507,神津島村,東京都,市区町村,vill.kouzushima.tokyo.jp,https://www.vill.kouzushima.tokyo.jp/notfound/,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
-OBJ-K1508,三宅町,東京都,市区町村,www.town.miyake.lg.jp,https://www.town.miyake.lg.jp/life/2/16/,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
+OBJ-K1508,三宅村,東京都,市区町村,www.town.miyake.lg.jp,https://www.town.miyake.lg.jp/life/2/16/,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
 OBJ-K1509,御蔵島村,東京都,市区町村,www.mikurasima.jp,https://www.vill.mikurasima.tokyo.jp/section/jigyosha/nyusatsu.html,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
 OBJ-K1510,青ヶ島村,東京都,市区町村,www.vill.aogashima.tokyo.jp,http://www.vill.aogashima.tokyo.jp/top.html,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
 OBJ-K1511,小笠原村,東京都,市区町村,www.vill.ogasawara.tokyo.jp,https://www.vill.ogasawara.tokyo.jp/,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
