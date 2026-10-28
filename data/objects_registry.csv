@@ -1,4 +1,4 @@
-object_id,org_name,prefecture,level,official_domain,candidate_endpoint_url,framework,source
+﻿object_id,org_name,prefecture,level,official_domain,candidate_endpoint_url,framework,source
 OBJ-K0001,人事院北海道事務局,北海道,国・独立行政法人等,www.jinji.go.jp,https://www.jinji.go.jp/hokaido/oshirase/seihutyotatsu.html,P6 機関トップ/汎用ページ型 (要・サイト内探索),kkj (one-time enumeration)
 OBJ-K0002,北海道事務所,北海道,国・独立行政法人等,www.jftc.go.jp,https://www.jftc.go.jp/soshiki/tyoutatsu/index.html,P2 調達情報型 (chotatsuパス),kkj (one-time enumeration)
 OBJ-K0003,北海道警察情報通信部,北海道,国・独立行政法人等,www.police.pref.hokkaido.lg.jp,https://www.police.pref.hokkaido.lg.jp/joutuu/johotusin/nyusatu-kokuji/nyusatu-kokuji.html,P1 入札情報一覧型 (nyusatsuパス),kkj (one-time enumeration)
@@ -3970,3 +3970,6 @@ OBJ-K3968,日本下水道事業団,全国,国・独立行政法人等,www.jswa.g
 OBJ-K3969,交通安全環境研究所,全国,国・独立行政法人等,www.ntsel.go.jp,https://www.ntsel.go.jp/chotatsu/list.html,P2 調達情報型,supplement (one-time cross-check)
 OBJ-K3970,市川市,千葉県,市区町村,www.city.ichikawa.lg.jp,https://www.city.ichikawa.lg.jp/life/sub/8/34/,P1 入札公告一覧型,supplement (one-time cross-check)
 OBJ-K3971,木更津市,千葉県,市区町村,www.city.kisarazu.lg.jp,https://www.city.kisarazu.lg.jp/shigoto_sangyo/nyusatsu_keiyaku_proposal/boshuchu/index.html,P1 入札公告一覧型,supplement (one-time cross-check)
+OBJ-K3972,銚子市,千葉県,市区町村,www.city.choshi.chiba.jp,https://www.city.choshi.chiba.jp/business/index0165.html,P4 電子入札/電子調達システム型,kkj (one-time enumeration)
+OBJ-K3973,館山市,千葉県,市区町村,www.city.tateyama.chiba.jp,https://www.city.tateyama.chiba.jp/kankei/page016137.html,P4 電子入札/電子調達システム型,kkj (one-time enumeration)
+OBJ-K3974,丹波市,兵庫県,市区町村,www.city.tamba.lg.jp,https://www.city.tamba.lg.jp/shigoto/nyusatsu/nyusatsu/10287.html,P4 電子入札/電子調達システム型,kkj (one-time enumeration)
