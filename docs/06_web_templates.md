@@ -1,16 +1,16 @@
 # 06 — Web テンプレート総覧（2026-10-27 网关轮 Phase D；2026-10-28 重采样更新）
 
-> 出典・前提：本ファイルは 2026-10-27 夜間网关轮（gateway run）Phase D の成果物 `output/web_template_summary.md` を docs/ に移したもの。配套データは `data/site_templates.csv`（3,005 行）。対象集合は「現行公告ページ確定済み」のオブジェクトで、(機関名, 一覧ページ URL) で重複を除いた 3,005 件を基準とする——主清单の行レベル census は現在 3,308 件で、差 303 件 = 同一機関・同一一覧ページを共有する兄弟行 254 件 + 集合凍結後に新規確定した 49 鍵（2026-10-28 復活 45 + 補充 4、未分類）。対账の詳細は merge ログ（output/day2/merge_log.md）参照。カバレッジ上の注意：当夜サンプル失敗の 1,170 件は 2026-10-28 白天に再サンプル済み——1,144 件が実サンプル分類に更新され、26 件が再び失敗し記録フィールド分類を日付注記付きで維持している。
+> 出典・前提：本ファイルは 2026-10-27 夜間网关轮（gateway run）Phase D の成果物 `output/web_template_summary.md` を docs/ に移したもの。配套データは `data/site_templates.csv`（3,054 行）。対象集合は「現行公告ページ確定済み」のオブジェクトで、(機関名, 一覧ページ URL) で重複を除いた 3,054 件を基準とする——主清单の行レベル census は現在 3,308 件で、差 254 件 = 全て同一機関・同一一覧ページを共有する兄弟行（集合凍結後に新規確定した 49 鍵——2026-10-28 復活 45 + 補充 4——は同日中に分類完了し本集合に編入済み）。対账の詳細は merge ログ（output/day2/merge_log.md）参照。カバレッジ上の注意：当夜サンプル失敗の 1,170 件は 2026-10-28 白天に再サンプル済み——1,144 件が実サンプル分類に更新され、26 件が再び失敗し記録フィールド分類を日付注記付きで維持している。
 
 # Web template summary — resolved source set (2026-10-27 night run)
 
-Companion data file: `data/site_templates.csv` (3,005 rows, one per resolved
+Companion data file: `data/site_templates.csv` (3,054 rows, one per resolved
 object). Classes follow `docs/02_classification.md` (P1–P7).
 
 ## Resolved set and coverage
 
 The classified set is every registry object with a confirmed current
-announcement page: 3,005 objects (2,804 already confirmed in the registry,
+announcement page: 3,054 objects (2,804 already confirmed in the registry,
 201 confirmed during this night's runs: approval queue 50 new keys, browser
 pass 41, connection-error recovery 36, Phase B crawls 71, verification
 crawls 3).
@@ -23,25 +23,27 @@ links).
 
 | classification basis | objects | share |
 |---|---|---|
-| gateway sample (live page parsed) | 2,417 | 80.4% |
+| gateway sample (live page parsed) | 2,465 | 80.7% |
 | tonight's crawl evidence | 300 | 10.0% |
 | sample fetch failed (incl. 2026-10-28 re-sample) → recorded fields | 26 | 0.9% |
 | recorded fields only (not sampled) | 240 | 8.0% |
 | sample skipped (robots) | 22 | 0.7% |
 
-**2026-10-28 update:** the 1,170 "sample failed" objects were re-sampled in daytime through the gateway (1,016 unique list URLs; `scripts/gw_day2_resample.py`). 990 URLs sampled successfully, 14 were skipped (robots), 12 failed again; 1,144 objects moved to live-sample classification and only 26 remain on recorded-fields classification, with a dated failure note in the evidence column. Live-sample coverage is now 2,417 of 3,005 objects (80.4%). Detail-pattern fields are empty for rows whose registry record carries no detail URL and whose sample showed no qualifying detail link — they were left blank rather than guessed.
+**2026-10-28 update:** the 1,170 "sample failed" objects were re-sampled in daytime through the gateway (1,016 unique list URLs; `scripts/gw_day2_resample.py`). 990 URLs sampled successfully, 14 were skipped (robots), 12 failed again; 1,144 objects moved to live-sample classification and only 26 remain on recorded-fields classification, with a dated failure note in the evidence column. Live-sample coverage is now 2,417 of 3,005 objects (80.4%).
+
+**2026-10-28 append:** the 49 keys confirmed after the set froze (45 connection-error recoveries + 4 supplementary) were classified the same day via gateway sampling (`output/day2/templates49.csv`): 48 live-sampled (P1 12, P2 1, P4 3, P5 7, P6 24, P7 1), and 1 （富山市） fell back to recorded fields (P1, evidence_only) because its redirect-target host was missing from the gateway allowlist; the allowlist has since been regenerated to include recorded redirect-target hosts and that row will be re-sampled after the gateway redeploys. Totals now: 3,054 objects, live-sample coverage 2,465 (80.7%). Detail-pattern fields are empty for rows whose registry record carries no detail URL and whose sample showed no qualifying detail link — they were left blank rather than guessed.
 
 ## P-class distribution (docs/02)
 
 | class | objects | structural signature | collector implication |
 |---|---|---|---|
-| P1 入札情報一覧型 | 779 | nyusatsu/bid/procurement paths; mostly ul/link lists of title+date with HTML or PDF details | standard list parser; date-ordered incremental fetch |
-| P2 調達情報型 | 206 | chotatsu paths on national agencies, customs, universities, hospitals | same parser as P1; filter shared ministry pages by issuer name |
+| P1 入札情報一覧型 | 792 | nyusatsu/bid/procurement paths; mostly ul/link lists of title+date with HTML or PDF details | standard list parser; date-ordered incremental fetch |
+| P2 調達情報型 | 207 | chotatsu paths on national agencies, customs, universities, hospitals | same parser as P1; filter shared ministry pages by issuer name |
 | P3 公告・公募掲示板型 | 30 | koukoku/koubo bulletin pages; notice text often inside PDFs | list parser + PDF text extraction (notice no., title, deadline) |
-| P4 電子調達システム型 | 109 | dedicated e-procurement entries and non-root search-form driven public systems | use only the public search/disclosure side; per-system adapter; never the login/IC-card area |
-| P5 契約情報型 | 275 | keiyaku paths; announcements and award results mixed on one list | parser must separate 公告中 from 結果公表 entries |
-| P6 機関トップ／汎用ページ型 | 1,606 | recorded target is a top/generic/CMS category page; the real listing sits deeper or inside the news flow | needs the nav-located listing (tonight's crawls supplied it for 74 objects) or news-list + keyword （入札・公募・プロポーザル) filtering at low frequency |
-| P7 PDF直接リンク型 | 0 | none in the confirmed set (the single KKJ-era candidate never confirmed) | — |
+| P4 電子調達システム型 | 112 | dedicated e-procurement entries and non-root search-form driven public systems | use only the public search/disclosure side; per-system adapter; never the login/IC-card area |
+| P5 契約情報型 | 282 | keiyaku paths; announcements and award results mixed on one list | parser must separate 公告中 from 結果公表 entries |
+| P6 機関トップ／汎用ページ型 | 1,630 | recorded target is a top/generic/CMS category page; the real listing sits deeper or inside the news flow | needs the nav-located listing (tonight's crawls supplied it for 74 objects) or news-list + keyword （入札・公募・プロポーザル) filtering at low frequency |
+| P7 PDF直接リンク型 | 1 | one PDF-direct target (2026-10-28 append) | PDF link monitoring |
 
 Representative sampled sites — P1: 北海道農政事務所 (ul_list, static_html
 details), 国立大学法人北海道大学 (search form on the list page, PDF details).
@@ -51,7 +53,7 @@ P4: 北海道地方環境事務所 /procure/ (search_form system page). P5: 北�
 各開発建設部 (keiyaku pages, link/ul lists). P6: 人事院北海道事務局 (top page
 with a 調達 link in the news flow).
 
-## List-page structures (sampled objects only, n=2,417)
+## List-page structures (sampled objects only, n=2,465)
 
 | structure | objects | note |
 |---|---|---|
@@ -87,7 +89,7 @@ a single page.
   split into true e-procurement public search (build a query adapter) and
   ordinary site search pasted on a list page (parse the static list
   underneath). The CSV keeps them separable via p_class + list_structure.
-- **P6-news-flow**: the largest single group (P6, 1,606). For small
+- **P6-news-flow**: the largest single group (P6, 1,630). For small
   municipalities the announcement "list" is the site's news list; the
   working collector is an RSS/news watcher with keyword filtering, at the
   lowest polling tier — tonight's crawl evidence confirms most of these

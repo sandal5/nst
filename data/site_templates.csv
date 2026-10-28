@@ -3004,3 +3004,52 @@
 美郷町,www.town.miyazaki-misato.lg.jp,https://www.town.miyazaki-misato.lg.jp/list00104.html,P6,evidence_only,static_html,unknown,html,recorded_fields; resolved_tonight: phaseB_crawl
 いちき串木野市,www.city.ichikikushikino.lg.jp,http://www.city.ichikikushikino.lg.jp/zaisei2/20260810jyokenkoukoku.html,P3,evidence_only,static_html,unknown,html,recorded_fields; resolved_tonight: phaseB_crawl
 和泊町,www.town.wadomari.lg.jp,http://www.town.wadomari.lg.jp/doboku/kurashi/tochi/nyusatsu/nyusatsujoho/nyusatsubi.html,P1,evidence_only,static_html,unknown,html,recorded_fields; resolved_tonight: phaseB_crawl
+（独）労働者健康安全機構北海道産業保健総合支援センター,www.hokkaidos.johas.go.jp,https://www.hokkaidos.johas.go.jp/pdf/nyusatsu.pdf,P7,insufficient_links,,none_detected,,gateway_sample (2026-10-28)
+富良野市,www.city.furano.hokkaido.jp,https://www.city.furano.hokkaido.jp/life/sangyoshigoto/nyusatsukeiyaku/,P5,ul_list,numeric_id,none_detected,html,gateway_sample (2026-10-28)
+今金町,www.town.imakane.lg.jp,https://www.town.imakane.lg.jp/mente.html,P6,insufficient_links,,none_detected,,gateway_sample (2026-10-28)
+むかわ町,www.town.mukawa.lg.jp,https://www.town.mukawa.lg.jp/1008.htm,P6,link_list,numeric_id,none_detected,html,gateway_sample (2026-10-28)
+清水町,www.town.shimizu.hokkaido.jp,https://www.town.shimizu.hokkaido.jp/,P6,search_form,static_html,none_detected,html,gateway_sample (2026-10-28); subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
+（独）国立高等専門学校機構八戸工業高等専門学校,www.hachinohe-ct.ac.jp,https://www.hachinohe-ct.ac.jp/zuikei/,P6,pdf_index,pdf_direct,none_detected,pdf,gateway_sample (2026-10-28)
+一関市,www.city.ichinoseki.iwate.jp,https://www.city.ichinoseki.iwate.jp/genre/business/nyuusatsu-keiyaku,P5,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+気仙沼市,www.kesennuma.miyagi.jp,https://www.kesennuma.miyagi.jp/li/business/020/index.html,P6,link_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+大館市,www.city.odate.lg.jp,https://www.city.odate.lg.jp/keiyaku_kensa,P5,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+東根市,www.city.higashine.yamagata.jp,https://www.city.higashine.yamagata.jp/section_list/section004/nyusatsujoho/,P1,ul_list,numeric_id,none_detected,html,gateway_sample (2026-10-28)
+尾花沢市,www.city.obanazawa.yamagata.jp,https://www.city.obanazawa.yamagata.jp/sangyo/bid/,P1,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+遊佐町,www.town.yuza.yamagata.jp,https://www.town.yuza.yamagata.jp/genre/industry/tender,P1,ul_list,numeric_id,none_detected,html,gateway_sample (2026-10-28)
+戸沢村,www.vill.tozawa.yamagata.jp,https://www.vill.tozawa.yamagata.jp/,P6,search_form,static_html,none_detected,html,gateway_sample (2026-10-28); subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
+茨城県,www.pref.ibaraki.jp,https://www.pref.ibaraki.jp/shiru/nyusatsu-chotatsu/index.html,P2,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+沼田市,www.city.numata.gunma.jp,https://www.city.numata.gunma.jp/jigyosha/nyusatsu/index.html,P1,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+富岡市,www.city.tomioka.lg.jp,https://www.city.tomioka.lg.jp/www/genre/1001050000102/index.html,P6,link_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+高山村,www.vill.takayama.gunma.jp,https://www.vill.takayama.gunma.jp/soshiki/01soumu.html,P6,pdf_index,pdf_direct,next_or_numbered,pdf,gateway_sample (2026-10-28); subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
+秩父市,www.city.chichibu.lg.jp,https://www.city.chichibu.lg.jp/1668.html,P6,ul_list,numeric_id,none_detected,html,gateway_sample (2026-10-28)
+川島町,www.town.kawajima.saitama.jp,https://www.town.kawajima.saitama.jp/2191.htm,P6,ul_list,numeric_id,none_detected,html,gateway_sample (2026-10-28)
+長瀞町,www.town.nagatoro.saitama.jp,https://www.town.nagatoro.saitama.jp/jigyosha/,P6,link_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+上里町,www.town.kamisato.saitama.jp,https://www.town.kamisato.saitama.jp/nyusatu/index.htm,P1,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+鎌ヶ谷市,www.city.kamagaya.chiba.jp,https://www.city.kamagaya.chiba.jp/jigyosha/nyuusatu_menu/index.html,P6,link_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+浦安市,www.city.urayasu.lg.jp,https://www.city.urayasu.lg.jp/shisei/jigyosha/nyusatsu/index.html,P1,ul_list,static_html,next_or_numbered,html,gateway_sample (2026-10-28)
+四街道市,www.city.yotsukaido.chiba.jp,https://www.city.yotsukaido.chiba.jp/shisei/jigyoshamuke/nyusatsu/index.html,P1,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+白井市,www.city.shiroi.chiba.jp,https://www.city.shiroi.chiba.jp/sangyo/nyusatsu/index.html,P1,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+富里市,www.city.tomisato.lg.jp,https://www.city.tomisato.lg.jp/category/3-1-0-0-0-0-0-0-0-0.html,P6,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28); subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
+財務省,www.mof.go.jp,https://www.mof.go.jp/application-contact/procurement/,P1,ul_list,static_html,next_or_numbered,html,gateway_sample (2026-10-28)
+（独）郵便貯金簡易生命保険管理・郵便局ネットワーク支援機構,www.yuchokampo.go.jp,https://www.yuchokampo.go.jp/about/supply.html,P6,pdf_index,static_html,none_detected,pdf,gateway_sample (2026-10-28)
+神津島村,vill.kouzushima.tokyo.jp,https://www.vill.kouzushima.tokyo.jp/notfound/,P4,search_form,,none_detected,,gateway_sample (2026-10-28); subclass_hint: search-form driven public system page
+三条市,www.city.sanjo.niigata.jp,https://www.city.sanjo.niigata.jp/sangyo_business/nyusatsu_keiyaku/index.html,P5,link_list,numeric_id,none_detected,html,gateway_sample (2026-10-28)
+阿賀町,www.town.aga.niigata.jp,https://www.town.aga.niigata.jp/sangyo_business/nyusatsu_keiyaku/index.html,P5,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+富山市,www.city.toyama.toyama.jp,https://www.city.toyama.lg.jp/business/nyusatsu/index.html,P1,evidence_only,,unknown,,recorded_fields (sample fetch failed 2026-10-28: gateway 403: host www.city.toyama.lg.jp not in project allowlist)
+早川町,www.town.hayakawa.yamanashi.jp,https://www.town.hayakawa.yamanashi.jp/business/bid/index.html,P1,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+羽島市,www.city.hashima.lg.jp,https://www.city.hashima.lg.jp/3603.html,P6,ul_list,numeric_id,next_or_numbered,html,gateway_sample (2026-10-28)
+岩倉市,www.city.iwakura.aichi.jp,https://www.city.iwakura.aichi.jp/category/4-1-0-0-0-0-0-0-0-0.html,P6,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28); subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
+阿久比町,www.town.agui.lg.jp,https://www.town.agui.lg.jp/category/7-1-0-0-0-0-0-0-0-0.html,P4,search_form,static_html,none_detected,html,gateway_sample (2026-10-28); subclass_hint: search-form driven public system page
+西宮市,www.nishi.or.jp,https://www.nishi.or.jp/jigyoshajoho/keiyaku/index.html,P5,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+宍粟市,www.city.shiso.lg.jp,https://www.city.shiso.lg.jp/jigyosha/nyusatsu/,P1,ul_list,numeric_id,none_detected,html,gateway_sample (2026-10-28)
+（独）労働者健康安全機構岡山ろうさい病院,www.okayamah.johas.go.jp,https://www.okayamah.johas.go.jp/index.php,P6,ul_list,pdf_direct,none_detected,html,gateway_sample (2026-10-28); subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
+坂出市,www.city.sakaide.lg.jp,https://www.city.sakaide.lg.jp/life/4/21/,P6,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28); subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
+南国市,www.city.nankoku.lg.jp,https://www.city.nankoku.lg.jp/business/,P6,dl_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+三原村,www.vill.mihara.kochi.jp,https://www.vill.mihara.kochi.jp/,P6,search_form,static_html,next_or_numbered,html,gateway_sample (2026-10-28); subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow
+田川市,www.joho.tagawa.fukuoka.jp,https://www.joho.tagawa.fukuoka.jp/list00695.html,P6,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+筑後市,www.city.chikugo.lg.jp,https://www.city.chikugo.lg.jp/shigoto/_3716.html,P6,link_list,numeric_id,none_detected,html,gateway_sample (2026-10-28)
+長崎県警察本部,www.police.pref.nagasaki.jp,https://www.police.pref.nagasaki.jp/police/disclosure/kaikei-joho/,P6,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+東京都,www.metro.tokyo.lg.jp,https://www.metro.tokyo.lg.jp/tosei/zaise/keiyaku,P5,link_list,query_id,none_detected,html,gateway_sample (2026-10-28)
+神奈川県,www.pref.kanagawa.jp,https://www.pref.kanagawa.jp/docs/bc2/002/open/index.html,P6,dl_list,static_html,next_or_numbered,html,gateway_sample (2026-10-28)
+横浜市,www.city.yokohama.lg.jp,https://www.city.yokohama.lg.jp/business/nyusatsu/,P1,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
+調達ポータル / 政府電子調達システム (GEPS),www.p-portal.go.jp,https://www.p-portal.go.jp/pps-web-biz/UAA01/OAA0101,P4,ul_list,numeric_id,none_detected,html,gateway_sample (2026-10-28); subclass_hint: e-procurement system entry
