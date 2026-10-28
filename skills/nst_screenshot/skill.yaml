@@ -1,0 +1,6 @@
+name: "nst_screenshot"
+title: "nst 截图+OCR 枚举与核验方法"
+description: "HTML 采集被禁止或走不通时的一次性截图枚举与 robots 页面视觉核验方法：本地取页器履行请求 + Chromium 渲染、全量展开下位机关、CDP 分片全页截图、Tesseract 日文 OCR 落表与质量闸门，做 nst 的目录枚举或 robots 核验时使用。"
+category: "Work and knowledge"
+include_in_prompt: false
+version: "0.1.0"
