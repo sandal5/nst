@@ -81,6 +81,25 @@ CSS = """
   figcaption .org { font-weight: 700; color: #1c2330; font-size: 14px; }
   .obs { margin: 6px 0 2px; padding-left: 20px; }
   .obs li { font-size: 13.5px; padding: 2px 0; border: none; }
+  a.nav.alt { background: #fff; color: #2f6fed; border: 1.5px solid #2f6fed; }
+  details { background: #fff; border: 1px solid #e2e6ec; border-radius: 10px; margin-bottom: 10px; }
+  details.lvl2 { margin: 8px 10px; background: #fafbfc; }
+  summary { cursor: pointer; padding: 11px 14px; font-size: 15px; font-weight: 600; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "▸ "; color: #2f6fed; }
+  details[open] > summary::before { content: "▾ "; }
+  summary .cnt { color: #66707e; font-weight: 400; font-size: 13px; margin-left: 8px; }
+  .row { display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-top: 1px solid #f0f2f5; font-size: 13.5px; }
+  .row .org { flex: 1; min-width: 0; }
+  .row a { color: #2f6fed; text-decoration: none; white-space: nowrap; }
+  .row input[type=checkbox] { width: 16px; height: 16px; flex: none; }
+  .bd { flex: none; font-size: 11.5px; border-radius: 4px; padding: 1px 6px; }
+  .bd.ok { background: #e5f4ea; color: #1d7a3a; }
+  .bd.ng { background: #fdeeee; color: #a33; }
+  .toolbar { position: sticky; top: 0; z-index: 5; background: #f6f7f9; padding: 10px 0; display: flex; gap: 10px; align-items: center; }
+  .toolbar input[type=search] { flex: 1; padding: 8px 12px; font-size: 14px; border: 1px solid #cfd6df; border-radius: 8px; }
+  .toolbar button { padding: 8px 12px; font-size: 13px; border: 1px solid #cfd6df; background: #fff; border-radius: 8px; cursor: pointer; }
+  .prog { font-size: 13.5px; color: #44505f; white-space: nowrap; }
   .sub { color: #66707e; font-size: 12.5px; }
 """
 
@@ -187,6 +206,148 @@ def build_tpl_pages(p_counts, n_templates, n_sampled):
     return pages
 
 
+OBJ_SCRIPT = """
+<script>
+(function () {
+  var KEY = "nst-obj-check-v1";
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { saved = {}; }
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".chk"));
+  function persist() { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} }
+  function refresh() {
+    var total = 0;
+    boxes.forEach(function (b) { if (b.checked) total++; });
+    var tc = document.getElementById("chkTotal"); if (tc) tc.textContent = total;
+    document.querySelectorAll("details[data-sec]").forEach(function (d) {
+      var n = 0;
+      d.querySelectorAll(".chk").forEach(function (b) { if (b.checked) n++; });
+      var el = d.querySelector(":scope > summary .chkd"); if (el) el.textContent = n;
+    });
+  }
+  boxes.forEach(function (b) {
+    if (saved[b.getAttribute("data-k")]) b.checked = true;
+    b.addEventListener("change", function () {
+      if (b.checked) saved[b.getAttribute("data-k")] = 1; else delete saved[b.getAttribute("data-k")];
+      persist(); refresh();
+    });
+  });
+  var reset = document.getElementById("chkReset");
+  if (reset) reset.addEventListener("click", function () {
+    saved = {}; persist();
+    boxes.forEach(function (b) { b.checked = false; });
+    refresh();
+  });
+  var q = document.getElementById("flt");
+  if (q) q.addEventListener("input", function () {
+    var v = q.value.trim();
+    document.querySelectorAll(".row").forEach(function (r) {
+      r.style.display = (!v || r.textContent.indexOf(v) >= 0) ? "" : "none";
+    });
+    if (v) document.querySelectorAll("details").forEach(function (d) {
+      var any = Array.prototype.some.call(d.querySelectorAll(".row"), function (r) { return r.style.display !== "none"; });
+      if (any) d.open = true;
+    });
+  });
+  refresh();
+})();
+</script>"""
+
+DOKU_GROUPS = {"独立行政法人等", "地方共同法人", "国土交通省系 独立行政法人"}
+
+
+def build_objects_page(master, open_items):
+    """Complete object list for manual checking, KKJ-style hierarchy with
+    accordion sections. Every row links to the verified announcement page
+    (or the official homepage when unresolved) and carries a checkbox whose
+    state persists in the reader's browser (localStorage)."""
+    bucket_of = {}
+    for r in open_items:
+        bucket_of[(r["org_name"], r["prefecture"])] = r["bucket"]
+
+    def row_html(r):
+        name = html.escape(r["org_name"])
+        status = r.get("verification_status") or ""
+        target = (r.get("daily_collection_target") or "").strip()
+        key = html.escape(f"{r['org_name']}|{r.get('official_domain', '')}|{target}", quote=True)
+        if status.startswith("検証済") and target.startswith("http"):
+            link = f'<a href="{html.escape(target, quote=True)}" target="_blank" rel="noopener">公告页 ↗</a>'
+            badge = '<span class="bd ok">確定</span>'
+        else:
+            dom = (r.get("official_domain") or "").strip()
+            link = (f'<a href="https://{html.escape(dom, quote=True)}/" target="_blank" rel="noopener">官网 ↗</a>'
+                    if dom else "")
+            reason = REASON_LABELS.get(bucket_of.get((r["org_name"], r["prefecture"]), ""), ("未决", ""))[0]
+            badge = f'<span class="bd ng">{html.escape(reason)}</span>'
+        return (f'<label class="row"><input type="checkbox" class="chk" data-k="{key}">'
+                f'<span class="org">{name}</span>{link}{badge}</label>')
+
+    def counts(rows):
+        c = sum(1 for r in rows if (r.get("verification_status") or "").startswith("検証済"))
+        return f'<span class="cnt">{len(rows):,} 件・確定 {c:,}・已核对 <span class="chkd">0</span></span>'
+
+    def section(title, inner, rows):
+        return (f'<details data-sec><summary>{html.escape(title)}{counts(rows)}</summary>'
+                f'{inner}</details>')
+
+    def flat(rows):
+        return "".join(row_html(r) for r in sorted(rows, key=lambda r: r["org_name"]))
+
+    def grouped(rows, keyfn):
+        groups = {}
+        for r in rows:
+            groups.setdefault(keyfn(r), []).append(r)
+        out = ""
+        for gname in sorted(groups, key=lambda g: -len(groups[g])):
+            grows = sorted(groups[gname], key=lambda r: r["org_name"])
+            inner = "".join(row_html(r) for r in grows)
+            out += (f'<details class="lvl2" data-sec><summary>{html.escape(gname)}{counts(grows)}</summary>'
+                    f'{inner}</details>')
+        return out
+
+    nat = [r for r in master if (r["level"] or "").startswith("国")]
+    doku = [r for r in nat if (r.get("group_ministry") or "") in DOKU_GROUPS]
+    ministries = [r for r in nat if (r.get("group_ministry") or "") not in DOKU_GROUPS]
+    prefs = [r for r in master if r["level"] == "都道府県"]
+    munis = [r for r in master if r["level"] == "市区町村"]
+    common = [r for r in master if r["level"] == "国 (共通システム)"]
+
+    total = len(master)
+    confirmed = sum(1 for r in master if (r.get("verification_status") or "").startswith("検証済"))
+    body = ""
+    body += section("省庁・国の機関", grouped(ministries, lambda r: r.get("group_ministry") or "(未分类)"), ministries)
+    body += section("都道府県", flat(prefs), prefs)
+    body += section("市区町村（按都道府县展开）", grouped(munis, lambda r: r["prefecture"]), munis)
+    body += section("独立行政法人等", flat(doku), doku)
+    if common:
+        body += section("共通システム", flat(common), common)
+
+    return f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>nst 对象清单・公告地址（人工核对）</title>
+<style>{CSS}</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="/sandal">← 返回任务状态</a>
+  <h1>对象清单・公告地址</h1>
+  <div class="upd">快照更新于 {TS}（每小时自动更新）｜全 {total:,} 件・已确定公告页 {confirmed:,} 件・未决 {total - confirmed:,} 件</div>
+  <div class="toolbar">
+    <input type="search" id="flt" placeholder="按机关名筛选（输入即过滤并展开）">
+    <span class="prog">已核对 <b id="chkTotal">0</b> / {total:,}</span>
+    <button id="chkReset" type="button">重置核对进度</button>
+  </div>
+  {body}
+  <div class="note">用法：点开层级 → 点「公告页」在新标签打开核对 → 勾选该行。勾选进度保存在本浏览器（localStorage），每小时数据刷新不会清掉它；「確定」= 已验证的现行公告页，「官网」链接 + 红色标记 = 未决行（附原因），这类请重点看。目录源对象待去重核实后并入本清单。</div>
+</div>
+{OBJ_SCRIPT}
+</body>
+</html>"""
+
+
 def main():
     master = read_csv(os.path.join(JP, "data/master_source_list.csv"))
     open_items = read_csv(os.path.join(JP, "data/open_items.csv"))
@@ -254,6 +415,7 @@ def main():
   </div>
 
   <a class="nav" href="/sandal/templates">模板分类与对象全景（分类 × 分层 × 机构归属 × 地区）→</a>
+  <a class="nav alt" href="/sandal/objects">对象清单・公告地址（人工核对用，手风琴层级）→</a>
 
   <h2>正在运行</h2>
   <table>
@@ -399,6 +561,12 @@ def main():
             f.write(f'  "{key}": `{body}`,\n')
         f.write("};\n")
     print(f"tpl pages: {len(tpl_pages)}")
+    objects_html = build_objects_page(master, open_items)
+    with open(os.path.join(REPO, "gateway/src/objects_page.js"), "w", encoding="utf-8") as f:
+        body = objects_html.replace("\\", "\\\\").replace("`", "\\`").replace("${", "\\${")
+        f.write("// Generated by scripts/gen_status_pages.py — do not edit by hand.\n")
+        f.write("export const OBJECTS_PAGE_HTML = `" + body + "`;\n")
+    print(f"objects page rows: {objects_html.count('class=\"chk\"')}")
     print(f"generated: confirmed {confirmed}/{total}, templates {n_templates}, endpoints {n_endpoints}, open {len(open_items)}")
 
 

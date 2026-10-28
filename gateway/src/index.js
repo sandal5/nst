@@ -21,6 +21,7 @@ import { ALLOWED_HOSTS } from "./allowlist.js";
 import { STATUS_PAGE_HTML } from "./status_page.js";
 import { TEMPLATES_PAGE_HTML } from "./templates_page.js";
 import { TPL_PAGES } from "./tpl_pages.js";
+import { OBJECTS_PAGE_HTML } from "./objects_page.js";
 
 // Front-door posture (project decision 2026-10-28): the gateway host must
 // look like a freshly installed stock web server. The root serves the
@@ -113,6 +114,13 @@ export default {
     // unlisted area: linked only from the status page itself.
     if (url.pathname === "/sandal/templates") {
       return htmlPage(TEMPLATES_PAGE_HTML, {
+        "x-robots-tag": "noindex, nofollow, noarchive",
+      });
+    }
+    // Complete object list for the owner's manual checking (sibling of
+    // the templates page, same unlisted area).
+    if (url.pathname === "/sandal/objects") {
+      return htmlPage(OBJECTS_PAGE_HTML, {
         "x-robots-tag": "noindex, nofollow, noarchive",
       });
     }

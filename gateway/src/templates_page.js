@@ -40,6 +40,25 @@ export const TEMPLATES_PAGE_HTML = `<!DOCTYPE html>
   figcaption .org { font-weight: 700; color: #1c2330; font-size: 14px; }
   .obs { margin: 6px 0 2px; padding-left: 20px; }
   .obs li { font-size: 13.5px; padding: 2px 0; border: none; }
+  a.nav.alt { background: #fff; color: #2f6fed; border: 1.5px solid #2f6fed; }
+  details { background: #fff; border: 1px solid #e2e6ec; border-radius: 10px; margin-bottom: 10px; }
+  details.lvl2 { margin: 8px 10px; background: #fafbfc; }
+  summary { cursor: pointer; padding: 11px 14px; font-size: 15px; font-weight: 600; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "▸ "; color: #2f6fed; }
+  details[open] > summary::before { content: "▾ "; }
+  summary .cnt { color: #66707e; font-weight: 400; font-size: 13px; margin-left: 8px; }
+  .row { display: flex; align-items: center; gap: 8px; padding: 6px 14px; border-top: 1px solid #f0f2f5; font-size: 13.5px; }
+  .row .org { flex: 1; min-width: 0; }
+  .row a { color: #2f6fed; text-decoration: none; white-space: nowrap; }
+  .row input[type=checkbox] { width: 16px; height: 16px; flex: none; }
+  .bd { flex: none; font-size: 11.5px; border-radius: 4px; padding: 1px 6px; }
+  .bd.ok { background: #e5f4ea; color: #1d7a3a; }
+  .bd.ng { background: #fdeeee; color: #a33; }
+  .toolbar { position: sticky; top: 0; z-index: 5; background: #f6f7f9; padding: 10px 0; display: flex; gap: 10px; align-items: center; }
+  .toolbar input[type=search] { flex: 1; padding: 8px 12px; font-size: 14px; border: 1px solid #cfd6df; border-radius: 8px; }
+  .toolbar button { padding: 8px 12px; font-size: 13px; border: 1px solid #cfd6df; background: #fff; border-radius: 8px; cursor: pointer; }
+  .prog { font-size: 13.5px; color: #44505f; white-space: nowrap; }
   .sub { color: #66707e; font-size: 12.5px; }
 </style>
 </head>
@@ -47,7 +66,7 @@ export const TEMPLATES_PAGE_HTML = `<!DOCTYPE html>
 <div class="wrap">
   <a class="back" href="/sandal">← 返回任务状态</a>
   <h1>模板分类与对象全景</h1>
-  <div class="upd">快照更新于 2026-10-28 15:53 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 15:57 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">3,974</div><div class="l">主清单对象（已确定 3,310，83.3%）</div></div>
