@@ -666,10 +666,13 @@ def build_objects_page(master, open_items):
 
 
 def publish_pages(pages):
-    """Best-effort: publish generated pages to the gateway KV (the live
-    channel; see gateway pageput). Failures only warn — the bundled JS
-    modules remain as fallback and are committed as usual."""
-    import urllib.request
+    """Publish generated pages to the gateway KV (the live channel; see
+    gateway pageput). Transport rules learned 2026-10-28: use httpx (the
+    .venv interpreter has it), NEVER follow redirects (the Worker's
+    catch-all 301 -> welcome page once made urllib report fake 200s),
+    require the JSON body to say ok:true, and retry each chunk up to 3
+    times (the egress proxy occasionally drops large POSTs)."""
+    import time
     env_path = os.path.join(JP, ".gateway.env")
     if not os.path.exists(env_path):
         print("publish: no gateway env, skipped")
@@ -686,31 +689,63 @@ def publish_pages(pages):
         print("publish: gateway env incomplete, skipped")
         return
     proxy = os.environ.get("https_proxy") or os.environ.get("HTTPS_PROXY")
-    opener = urllib.request.build_opener(
-        urllib.request.ProxyHandler({"https": proxy, "http": proxy} if proxy else {}))
+    ua = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+          "(KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36")
+    try:
+        import httpx
+        client = httpx.Client(proxy=proxy, trust_env=False, timeout=60)
+
+        def post(payload):
+            r = client.post(base + "/sandal/api/pageput", json=payload,
+                            headers={"X-Gateway-Key": key, "User-Agent": ua})
+            if r.status_code != 200:
+                raise RuntimeError(f"HTTP {r.status_code}: {r.text[:80]}")
+            if not r.json().get("ok"):
+                raise RuntimeError(f"bad body: {r.text[:80]}")
+    except ImportError:
+        import urllib.request
+
+        class NoRedirect(urllib.request.HTTPRedirectHandler):
+            def redirect_request(self, req, fp, code, msg, headers, newurl):
+                return None
+
+        opener = urllib.request.build_opener(
+            NoRedirect,
+            urllib.request.ProxyHandler(
+                {"https": proxy, "http": proxy} if proxy else {}))
+
+        def post(payload):
+            req = urllib.request.Request(
+                base + "/sandal/api/pageput",
+                data=json.dumps(payload).encode("utf-8"),
+                headers={"Content-Type": "application/json",
+                         "X-Gateway-Key": key, "User-Agent": ua},
+                method="POST")
+            with opener.open(req, timeout=60) as resp:
+                body = json.loads(resp.read().decode("utf-8"))
+            if not body.get("ok"):
+                raise RuntimeError(f"bad body: {body}")
+
     for name, page_html in pages.items():
         chunks = [page_html[i:i + 200000]
                   for i in range(0, len(page_html), 200000)] or [""]
         ok = True
         for idx, chunk in enumerate(chunks):
-            try:
-                req = urllib.request.Request(
-                    base + "/sandal/api/pageput",
-                    data=json.dumps({"name": name, "html": chunk,
-                                     "part": idx, "parts": len(chunks)}).encode("utf-8"),
-                    headers={"Content-Type": "application/json", "X-Gateway-Key": key,
-                             # The gateway domain's edge protection rejects the
-                             # default python-urllib UA with a 403 block page.
-                             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"},
-                    method="POST")
-                with opener.open(req, timeout=60) as resp:
-                    if resp.status != 200:
+            payload = {"name": name, "html": chunk,
+                       "part": idx, "parts": len(chunks)}
+            for attempt in range(3):
+                try:
+                    post(payload)
+                    break
+                except Exception as e:
+                    if attempt == 2:
+                        print(f"publish {name}[{idx}/{len(chunks)}]: FAILED {e}")
                         ok = False
-            except Exception as e:
-                print(f"publish {name}[{idx}/{len(chunks)}]: FAILED {e}")
-                ok = False
+                    else:
+                        time.sleep(2)
+            if not ok:
                 break
-        print(f"publish {name}: {'200' if ok else 'FAILED'} ({len(chunks)} part(s))")
+        print(f"publish {name}: {'OK' if ok else 'FAILED'} ({len(chunks)} part(s))")
 
 
 def main():
@@ -755,8 +790,37 @@ def main():
             return f'<li><span class="done">完成</span>{ts}　{html.escape(x.get("text", ""))}</li>'
         return f'<li><span class="done">完成</span>　{html.escape(str(x))}</li>'
 
+    def day_block(day, items, is_today):
+        dicts = [x for x in items if isinstance(x, dict)]
+        lis = "".join(done_li(x) for x in sorted(
+            dicts, key=lambda x: x.get("time", ""), reverse=True))
+        disp = "" if is_today else ' style="display:none"'
+        label = f"{day}（今日）" if is_today else day
+        return (f'<div class="daypage" data-day="{html.escape(day)}"{disp}>'
+                f'<h3>{html.escape(label)}</h3><ul>{lis}</ul></div>')
+
     done_items = "".join(done_li(x) for x in frag.get("done_today", []))
     date_label = frag.get("date", "")
+    # Completion history: today first (newest item first), then archived
+    # days newest-first; a small pager flips between days client-side.
+    archive = frag.get("done_archive", {}) or {}
+    day_list = [(date_label, frag.get("done_today", []), True)]
+    for d in sorted((d for d in archive if d != date_label), reverse=True):
+        day_list.append((d, archive[d], False))
+    pager_html = "".join(
+        f'<button type="button" class="daybtn" data-day="{html.escape(d)}" '
+        f'style="margin:0 6px 8px 0;padding:4px 12px;border:1px solid #888;'
+        f'border-radius:12px;background:{"#1a73e8" if t else "#fff"};'
+        f'color:{"#fff" if t else "#333"};cursor:pointer">'
+        f'{html.escape(d)}{"（今日）" if t else ""}</button>'
+        for d, _, t in day_list)
+    day_blocks = "".join(day_block(d, items, t) for d, items, t in day_list)
+    done_script = """<script>
+document.querySelectorAll('.daybtn').forEach(function(b){b.addEventListener('click',function(){
+  document.querySelectorAll('.daypage').forEach(function(p){p.style.display=(p.dataset.day===b.dataset.day)?'':'none';});
+  document.querySelectorAll('.daybtn').forEach(function(x){x.style.background=(x===b)?'#1a73e8':'#fff';x.style.color=(x===b)?'#fff':'#333';});
+});});
+</script>"""
     overview = f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -794,10 +858,10 @@ def main():
     {queue_rows}
   </table>
 
-  <h2>今日完成{f"（{date_label}）" if date_label else ""}</h2>
-  <ul>
-    {done_items}
-  </ul>
+  <h2>完成记录（倒叙 · 按天翻页）</h2>
+  <div>{pager_html}</div>
+  {day_blocks}
+  {done_script}
 
   <div class="note">说明：本页数字由主清单数据文件每小时重算；许可等待（approval_pending）当前为 0。目录源件数以 2026-10-28 实测 9,669 件为准。</div>
 </div>
