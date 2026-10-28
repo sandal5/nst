@@ -144,6 +144,18 @@ async function checkApi(request, env, action) {
     return json({ error: "bad json" }, 400);
   }
   // Assistant-side operations (gateway key).
+  if (action === "pageput") {
+    if (!keyGuard(request, env)) return json({ error: "unauthorized" }, 401);
+    const name = body.name || "";
+    if (!/^(status|templates|objects|p[1-7])$/.test(name)) {
+      return json({ error: "bad page name" }, 400);
+    }
+    if (typeof body.html !== "string" || !body.html) {
+      return json({ error: "missing html" }, 400);
+    }
+    await env.CHECK_KV.put("page:" + name, body.html);
+    return json({ ok: true, bytes: body.html.length });
+  }
   if (action === "ack") {
     if (!keyGuard(request, env)) return json({ error: "unauthorized" }, 401);
     const now = new Date().toISOString();
@@ -254,6 +266,20 @@ async function checkApi(request, env, action) {
   return json({ error: "unknown action" }, 404);
 }
 
+async function kvPage(env, name, bundled) {
+  // Generated pages are published to KV by the page generator (see
+  // /sandal/api/pageput): the KV copy is the live one, so hourly page
+  // updates do not depend on a Worker redeploy. The bundled copy is the
+  // fallback for a cold KV.
+  if (env && env.CHECK_KV) {
+    try {
+      const h = await env.CHECK_KV.get("page:" + name);
+      if (h) return h;
+    } catch {}
+  }
+  return bundled;
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -269,36 +295,65 @@ export default {
     // Owner's task-status page. Unlisted: never linked, never named in any
     // other response, disallowed by robots.txt, and served with noindex.
     if (url.pathname === "/sandal") {
-      return htmlPage(STATUS_PAGE_HTML, {
+      return htmlPage(await kvPage(env, "status", STATUS_PAGE_HTML), {
         "x-robots-tag": "noindex, nofollow, noarchive",
       });
     }
     // Sub-page of the status page (template classes x dimensions). Same
     // unlisted area: linked only from the status page itself.
     if (url.pathname === "/sandal/templates") {
-      return htmlPage(TEMPLATES_PAGE_HTML, {
+      return htmlPage(await kvPage(env, "templates", TEMPLATES_PAGE_HTML), {
         "x-robots-tag": "noindex, nofollow, noarchive",
       });
     }
     // Complete object list for the owner's manual checking (sibling of
     // the templates page, same unlisted area).
     if (url.pathname === "/sandal/objects") {
-      return htmlPage(OBJECTS_PAGE_HTML, {
+      return htmlPage(await kvPage(env, "objects", OBJECTS_PAGE_HTML), {
         "x-robots-tag": "noindex, nofollow, noarchive",
       });
     }
     // Per-class explanation pages under the templates page.
     const tplMatch = url.pathname.match(/^\/sandal\/templates\/(p[1-7])$/);
     if (tplMatch && TPL_PAGES[tplMatch[1]]) {
-      return htmlPage(TPL_PAGES[tplMatch[1]], {
+      return htmlPage(await kvPage(env, tplMatch[1], TPL_PAGES[tplMatch[1]]), {
         "x-robots-tag": "noindex, nofollow, noarchive",
       });
     }
     // Manual-check state API (see checkApi). Must precede the /sandal/
     // catch-all redirect below.
-    const apiMatch = url.pathname.match(/^\/sandal\/api\/(state|mark|ack|return|pull|import)$/);
+    const apiMatch = url.pathname.match(/^\/sandal\/api\/(state|mark|ack|return|pull|import|pageput)$/);
     if (apiMatch) {
       return checkApi(request, env, apiMatch[1]);
+    }
+    // Screenshot uploads (assistant-side, gateway key): raw image body,
+    // object key in ?k=. Stored in the R2 bucket bound as SHOTS.
+    if (url.pathname === "/sandal/api/shot" && request.method === "POST") {
+      if (!env.SHOTS) return json({ error: "r2_pending" }, 501);
+      if (!keyGuard(request, env)) return json({ error: "unauthorized" }, 401);
+      const k = url.searchParams.get("k");
+      if (!k) return json({ error: "missing k" }, 400);
+      const buf = await request.arrayBuffer();
+      await env.SHOTS.put(k, buf, {
+        httpMetadata: { contentType: request.headers.get("content-type") || "image/jpeg" },
+      });
+      return json({ ok: true, bytes: buf.byteLength });
+    }
+    // Screenshot serving for the checking pages. The bucket stays
+    // private; images are only reachable through this unlisted path.
+    const shotMatch = url.pathname.match(/^\/sandal\/shots\/(.+)$/);
+    if (shotMatch && request.method === "GET") {
+      if (!env.SHOTS) return new Response("not found", { status: 404 });
+      const obj = await env.SHOTS.get(decodeURIComponent(shotMatch[1]));
+      if (!obj) return new Response("not found", { status: 404 });
+      return new Response(obj.body, {
+        status: 200,
+        headers: {
+          "content-type": (obj.httpMetadata && obj.httpMetadata.contentType) || "image/jpeg",
+          "cache-control": "public, max-age=86400",
+          "x-robots-tag": "noindex, nofollow, noarchive",
+        },
+      });
     }
     if (url.pathname.startsWith("/sandal/")) {
       return new Response(null, { status: 301, headers: { location: "/sandal" } });
