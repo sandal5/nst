@@ -18,6 +18,50 @@
 // default identity, never a per-block evasion retry.
 
 import { ALLOWED_HOSTS } from "./allowlist.js";
+import { STATUS_PAGE_HTML } from "./status_page.js";
+
+// Front-door posture (project decision 2026-10-28): the gateway host must
+// look like a freshly installed stock web server. The root serves the
+// classic default page, robots.txt disallows everything, and every path
+// other than the API and the owner's unlisted status path redirects to
+// the root. Nothing on the public surface links to or names the status
+// path; it is reachable only by typing it directly.
+const NGINX_PAGE_HTML = `<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>`;
+
+const ROBOTS_TXT = "User-agent: *\nDisallow: /\n";
+
+function htmlPage(html, extraHeaders = {}) {
+  return new Response(html, {
+    status: 200,
+    headers: {
+      "content-type": "text/html; charset=utf-8",
+      "cache-control": "no-store",
+      ...extraHeaders,
+    },
+  });
+}
 
 const MAX_BODY = 8 * 1024 * 1024;
 
@@ -47,7 +91,28 @@ function hostAllowed(hostname) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    if (url.pathname !== "/fetch") return json({ error: "not found" }, 404);
+    if (url.pathname === "/robots.txt") {
+      return new Response(ROBOTS_TXT, {
+        status: 200,
+        headers: { "content-type": "text/plain; charset=utf-8" },
+      });
+    }
+    if (url.pathname === "/" || url.pathname === "/index.html") {
+      return htmlPage(NGINX_PAGE_HTML);
+    }
+    // Owner's task-status page. Unlisted: never linked, never named in any
+    // other response, disallowed by robots.txt, and served with noindex.
+    if (url.pathname === "/sandal") {
+      return htmlPage(STATUS_PAGE_HTML, {
+        "x-robots-tag": "noindex, nofollow, noarchive",
+      });
+    }
+    if (url.pathname !== "/fetch") {
+      return new Response(null, {
+        status: 301,
+        headers: { location: "/" },
+      });
+    }
     if (!env.GATEWAY_KEY || request.headers.get("X-Gateway-Key") !== env.GATEWAY_KEY) {
       return json({ error: "unauthorized" }, 401);
     }
