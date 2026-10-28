@@ -65,7 +65,7 @@ export const OBJECTS_PAGE_HTML = `<!DOCTYPE html>
 <div class="wrap">
   <a class="back" href="/sandal">← 返回任务状态</a>
   <h1>对象清单・公告地址</h1>
-  <div class="upd">快照更新于 2026-10-28 16:00 JST（每小时自动更新）｜全 3,974 件・已确定公告页 3,310 件・未决 664 件</div>
+  <div class="upd">快照更新于 2026-10-28 16:25 JST（每小时自动更新）｜全 3,974 件・已确定公告页 3,310 件・未决 664 件</div>
   <div class="toolbar">
     <input type="search" id="flt" placeholder="按机关名筛选（输入即过滤并展开）">
     <span class="prog">已核对 <b id="chkTotal">0</b> / 3,974</span>
