@@ -60,6 +60,28 @@ export const TPL_PAGES = {
   .toolbar input[type=search] { flex: 1; padding: 8px 12px; font-size: 14px; border: 1px solid #cfd6df; border-radius: 8px; }
   .toolbar button { padding: 8px 12px; font-size: 13px; border: 1px solid #cfd6df; background: #fff; border-radius: 8px; cursor: pointer; }
   .prog { font-size: 13.5px; color: #44505f; white-space: nowrap; }
+  .acts { flex: none; display: inline-flex; gap: 6px; }
+  .acts[hidden] { display: none; }
+  .chip[hidden] { display: none; }
+  .bok, .bre, .bnote { font-size: 12.5px; padding: 3px 10px; border-radius: 6px; cursor: pointer; border: 1px solid #cfd6df; background: #fff; }
+  .bok { border-color: #1d7a3a; color: #1d7a3a; font-weight: 600; }
+  .bre { border-color: #b3541e; color: #b3541e; font-weight: 600; }
+  .chip { flex: none; font-size: 12px; border-radius: 4px; padding: 2px 8px; }
+  .chip.ok { background: #e5f4ea; color: #1d7a3a; }
+  .chip.re { background: #fdf0e2; color: #b3541e; }
+  .notebox { flex: none; display: inline-flex; gap: 6px; }
+  .notebox[hidden] { display: none; }
+  .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
+  .bbatch { margin-left: 10px; font-size: 12px; padding: 2px 9px; border: 1px solid #1d7a3a; color: #1d7a3a; background: #fff; border-radius: 6px; cursor: pointer; font-weight: 600; }
+  details.panel { border-left: 4px solid #b3541e; }
+  details.panel.ret { border-left-color: #2f6fed; }
+  .qrow { padding: 6px 14px; border-top: 1px solid #f0f2f5; font-size: 13.5px; }
+  .qrow .org { font-weight: 600; }
+  .qrow a { color: #2f6fed; text-decoration: none; }
+  .qfoot { padding: 10px 14px; display: flex; gap: 10px; align-items: center; border-top: 1px solid #f0f2f5; }
+  .qfoot button { padding: 6px 12px; font-size: 13px; border: 1px solid #b3541e; color: #b3541e; background: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; }
+  .retinfo { flex: none; font-size: 12px; color: #2f6fed; }
+  .retinfo a { color: #2f6fed; }
   .sub { color: #66707e; font-size: 12.5px; }
 </style>
 </head>
@@ -67,7 +89,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P1　入札情報一覧型</h1>
-  <div class="upd">快照更新于 2026-10-28 16:25 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 16:43 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">792</div><div class="l">该类对象数（占已归类 25.9%）</div></div>
@@ -158,6 +180,28 @@ export const TPL_PAGES = {
   .toolbar input[type=search] { flex: 1; padding: 8px 12px; font-size: 14px; border: 1px solid #cfd6df; border-radius: 8px; }
   .toolbar button { padding: 8px 12px; font-size: 13px; border: 1px solid #cfd6df; background: #fff; border-radius: 8px; cursor: pointer; }
   .prog { font-size: 13.5px; color: #44505f; white-space: nowrap; }
+  .acts { flex: none; display: inline-flex; gap: 6px; }
+  .acts[hidden] { display: none; }
+  .chip[hidden] { display: none; }
+  .bok, .bre, .bnote { font-size: 12.5px; padding: 3px 10px; border-radius: 6px; cursor: pointer; border: 1px solid #cfd6df; background: #fff; }
+  .bok { border-color: #1d7a3a; color: #1d7a3a; font-weight: 600; }
+  .bre { border-color: #b3541e; color: #b3541e; font-weight: 600; }
+  .chip { flex: none; font-size: 12px; border-radius: 4px; padding: 2px 8px; }
+  .chip.ok { background: #e5f4ea; color: #1d7a3a; }
+  .chip.re { background: #fdf0e2; color: #b3541e; }
+  .notebox { flex: none; display: inline-flex; gap: 6px; }
+  .notebox[hidden] { display: none; }
+  .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
+  .bbatch { margin-left: 10px; font-size: 12px; padding: 2px 9px; border: 1px solid #1d7a3a; color: #1d7a3a; background: #fff; border-radius: 6px; cursor: pointer; font-weight: 600; }
+  details.panel { border-left: 4px solid #b3541e; }
+  details.panel.ret { border-left-color: #2f6fed; }
+  .qrow { padding: 6px 14px; border-top: 1px solid #f0f2f5; font-size: 13.5px; }
+  .qrow .org { font-weight: 600; }
+  .qrow a { color: #2f6fed; text-decoration: none; }
+  .qfoot { padding: 10px 14px; display: flex; gap: 10px; align-items: center; border-top: 1px solid #f0f2f5; }
+  .qfoot button { padding: 6px 12px; font-size: 13px; border: 1px solid #b3541e; color: #b3541e; background: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; }
+  .retinfo { flex: none; font-size: 12px; color: #2f6fed; }
+  .retinfo a { color: #2f6fed; }
   .sub { color: #66707e; font-size: 12.5px; }
 </style>
 </head>
@@ -165,7 +209,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P2　調達情報型</h1>
-  <div class="upd">快照更新于 2026-10-28 16:25 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 16:43 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">207</div><div class="l">该类对象数（占已归类 6.8%）</div></div>
@@ -256,6 +300,28 @@ export const TPL_PAGES = {
   .toolbar input[type=search] { flex: 1; padding: 8px 12px; font-size: 14px; border: 1px solid #cfd6df; border-radius: 8px; }
   .toolbar button { padding: 8px 12px; font-size: 13px; border: 1px solid #cfd6df; background: #fff; border-radius: 8px; cursor: pointer; }
   .prog { font-size: 13.5px; color: #44505f; white-space: nowrap; }
+  .acts { flex: none; display: inline-flex; gap: 6px; }
+  .acts[hidden] { display: none; }
+  .chip[hidden] { display: none; }
+  .bok, .bre, .bnote { font-size: 12.5px; padding: 3px 10px; border-radius: 6px; cursor: pointer; border: 1px solid #cfd6df; background: #fff; }
+  .bok { border-color: #1d7a3a; color: #1d7a3a; font-weight: 600; }
+  .bre { border-color: #b3541e; color: #b3541e; font-weight: 600; }
+  .chip { flex: none; font-size: 12px; border-radius: 4px; padding: 2px 8px; }
+  .chip.ok { background: #e5f4ea; color: #1d7a3a; }
+  .chip.re { background: #fdf0e2; color: #b3541e; }
+  .notebox { flex: none; display: inline-flex; gap: 6px; }
+  .notebox[hidden] { display: none; }
+  .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
+  .bbatch { margin-left: 10px; font-size: 12px; padding: 2px 9px; border: 1px solid #1d7a3a; color: #1d7a3a; background: #fff; border-radius: 6px; cursor: pointer; font-weight: 600; }
+  details.panel { border-left: 4px solid #b3541e; }
+  details.panel.ret { border-left-color: #2f6fed; }
+  .qrow { padding: 6px 14px; border-top: 1px solid #f0f2f5; font-size: 13.5px; }
+  .qrow .org { font-weight: 600; }
+  .qrow a { color: #2f6fed; text-decoration: none; }
+  .qfoot { padding: 10px 14px; display: flex; gap: 10px; align-items: center; border-top: 1px solid #f0f2f5; }
+  .qfoot button { padding: 6px 12px; font-size: 13px; border: 1px solid #b3541e; color: #b3541e; background: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; }
+  .retinfo { flex: none; font-size: 12px; color: #2f6fed; }
+  .retinfo a { color: #2f6fed; }
   .sub { color: #66707e; font-size: 12.5px; }
 </style>
 </head>
@@ -263,7 +329,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P3　公告・公募掲示板型</h1>
-  <div class="upd">快照更新于 2026-10-28 16:25 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 16:43 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">30</div><div class="l">该类对象数（占已归类 1.0%）</div></div>
@@ -354,6 +420,28 @@ export const TPL_PAGES = {
   .toolbar input[type=search] { flex: 1; padding: 8px 12px; font-size: 14px; border: 1px solid #cfd6df; border-radius: 8px; }
   .toolbar button { padding: 8px 12px; font-size: 13px; border: 1px solid #cfd6df; background: #fff; border-radius: 8px; cursor: pointer; }
   .prog { font-size: 13.5px; color: #44505f; white-space: nowrap; }
+  .acts { flex: none; display: inline-flex; gap: 6px; }
+  .acts[hidden] { display: none; }
+  .chip[hidden] { display: none; }
+  .bok, .bre, .bnote { font-size: 12.5px; padding: 3px 10px; border-radius: 6px; cursor: pointer; border: 1px solid #cfd6df; background: #fff; }
+  .bok { border-color: #1d7a3a; color: #1d7a3a; font-weight: 600; }
+  .bre { border-color: #b3541e; color: #b3541e; font-weight: 600; }
+  .chip { flex: none; font-size: 12px; border-radius: 4px; padding: 2px 8px; }
+  .chip.ok { background: #e5f4ea; color: #1d7a3a; }
+  .chip.re { background: #fdf0e2; color: #b3541e; }
+  .notebox { flex: none; display: inline-flex; gap: 6px; }
+  .notebox[hidden] { display: none; }
+  .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
+  .bbatch { margin-left: 10px; font-size: 12px; padding: 2px 9px; border: 1px solid #1d7a3a; color: #1d7a3a; background: #fff; border-radius: 6px; cursor: pointer; font-weight: 600; }
+  details.panel { border-left: 4px solid #b3541e; }
+  details.panel.ret { border-left-color: #2f6fed; }
+  .qrow { padding: 6px 14px; border-top: 1px solid #f0f2f5; font-size: 13.5px; }
+  .qrow .org { font-weight: 600; }
+  .qrow a { color: #2f6fed; text-decoration: none; }
+  .qfoot { padding: 10px 14px; display: flex; gap: 10px; align-items: center; border-top: 1px solid #f0f2f5; }
+  .qfoot button { padding: 6px 12px; font-size: 13px; border: 1px solid #b3541e; color: #b3541e; background: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; }
+  .retinfo { flex: none; font-size: 12px; color: #2f6fed; }
+  .retinfo a { color: #2f6fed; }
   .sub { color: #66707e; font-size: 12.5px; }
 </style>
 </head>
@@ -361,7 +449,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P4　電子調達システム型</h1>
-  <div class="upd">快照更新于 2026-10-28 16:25 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 16:43 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">112</div><div class="l">该类对象数（占已归类 3.7%）</div></div>
@@ -452,6 +540,28 @@ export const TPL_PAGES = {
   .toolbar input[type=search] { flex: 1; padding: 8px 12px; font-size: 14px; border: 1px solid #cfd6df; border-radius: 8px; }
   .toolbar button { padding: 8px 12px; font-size: 13px; border: 1px solid #cfd6df; background: #fff; border-radius: 8px; cursor: pointer; }
   .prog { font-size: 13.5px; color: #44505f; white-space: nowrap; }
+  .acts { flex: none; display: inline-flex; gap: 6px; }
+  .acts[hidden] { display: none; }
+  .chip[hidden] { display: none; }
+  .bok, .bre, .bnote { font-size: 12.5px; padding: 3px 10px; border-radius: 6px; cursor: pointer; border: 1px solid #cfd6df; background: #fff; }
+  .bok { border-color: #1d7a3a; color: #1d7a3a; font-weight: 600; }
+  .bre { border-color: #b3541e; color: #b3541e; font-weight: 600; }
+  .chip { flex: none; font-size: 12px; border-radius: 4px; padding: 2px 8px; }
+  .chip.ok { background: #e5f4ea; color: #1d7a3a; }
+  .chip.re { background: #fdf0e2; color: #b3541e; }
+  .notebox { flex: none; display: inline-flex; gap: 6px; }
+  .notebox[hidden] { display: none; }
+  .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
+  .bbatch { margin-left: 10px; font-size: 12px; padding: 2px 9px; border: 1px solid #1d7a3a; color: #1d7a3a; background: #fff; border-radius: 6px; cursor: pointer; font-weight: 600; }
+  details.panel { border-left: 4px solid #b3541e; }
+  details.panel.ret { border-left-color: #2f6fed; }
+  .qrow { padding: 6px 14px; border-top: 1px solid #f0f2f5; font-size: 13.5px; }
+  .qrow .org { font-weight: 600; }
+  .qrow a { color: #2f6fed; text-decoration: none; }
+  .qfoot { padding: 10px 14px; display: flex; gap: 10px; align-items: center; border-top: 1px solid #f0f2f5; }
+  .qfoot button { padding: 6px 12px; font-size: 13px; border: 1px solid #b3541e; color: #b3541e; background: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; }
+  .retinfo { flex: none; font-size: 12px; color: #2f6fed; }
+  .retinfo a { color: #2f6fed; }
   .sub { color: #66707e; font-size: 12.5px; }
 </style>
 </head>
@@ -459,7 +569,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P5　契約情報型</h1>
-  <div class="upd">快照更新于 2026-10-28 16:25 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 16:43 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">282</div><div class="l">该类对象数（占已归类 9.2%）</div></div>
@@ -550,6 +660,28 @@ export const TPL_PAGES = {
   .toolbar input[type=search] { flex: 1; padding: 8px 12px; font-size: 14px; border: 1px solid #cfd6df; border-radius: 8px; }
   .toolbar button { padding: 8px 12px; font-size: 13px; border: 1px solid #cfd6df; background: #fff; border-radius: 8px; cursor: pointer; }
   .prog { font-size: 13.5px; color: #44505f; white-space: nowrap; }
+  .acts { flex: none; display: inline-flex; gap: 6px; }
+  .acts[hidden] { display: none; }
+  .chip[hidden] { display: none; }
+  .bok, .bre, .bnote { font-size: 12.5px; padding: 3px 10px; border-radius: 6px; cursor: pointer; border: 1px solid #cfd6df; background: #fff; }
+  .bok { border-color: #1d7a3a; color: #1d7a3a; font-weight: 600; }
+  .bre { border-color: #b3541e; color: #b3541e; font-weight: 600; }
+  .chip { flex: none; font-size: 12px; border-radius: 4px; padding: 2px 8px; }
+  .chip.ok { background: #e5f4ea; color: #1d7a3a; }
+  .chip.re { background: #fdf0e2; color: #b3541e; }
+  .notebox { flex: none; display: inline-flex; gap: 6px; }
+  .notebox[hidden] { display: none; }
+  .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
+  .bbatch { margin-left: 10px; font-size: 12px; padding: 2px 9px; border: 1px solid #1d7a3a; color: #1d7a3a; background: #fff; border-radius: 6px; cursor: pointer; font-weight: 600; }
+  details.panel { border-left: 4px solid #b3541e; }
+  details.panel.ret { border-left-color: #2f6fed; }
+  .qrow { padding: 6px 14px; border-top: 1px solid #f0f2f5; font-size: 13.5px; }
+  .qrow .org { font-weight: 600; }
+  .qrow a { color: #2f6fed; text-decoration: none; }
+  .qfoot { padding: 10px 14px; display: flex; gap: 10px; align-items: center; border-top: 1px solid #f0f2f5; }
+  .qfoot button { padding: 6px 12px; font-size: 13px; border: 1px solid #b3541e; color: #b3541e; background: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; }
+  .retinfo { flex: none; font-size: 12px; color: #2f6fed; }
+  .retinfo a { color: #2f6fed; }
   .sub { color: #66707e; font-size: 12.5px; }
 </style>
 </head>
@@ -557,7 +689,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P6　機関トップ/汎用ページ型</h1>
-  <div class="upd">快照更新于 2026-10-28 16:25 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 16:43 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">1,630</div><div class="l">该类对象数（占已归类 53.4%）</div></div>
@@ -648,6 +780,28 @@ export const TPL_PAGES = {
   .toolbar input[type=search] { flex: 1; padding: 8px 12px; font-size: 14px; border: 1px solid #cfd6df; border-radius: 8px; }
   .toolbar button { padding: 8px 12px; font-size: 13px; border: 1px solid #cfd6df; background: #fff; border-radius: 8px; cursor: pointer; }
   .prog { font-size: 13.5px; color: #44505f; white-space: nowrap; }
+  .acts { flex: none; display: inline-flex; gap: 6px; }
+  .acts[hidden] { display: none; }
+  .chip[hidden] { display: none; }
+  .bok, .bre, .bnote { font-size: 12.5px; padding: 3px 10px; border-radius: 6px; cursor: pointer; border: 1px solid #cfd6df; background: #fff; }
+  .bok { border-color: #1d7a3a; color: #1d7a3a; font-weight: 600; }
+  .bre { border-color: #b3541e; color: #b3541e; font-weight: 600; }
+  .chip { flex: none; font-size: 12px; border-radius: 4px; padding: 2px 8px; }
+  .chip.ok { background: #e5f4ea; color: #1d7a3a; }
+  .chip.re { background: #fdf0e2; color: #b3541e; }
+  .notebox { flex: none; display: inline-flex; gap: 6px; }
+  .notebox[hidden] { display: none; }
+  .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
+  .bbatch { margin-left: 10px; font-size: 12px; padding: 2px 9px; border: 1px solid #1d7a3a; color: #1d7a3a; background: #fff; border-radius: 6px; cursor: pointer; font-weight: 600; }
+  details.panel { border-left: 4px solid #b3541e; }
+  details.panel.ret { border-left-color: #2f6fed; }
+  .qrow { padding: 6px 14px; border-top: 1px solid #f0f2f5; font-size: 13.5px; }
+  .qrow .org { font-weight: 600; }
+  .qrow a { color: #2f6fed; text-decoration: none; }
+  .qfoot { padding: 10px 14px; display: flex; gap: 10px; align-items: center; border-top: 1px solid #f0f2f5; }
+  .qfoot button { padding: 6px 12px; font-size: 13px; border: 1px solid #b3541e; color: #b3541e; background: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; }
+  .retinfo { flex: none; font-size: 12px; color: #2f6fed; }
+  .retinfo a { color: #2f6fed; }
   .sub { color: #66707e; font-size: 12.5px; }
 </style>
 </head>
@@ -655,7 +809,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P7　PDF直接リンク型</h1>
-  <div class="upd">快照更新于 2026-10-28 16:25 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 16:43 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">1</div><div class="l">该类对象数（占已归类 0.0%）</div></div>

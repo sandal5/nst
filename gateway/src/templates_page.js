@@ -59,6 +59,28 @@ export const TEMPLATES_PAGE_HTML = `<!DOCTYPE html>
   .toolbar input[type=search] { flex: 1; padding: 8px 12px; font-size: 14px; border: 1px solid #cfd6df; border-radius: 8px; }
   .toolbar button { padding: 8px 12px; font-size: 13px; border: 1px solid #cfd6df; background: #fff; border-radius: 8px; cursor: pointer; }
   .prog { font-size: 13.5px; color: #44505f; white-space: nowrap; }
+  .acts { flex: none; display: inline-flex; gap: 6px; }
+  .acts[hidden] { display: none; }
+  .chip[hidden] { display: none; }
+  .bok, .bre, .bnote { font-size: 12.5px; padding: 3px 10px; border-radius: 6px; cursor: pointer; border: 1px solid #cfd6df; background: #fff; }
+  .bok { border-color: #1d7a3a; color: #1d7a3a; font-weight: 600; }
+  .bre { border-color: #b3541e; color: #b3541e; font-weight: 600; }
+  .chip { flex: none; font-size: 12px; border-radius: 4px; padding: 2px 8px; }
+  .chip.ok { background: #e5f4ea; color: #1d7a3a; }
+  .chip.re { background: #fdf0e2; color: #b3541e; }
+  .notebox { flex: none; display: inline-flex; gap: 6px; }
+  .notebox[hidden] { display: none; }
+  .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
+  .bbatch { margin-left: 10px; font-size: 12px; padding: 2px 9px; border: 1px solid #1d7a3a; color: #1d7a3a; background: #fff; border-radius: 6px; cursor: pointer; font-weight: 600; }
+  details.panel { border-left: 4px solid #b3541e; }
+  details.panel.ret { border-left-color: #2f6fed; }
+  .qrow { padding: 6px 14px; border-top: 1px solid #f0f2f5; font-size: 13.5px; }
+  .qrow .org { font-weight: 600; }
+  .qrow a { color: #2f6fed; text-decoration: none; }
+  .qfoot { padding: 10px 14px; display: flex; gap: 10px; align-items: center; border-top: 1px solid #f0f2f5; }
+  .qfoot button { padding: 6px 12px; font-size: 13px; border: 1px solid #b3541e; color: #b3541e; background: #fff; border-radius: 8px; cursor: pointer; font-weight: 600; }
+  .retinfo { flex: none; font-size: 12px; color: #2f6fed; }
+  .retinfo a { color: #2f6fed; }
   .sub { color: #66707e; font-size: 12.5px; }
 </style>
 </head>
@@ -66,7 +88,7 @@ export const TEMPLATES_PAGE_HTML = `<!DOCTYPE html>
 <div class="wrap">
   <a class="back" href="/sandal">← 返回任务状态</a>
   <h1>模板分类与对象全景</h1>
-  <div class="upd">快照更新于 2026-10-28 16:25 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 16:43 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">3,974</div><div class="l">主清单对象（已确定 3,310，83.3%）</div></div>
