@@ -1,4 +1,4 @@
-﻿org_name,domain,list_url,p_class,list_structure,detail_pattern,pagination,detail_format,evidence
+org_name,domain,list_url,p_class,list_structure,detail_pattern,pagination,detail_format,evidence
 人事院北海道事務局,www.jinji.go.jp,https://www.jinji.go.jp/hokaido/oshirase/seihutyotatsu.html,P6,link_list,static_html,none_detected,mixed,gateway_sample
 北海道警察情報通信部,www.police.pref.hokkaido.lg.jp,https://www.police.pref.hokkaido.lg.jp/joutuu/johotusin/nyusatu-kokuji/nyusatu-kokuji.html,P3,insufficient_links,,none_detected,,gateway_sample (2026-10-28)
 北海道警察本部会計課,www.police.pref.hokkaido.lg.jp,https://www.police.pref.hokkaido.lg.jp/info/soumu/kaikei/nyusatu.html,P1,table_list,static_html,none_detected,html,gateway_sample (2026-10-28)
@@ -3035,7 +3035,7 @@
 神津島村,vill.kouzushima.tokyo.jp,https://www.vill.kouzushima.tokyo.jp/notfound/,P4,search_form,,none_detected,,gateway_sample (2026-10-28); subclass_hint: search-form driven public system page
 三条市,www.city.sanjo.niigata.jp,https://www.city.sanjo.niigata.jp/sangyo_business/nyusatsu_keiyaku/index.html,P5,link_list,numeric_id,none_detected,html,gateway_sample (2026-10-28)
 阿賀町,www.town.aga.niigata.jp,https://www.town.aga.niigata.jp/sangyo_business/nyusatsu_keiyaku/index.html,P5,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
-富山市,www.city.toyama.toyama.jp,https://www.city.toyama.lg.jp/business/nyusatsu/index.html,P1,evidence_only,,unknown,,recorded_fields (sample fetch failed 2026-10-28: gateway 403: host www.city.toyama.lg.jp not in project allowlist)
+富山市,www.city.toyama.toyama.jp,https://www.city.toyama.lg.jp/business/nyusatsu/index.html,P1,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
 早川町,www.town.hayakawa.yamanashi.jp,https://www.town.hayakawa.yamanashi.jp/business/bid/index.html,P1,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28)
 羽島市,www.city.hashima.lg.jp,https://www.city.hashima.lg.jp/3603.html,P6,ul_list,numeric_id,next_or_numbered,html,gateway_sample (2026-10-28)
 岩倉市,www.city.iwakura.aichi.jp,https://www.city.iwakura.aichi.jp/category/4-1-0-0-0-0-0-0-0-0.html,P6,ul_list,static_html,none_detected,html,gateway_sample (2026-10-28); subclass_hint: generic/top page was the recorded target; listing sits deeper or in news flow

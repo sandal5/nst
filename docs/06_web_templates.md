@@ -23,7 +23,7 @@ links).
 
 | classification basis | objects | share |
 |---|---|---|
-| gateway sample (live page parsed) | 2,465 | 80.7% |
+| gateway sample (live page parsed) | 2,466 | 80.7% |
 | tonight's crawl evidence | 300 | 10.0% |
 | sample fetch failed (incl. 2026-10-28 re-sample) → recorded fields | 26 | 0.9% |
 | recorded fields only (not sampled) | 240 | 8.0% |
@@ -31,7 +31,7 @@ links).
 
 **2026-10-28 update:** the 1,170 "sample failed" objects were re-sampled in daytime through the gateway (1,016 unique list URLs; `scripts/gw_day2_resample.py`). 990 URLs sampled successfully, 14 were skipped (robots), 12 failed again; 1,144 objects moved to live-sample classification and only 26 remain on recorded-fields classification, with a dated failure note in the evidence column. Live-sample coverage is now 2,417 of 3,005 objects (80.4%).
 
-**2026-10-28 append:** the 49 keys confirmed after the set froze (45 connection-error recoveries + 4 supplementary) were classified the same day via gateway sampling (`output/day2/templates49.csv`): 48 live-sampled (P1 12, P2 1, P4 3, P5 7, P6 24, P7 1), and 1 （富山市） fell back to recorded fields (P1, evidence_only) because its redirect-target host was missing from the gateway allowlist; the allowlist has since been regenerated to include recorded redirect-target hosts and that row will be re-sampled after the gateway redeploys. Totals now: 3,054 objects, live-sample coverage 2,465 (80.7%). Detail-pattern fields are empty for rows whose registry record carries no detail URL and whose sample showed no qualifying detail link — they were left blank rather than guessed.
+**2026-10-28 append:** the 49 keys confirmed after the set froze (45 connection-error recoveries + 4 supplementary) were classified the same day via gateway sampling (`output/day2/templates49.csv`): 48 live-sampled (P1 12, P2 1, P4 3, P5 7, P6 24, P7 1), and 1 （富山市） fell back to recorded fields (P1, evidence_only) because its redirect-target host was missing from the gateway allowlist; the allowlist was regenerated to include recorded redirect-target hosts and, after the gateway redeployed, that row was re-sampled successfully the same day (P1 / ul_list, live sample). Totals now: 3,054 objects, live-sample coverage 2,466 (80.7%). Detail-pattern fields are empty for rows whose registry record carries no detail URL and whose sample showed no qualifying detail link — they were left blank rather than guessed.
 
 ## P-class distribution (docs/02)
 
