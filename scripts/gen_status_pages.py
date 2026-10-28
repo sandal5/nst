@@ -447,11 +447,50 @@ def build_objects_page(master, open_items):
                     f'{inner}</details>')
         return out
 
+    # --- Top-level taxonomy v2 (iterated on v1, Gordon 2026-10-28): the
+    # registry is split by issuer TYPE. Rules are conservative: exact lists
+    # for 政令市/特別区, name markers for 特殊法人, explicit bureau patterns
+    # for 地方支分部局; anything unmatched stays in its v1 bucket.
+    SEIREI = {'札幌市', '仙台市', 'さいたま市', '千葉市', '横浜市', '川崎市', '相模原市',
+              '新潟市', '静岡市', '浜松市', '名古屋市', '京都市', '大阪市', '堺市', '神戸市',
+              '岡山市', '広島市', '北九州市', '福岡市', '熊本市'}
+    WARDS = {'千代田区', '中央区', '港区', '新宿区', '文京区', '台東区', '墨田区', '江東区',
+             '品川区', '目黒区', '大田区', '世田谷区', '渋谷区', '中野区', '杉並区', '豊島区',
+             '北区', '荒川区', '板橋区', '練馬区', '足立区', '葛飾区', '江戸川区'}
+    BRANCH_TYPES = [
+        ('地方整備局', '地方整備局'), ('地方検察庁', '検察庁（地方・高等）'), ('高等検察庁', '検察庁（地方・高等）'),
+        ('労働局', '都道府県労働局'), ('管区警察局', '管区警察局'), ('森林管理局', '森林管理局'),
+        ('農政局', '地方農政局'), ('法務局', '法務局'), ('出入国在留管理局', '出入国在留管理局'),
+        ('海上保安', '海上保安本部等'), ('国税局', '国税局'), ('国税不服審判所', '国税局'),
+        ('税関', '税関'), ('総合通信局', '総合通信局'), ('運輸局', '地方運輸局'),
+        ('地方航空局', '地方運輸局'), ('地方厚生局', '地方厚生局'), ('矯正管区', '矯正管区'),
+        ('地方防衛局', '地方防衛局'), ('地方環境事務所', '地方環境事務所'),
+        ('管区行政評価局', '管区行政評価局'), ('地方公安調査局', '公安調査局'),
+        ('気象台', '気象台'), ('経済産業局', '経済産業局'),
+    ]
+
+    def is_tokushu(r):
+        n = r["org_name"]
+        return n.startswith("（特）") or "日本年金機構" in n or n.startswith("放送大学")
+
+    def branch_type(r):
+        n = r["org_name"]
+        for pat, label in BRANCH_TYPES:
+            if pat in n:
+                return label
+        return None
+
     nat = [r for r in master if (r["level"] or "") == "国・独立行政法人等"]
-    doku = [r for r in nat if (r.get("group_ministry") or "") in DOKU_GROUPS]
-    ministries = [r for r in nat if (r.get("group_ministry") or "") not in DOKU_GROUPS]
+    tokushu = [r for r in nat if is_tokushu(r)]
+    doku = [r for r in nat if not is_tokushu(r) and (r.get("group_ministry") or "") in DOKU_GROUPS]
+    nat_rest = [r for r in nat if not is_tokushu(r) and r not in doku]
+    branches = [r for r in nat_rest if branch_type(r)]
+    ministries = [r for r in nat_rest if not branch_type(r)]
     prefs = [r for r in master if r["level"] == "都道府県"]
-    munis = [r for r in master if r["level"] == "市区町村"]
+    muni_all = [r for r in master if r["level"] == "市区町村"]
+    seirei = [r for r in muni_all if r["org_name"] in SEIREI]
+    wards = [r for r in muni_all if r["prefecture"] == "東京都" and r["org_name"] in WARDS]
+    munis = [r for r in muni_all if r not in seirei and r not in wards]
     common = [r for r in master if r["level"] == "国 (共通システム)"]
 
     total = len(master)
@@ -484,10 +523,14 @@ def build_objects_page(master, open_items):
              f'<span class="sub">导出后把文件发给我即可。未备注的默认按 skill 方式核对：{DEFAULT_RECHECK_METHOD}。</span></div>'
              f'</details>')
     body += panel_b
-    body += section("省庁・国の機関", grouped(ministries, lambda r: r.get("group_ministry") or "(未分类)"), ministries)
+    body += section("国の機関・省庁（本省等）", grouped(ministries, lambda r: r.get("group_ministry") or "(未分类)"), ministries)
+    body += section("国の地方支分部局", grouped(branches, branch_type), branches)
     body += section("都道府県", flat(prefs), prefs)
+    body += section("政令指定都市", flat(seirei), seirei)
+    body += section("特別区（東京23区）", flat(wards), wards)
     body += section("市区町村（按都道府县展开）", grouped(munis, lambda r: r["prefecture"]), munis)
     body += section("独立行政法人等", flat(doku), doku)
+    body += section("特殊法人・特殊会社等", flat(tokushu), tokushu)
     if common:
         body += section("共通システム", flat(common), common)
 
