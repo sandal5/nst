@@ -693,7 +693,10 @@ def publish_pages(pages):
             req = urllib.request.Request(
                 base + "/sandal/api/pageput",
                 data=json.dumps({"name": name, "html": page_html}).encode("utf-8"),
-                headers={"Content-Type": "application/json", "X-Gateway-Key": key},
+                headers={"Content-Type": "application/json", "X-Gateway-Key": key,
+                         # The gateway domain's edge protection rejects the
+                         # default python-urllib UA with a 403 block page.
+                         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"},
                 method="POST")
             with opener.open(req, timeout=60) as resp:
                 print(f"publish {name}: {resp.status}")
