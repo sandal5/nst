@@ -153,7 +153,23 @@ async function checkApi(request, env, action) {
     if (typeof body.html !== "string" || !body.html) {
       return json({ error: "missing html" }, 400);
     }
-    await env.CHECK_KV.put("page:" + name, body.html);
+    // Large pages arrive in chunks (per-request CPU on the free plan
+    // cannot JSON-parse a multi-MB body). Single-part pages are stored
+    // whole; chunked pages as page:<name>#<i> plus a #meta manifest.
+    const part = body.part | 0;
+    const parts = body.parts | 0;
+    if (parts <= 1) {
+      await env.CHECK_KV.put("page:" + name, body.html);
+    } else {
+      if (part < 0 || part >= parts || parts > 64 || body.html.length > 400000) {
+        return json({ error: "bad chunk" }, 400);
+      }
+      await env.CHECK_KV.put("page:" + name + "#" + part, body.html);
+      if (part === 0) {
+        await env.CHECK_KV.put("page:" + name + "#meta",
+          JSON.stringify({ parts }));
+      }
+    }
     return json({ ok: true, bytes: body.html.length });
   }
   if (action === "ack") {
@@ -273,8 +289,18 @@ async function kvPage(env, name, bundled) {
   // fallback for a cold KV.
   if (env && env.CHECK_KV) {
     try {
-      const h = await env.CHECK_KV.get("page:" + name);
-      if (h) return h;
+      const whole = await env.CHECK_KV.get("page:" + name);
+      if (whole) return whole;
+      const meta = await env.CHECK_KV.get("page:" + name + "#meta", "json");
+      if (meta && meta.parts > 1) {
+        const chunks = [];
+        for (let i = 0; i < meta.parts; i++) {
+          const c = await env.CHECK_KV.get("page:" + name + "#" + i);
+          if (c === null) return bundled; // incomplete upload in flight
+          chunks.push(c);
+        }
+        return chunks.join("");
+      }
     } catch {}
   }
   return bundled;

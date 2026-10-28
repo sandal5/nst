@@ -689,19 +689,28 @@ def publish_pages(pages):
     opener = urllib.request.build_opener(
         urllib.request.ProxyHandler({"https": proxy, "http": proxy} if proxy else {}))
     for name, page_html in pages.items():
-        try:
-            req = urllib.request.Request(
-                base + "/sandal/api/pageput",
-                data=json.dumps({"name": name, "html": page_html}).encode("utf-8"),
-                headers={"Content-Type": "application/json", "X-Gateway-Key": key,
-                         # The gateway domain's edge protection rejects the
-                         # default python-urllib UA with a 403 block page.
-                         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"},
-                method="POST")
-            with opener.open(req, timeout=60) as resp:
-                print(f"publish {name}: {resp.status}")
-        except Exception as e:
-            print(f"publish {name}: FAILED {e}")
+        chunks = [page_html[i:i + 200000]
+                  for i in range(0, len(page_html), 200000)] or [""]
+        ok = True
+        for idx, chunk in enumerate(chunks):
+            try:
+                req = urllib.request.Request(
+                    base + "/sandal/api/pageput",
+                    data=json.dumps({"name": name, "html": chunk,
+                                     "part": idx, "parts": len(chunks)}).encode("utf-8"),
+                    headers={"Content-Type": "application/json", "X-Gateway-Key": key,
+                             # The gateway domain's edge protection rejects the
+                             # default python-urllib UA with a 403 block page.
+                             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"},
+                    method="POST")
+                with opener.open(req, timeout=60) as resp:
+                    if resp.status != 200:
+                        ok = False
+            except Exception as e:
+                print(f"publish {name}[{idx}/{len(chunks)}]: FAILED {e}")
+                ok = False
+                break
+        print(f"publish {name}: {'200' if ok else 'FAILED'} ({len(chunks)} part(s))")
 
 
 def main():
