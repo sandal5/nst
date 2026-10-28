@@ -225,7 +225,7 @@
 袖ケ浦市,千葉県,市区町村,www.city.sodegaura.lg.jp,http://www.city.sodegaura.lg.jp/life/3/26/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 いすみ市,千葉県,市区町村,www.city.isumi.lg.jp,http://www.city.isumi.lg.jp/business/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 栄町,千葉県,市区町村,www.town.sakae.chiba.jp,http://www.town.sakae.chiba.jp/dir.php?code=42,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
-大網白里町,千葉県,市区町村,www.city.oamishirasato.lg.jp,http://www.city.oamishirasato.lg.jp/category/66-0-0-0-0.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
+大網白里市,千葉県,市区町村,www.city.oamishirasato.lg.jp,http://www.city.oamishirasato.lg.jp/category/66-0-0-0-0.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 大多喜町,千葉県,市区町村,www.town.otaki.chiba.jp,"http://www.town.otaki.chiba.jp/index.cfm/11,0,74,html",manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 御宿町,千葉県,市区町村,www.town.onjuku.chiba.jp,http://www.town.onjuku.chiba.jp/sub5/10/,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 国際平和協力本部事務局,東京都,国・独立行政法人等,www.pko.go.jp,http://www.pko.go.jp/pko_j/chotatu.html,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
@@ -444,9 +444,10 @@
 国立大学法人奈良女子大学,奈良県,国・独立行政法人等,koto.nara-wu.ac.jp,http://koto.nara-wu.ac.jp/kokai/sisetu/tyoutatu.htm,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 （独）奈良国立博物館,奈良県,国・独立行政法人等,www.narahaku.go.jp,https://www.narahaku.go.jp/news/04.html,robots_denied,robots 禁止 (手動確認対象),人工确认对象，不自动采集
 （独）国立病院機構奈良医療センター,奈良県,国・独立行政法人等,www.nho-nara.jp,http://www.nho-nara.jp/html/tender.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-奈良県,奈良県,都道府県,www.pref.nara.jp,http://www.pref.nara.jp/dd_aspx_menuid-11241.htm,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
+奈良県,奈良県,都道府県,www.pref.nara.lg.jp,http://www.pref.nara.jp/dd_aspx_menuid-11241.htm,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 葛城市,奈良県,市区町村,www.city.katsuragi.nara.jp,"http://www.city.katsuragi.nara.jp/index.cfm/16,0,74,html",manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 宇陀市,奈良県,市区町村,www.city.uda.nara.jp,http://www.city.uda.nara.jp/sangyou/nyuusatsu/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
+三宅町,奈良県,市区町村,www.town.miyake.nara.jp,,unverified,未検証,待首次验证
 河合町,奈良県,市区町村,www.town.kawai.nara.jp,http://www.town.kawai.nara.jp/chosei/sonota/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 上北山村,奈良県,市区町村,vill.kamikitayama.nara.jp,http://vill.kamikitayama.nara.jp/kurashi/tetsuduki/nyusatsu/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 東吉野村,奈良県,市区町村,www.vill.higashiyoshino.nara.jp,http://www.vill.higashiyoshino.nara.jp/,reverify,要再検証 (跳转复核失敗),择日再验证
