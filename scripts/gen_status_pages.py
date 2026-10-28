@@ -12,8 +12,10 @@ same inputs produce the same files apart from the timestamp argument.
 
 Usage: gen_status_pages.py [timestamp-string]
 """
+import base64
 import csv
 import html
+import io
 import json
 import os
 import sys
@@ -71,6 +73,14 @@ CSS = """
   .bar span { display: block; background: #2f6fed; height: 8px; border-radius: 4px; }
   a.nav { display: block; background: #2f6fed; color: #fff; text-decoration: none; border-radius: 10px; padding: 14px 16px; font-size: 15px; font-weight: 600; margin: 4px 0 8px; }
   a.back { color: #2f6fed; text-decoration: none; font-size: 13.5px; }
+  a.plink { color: #2f6fed; text-decoration: none; white-space: nowrap; font-size: 13.5px; }
+  .ts { color: #66707e; font-size: 12.5px; font-variant-numeric: tabular-nums; margin-left: 6px; white-space: nowrap; }
+  figure { margin: 0 0 20px; background: #fff; border: 1px solid #e2e6ec; border-radius: 10px; padding: 12px; }
+  figure img { width: 100%; border: 1px solid #dfe4ea; border-radius: 6px; display: block; }
+  figcaption { font-size: 13px; color: #44505f; padding-top: 10px; line-height: 1.7; }
+  figcaption .org { font-weight: 700; color: #1c2330; font-size: 14px; }
+  .obs { margin: 6px 0 2px; padding-left: 20px; }
+  .obs li { font-size: 13.5px; padding: 2px 0; border: none; }
   .sub { color: #66707e; font-size: 12.5px; }
 """
 
@@ -86,6 +96,95 @@ def pct(a, b):
 
 def bar(share):
     return f'<div class="bar"><span style="width:{share:.1f}%"></span></div>'
+
+
+def img_data_uri(path):
+    """Re-encode a screenshot to <=1000px wide JPEG and return a data URI."""
+    try:
+        from PIL import Image
+        im = Image.open(path).convert("RGB")
+        if im.width > 1000:
+            im = im.resize((1000, int(im.height * 1000 / im.width)))
+        buf = io.BytesIO()
+        im.save(buf, "JPEG", quality=62)
+        return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
+    except Exception:
+        with open(path, "rb") as f:
+            return "data:image/jpeg;base64," + base64.b64encode(f.read()).decode()
+
+
+def build_tpl_pages(p_counts, n_templates, n_sampled):
+    """Per-class explanation pages with representative screenshots.
+
+    Source: output/template_shots/manifest.json (+ its JPEGs), produced by
+    the screenshot-capture pass. Returns {p1: html, ..., p7: html}; classes
+    without manifest entries get a page without screenshots.
+    """
+    shots_dir = os.path.join(JP, "output/template_shots")
+    manifest = {}
+    mpath = os.path.join(shots_dir, "manifest.json")
+    if os.path.exists(mpath):
+        with open(mpath, encoding="utf-8") as f:
+            manifest = {c["class"]: c for c in json.load(f).get("classes", [])}
+    pages = {}
+    for p in ["P1", "P2", "P3", "P4", "P5", "P6", "P7"]:
+        name, desc = P_NAMES[p]
+        n = p_counts.get(p, 0)
+        entry = manifest.get(p, {})
+        figs = ""
+        for ex in entry.get("examples", []):
+            img_path = os.path.join(shots_dir, ex.get("image", ""))
+            if not os.path.exists(img_path):
+                continue
+            obs = "".join(f"<li>{html.escape(o)}</li>" for o in ex.get("observed", []))
+            figs += f"""<figure>
+  <img src="{img_data_uri(img_path)}" alt="{html.escape(ex.get('org_name', ''))} 公告页截图">
+  <figcaption><span class="org">{html.escape(ex.get('org_name', ''))}</span>　{html.escape(ex.get('page_title', ''))}<br>
+  <span class="sub">{html.escape(ex.get('list_url', ''))}｜截图 {html.escape(ex.get('captured_at', ''))}</span>
+  <ul class="obs">{obs}</ul></figcaption>
+</figure>"""
+        notes = "".join(f"<li>{html.escape(x)}</li>" for x in entry.get("class_notes", []))
+        failed = entry.get("failed_attempts", [])
+        fail_note = ""
+        if failed:
+            names = "、".join(html.escape(str(x.get("org_name", x)) if isinstance(x, dict) else str(x)) for x in failed[:5])
+            fail_note = f'<div class="note">本次采集失败留痕：{names}（超时/拒绝/崩溃，见采集记录）。</div>'
+        pages[p.lower()] = f"""<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="refresh" content="300">
+<title>{p} {name}｜nst 模板说明</title>
+<style>{CSS}</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
+  <h1>{p}　{name}</h1>
+  <div class="upd">快照更新于 {TS}（每小时自动更新）</div>
+
+  <div class="cards">
+    <div class="card"><div class="n">{n:,}</div><div class="l">该类对象数（占已归类 {pct(n, n_templates)}）</div></div>
+    <div class="card"><div class="n">{len(entry.get('examples', []))}</div><div class="l">本页代表截图（逐张实测说明）</div></div>
+  </div>
+
+  <h2>这类页面长什么样</h2>
+  <ul>
+    <li>{desc}</li>
+    {notes}
+  </ul>
+
+  <h2>代表截图</h2>
+  {figs if figs else '<div class="note">暂无代表截图。</div>'}
+  {fail_note}
+
+  <div class="note">口径：截图为代表站公告页顶部（1280px 宽视口），说明逐条来自截图实测；分类依据为全库 {n_templates:,} 个对象（实采 {n_sampled:,} 个）。</div>
+</div>
+</body>
+</html>"""
+    return pages
 
 
 def main():
@@ -124,8 +223,13 @@ def main():
     if n_candidates:
         queue_rows += (f'<tr><td>候选册：组合类团体</td><td class="num">{n_candidates:,}</td>'
                        f'<td class="wait">挂账，逐个核实是否为发注机关</td></tr>')
-    done_items = "".join(
-        f'<li><span class="done">完成</span>　{html.escape(x)}</li>' for x in frag.get("done_today", []))
+    def done_li(x):
+        if isinstance(x, dict):
+            ts = f'<span class="ts">{html.escape(x.get("time", ""))}</span>' if x.get("time") else ""
+            return f'<li><span class="done">完成</span>{ts}　{html.escape(x.get("text", ""))}</li>'
+        return f'<li><span class="done">完成</span>　{html.escape(str(x))}</li>'
+
+    done_items = "".join(done_li(x) for x in frag.get("done_today", []))
     date_label = frag.get("date", "")
     overview = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -181,7 +285,7 @@ def main():
         name, desc = P_NAMES[p]
         p_rows += (f'<tr><td><b>{p}</b> {name}</td><td class="num">{n:,}</td>'
                    f'<td class="num">{pct(n, n_templates)}</td><td>{bar(n / n_templates * 100 if n_templates else 0)}</td>'
-                   f'<td class="sub">{desc}</td></tr>')
+                   f'<td class="sub">{desc}</td><td><a class="plink" href="/sandal/templates/{p.lower()}">截图说明 →</a></td></tr>')
     struct_counts = Counter(r["list_structure"] for r in templates)
     struct_rows = "".join(
         f'<tr><td>{STRUCT_LABELS.get(k, k)}</td><td class="num">{n:,}</td><td class="num">{pct(n, n_templates)}</td></tr>'
@@ -239,7 +343,7 @@ def main():
 
   <h2>按模板分类（P1–P7，已归类 {n_templates:,} 个对象）</h2>
   <table>
-    <tr><th>分类</th><th class="num">对象数</th><th class="num">占比</th><th></th><th>说明</th></tr>
+    <tr><th>分类</th><th class="num">对象数</th><th class="num">占比</th><th></th><th>说明</th><th>详情</th></tr>
     {p_rows}
   </table>
   <div class="sub">分类依据：实采样本 {n_sampled:,} 个（{pct(n_sampled, n_templates)}），其余按登记字段归类。P6 占大头，意味着多数小机关把公告放在新闻流或栏目深处，采集器需要按关键词过滤。</div>
@@ -286,6 +390,15 @@ def main():
                 "export const STATUS_PAGE_HTML = `" + overview.replace("\\", "\\\\").replace("`", "\\`").replace("${", "\\${") + "`;\n")
     with open(os.path.join(REPO, "gateway/src/templates_page.js"), "w", encoding="utf-8") as f:
         f.write(js_module(detail).replace("PAGE_HTML", "TEMPLATES_PAGE_HTML"))
+    tpl_pages = build_tpl_pages(p_counts, n_templates, n_sampled)
+    with open(os.path.join(REPO, "gateway/src/tpl_pages.js"), "w", encoding="utf-8") as f:
+        f.write("// Generated by scripts/gen_status_pages.py — do not edit by hand.\n")
+        f.write("export const TPL_PAGES = {\n")
+        for key, page_html in tpl_pages.items():
+            body = page_html.replace("\\", "\\\\").replace("`", "\\`").replace("${", "\\${")
+            f.write(f'  "{key}": `{body}`,\n')
+        f.write("};\n")
+    print(f"tpl pages: {len(tpl_pages)}")
     print(f"generated: confirmed {confirmed}/{total}, templates {n_templates}, endpoints {n_endpoints}, open {len(open_items)}")
 
 

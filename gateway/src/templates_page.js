@@ -32,6 +32,14 @@ export const TEMPLATES_PAGE_HTML = `<!DOCTYPE html>
   .bar span { display: block; background: #2f6fed; height: 8px; border-radius: 4px; }
   a.nav { display: block; background: #2f6fed; color: #fff; text-decoration: none; border-radius: 10px; padding: 14px 16px; font-size: 15px; font-weight: 600; margin: 4px 0 8px; }
   a.back { color: #2f6fed; text-decoration: none; font-size: 13.5px; }
+  a.plink { color: #2f6fed; text-decoration: none; white-space: nowrap; font-size: 13.5px; }
+  .ts { color: #66707e; font-size: 12.5px; font-variant-numeric: tabular-nums; margin-left: 6px; white-space: nowrap; }
+  figure { margin: 0 0 20px; background: #fff; border: 1px solid #e2e6ec; border-radius: 10px; padding: 12px; }
+  figure img { width: 100%; border: 1px solid #dfe4ea; border-radius: 6px; display: block; }
+  figcaption { font-size: 13px; color: #44505f; padding-top: 10px; line-height: 1.7; }
+  figcaption .org { font-weight: 700; color: #1c2330; font-size: 14px; }
+  .obs { margin: 6px 0 2px; padding-left: 20px; }
+  .obs li { font-size: 13.5px; padding: 2px 0; border: none; }
   .sub { color: #66707e; font-size: 12.5px; }
 </style>
 </head>
@@ -39,7 +47,7 @@ export const TEMPLATES_PAGE_HTML = `<!DOCTYPE html>
 <div class="wrap">
   <a class="back" href="/sandal">← 返回任务状态</a>
   <h1>模板分类与对象全景</h1>
-  <div class="upd">快照更新于 2026-10-28 15:24 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 15:53 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">3,974</div><div class="l">主清单对象（已确定 3,310，83.3%）</div></div>
@@ -50,8 +58,8 @@ export const TEMPLATES_PAGE_HTML = `<!DOCTYPE html>
 
   <h2>按模板分类（P1–P7，已归类 3,054 个对象）</h2>
   <table>
-    <tr><th>分类</th><th class="num">对象数</th><th class="num">占比</th><th></th><th>说明</th></tr>
-    <tr><td><b>P1</b> 入札情報一覧型</td><td class="num">792</td><td class="num">25.9%</td><td><div class="bar"><span style="width:25.9%"></span></div></td><td class="sub">入札・nyusatsu 系路径的标准公告列表，标题+日期排列</td></tr><tr><td><b>P2</b> 調達情報型</td><td class="num">207</td><td class="num">6.8%</td><td><div class="bar"><span style="width:6.8%"></span></div></td><td class="sub">chotatsu 系路径，国家机关・大学・医院较多</td></tr><tr><td><b>P3</b> 公告・公募掲示板型</td><td class="num">30</td><td class="num">1.0%</td><td><div class="bar"><span style="width:1.0%"></span></div></td><td class="sub">公告板型，公告本文常在 PDF 内</td></tr><tr><td><b>P4</b> 電子調達システム型</td><td class="num">112</td><td class="num">3.7%</td><td><div class="bar"><span style="width:3.7%"></span></div></td><td class="sub">电子调達系统入口 / 检索式公开侧，需系统级适配</td></tr><tr><td><b>P5</b> 契約情報型</td><td class="num">282</td><td class="num">9.2%</td><td><div class="bar"><span style="width:9.2%"></span></div></td><td class="sub">公告与结果同页，解析时需区分公告中与结果公表</td></tr><tr><td><b>P6</b> 機関トップ/汎用ページ型</td><td class="num">1,630</td><td class="num">53.4%</td><td><div class="bar"><span style="width:53.4%"></span></div></td><td class="sub">登记的是机构トップ或汎用页，真实列表在更深处或新闻流里</td></tr><tr><td><b>P7</b> PDF直接リンク型</td><td class="num">1</td><td class="num">0.0%</td><td><div class="bar"><span style="width:0.0%"></span></div></td><td class="sub">公告页本身即 PDF 直链</td></tr>
+    <tr><th>分类</th><th class="num">对象数</th><th class="num">占比</th><th></th><th>说明</th><th>详情</th></tr>
+    <tr><td><b>P1</b> 入札情報一覧型</td><td class="num">792</td><td class="num">25.9%</td><td><div class="bar"><span style="width:25.9%"></span></div></td><td class="sub">入札・nyusatsu 系路径的标准公告列表，标题+日期排列</td><td><a class="plink" href="/sandal/templates/p1">截图说明 →</a></td></tr><tr><td><b>P2</b> 調達情報型</td><td class="num">207</td><td class="num">6.8%</td><td><div class="bar"><span style="width:6.8%"></span></div></td><td class="sub">chotatsu 系路径，国家机关・大学・医院较多</td><td><a class="plink" href="/sandal/templates/p2">截图说明 →</a></td></tr><tr><td><b>P3</b> 公告・公募掲示板型</td><td class="num">30</td><td class="num">1.0%</td><td><div class="bar"><span style="width:1.0%"></span></div></td><td class="sub">公告板型，公告本文常在 PDF 内</td><td><a class="plink" href="/sandal/templates/p3">截图说明 →</a></td></tr><tr><td><b>P4</b> 電子調達システム型</td><td class="num">112</td><td class="num">3.7%</td><td><div class="bar"><span style="width:3.7%"></span></div></td><td class="sub">电子调達系统入口 / 检索式公开侧，需系统级适配</td><td><a class="plink" href="/sandal/templates/p4">截图说明 →</a></td></tr><tr><td><b>P5</b> 契約情報型</td><td class="num">282</td><td class="num">9.2%</td><td><div class="bar"><span style="width:9.2%"></span></div></td><td class="sub">公告与结果同页，解析时需区分公告中与结果公表</td><td><a class="plink" href="/sandal/templates/p5">截图说明 →</a></td></tr><tr><td><b>P6</b> 機関トップ/汎用ページ型</td><td class="num">1,630</td><td class="num">53.4%</td><td><div class="bar"><span style="width:53.4%"></span></div></td><td class="sub">登记的是机构トップ或汎用页，真实列表在更深处或新闻流里</td><td><a class="plink" href="/sandal/templates/p6">截图说明 →</a></td></tr><tr><td><b>P7</b> PDF直接リンク型</td><td class="num">1</td><td class="num">0.0%</td><td><div class="bar"><span style="width:0.0%"></span></div></td><td class="sub">公告页本身即 PDF 直链</td><td><a class="plink" href="/sandal/templates/p7">截图说明 →</a></td></tr>
   </table>
   <div class="sub">分类依据：实采样本 2,466 个（80.7%），其余按登记字段归类。P6 占大头，意味着多数小机关把公告放在新闻流或栏目深处，采集器需要按关键词过滤。</div>
 

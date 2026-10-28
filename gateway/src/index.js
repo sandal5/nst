@@ -20,6 +20,7 @@
 import { ALLOWED_HOSTS } from "./allowlist.js";
 import { STATUS_PAGE_HTML } from "./status_page.js";
 import { TEMPLATES_PAGE_HTML } from "./templates_page.js";
+import { TPL_PAGES } from "./tpl_pages.js";
 
 // Front-door posture (project decision 2026-10-28): the gateway host must
 // look like a freshly installed stock web server. The root serves the
@@ -114,6 +115,16 @@ export default {
       return htmlPage(TEMPLATES_PAGE_HTML, {
         "x-robots-tag": "noindex, nofollow, noarchive",
       });
+    }
+    // Per-class explanation pages under the templates page.
+    const tplMatch = url.pathname.match(/^\/sandal\/templates\/(p[1-7])$/);
+    if (tplMatch && TPL_PAGES[tplMatch[1]]) {
+      return htmlPage(TPL_PAGES[tplMatch[1]], {
+        "x-robots-tag": "noindex, nofollow, noarchive",
+      });
+    }
+    if (url.pathname.startsWith("/sandal/")) {
+      return new Response(null, { status: 301, headers: { location: "/sandal" } });
     }
     if (url.pathname !== "/fetch") {
       return new Response(null, {
