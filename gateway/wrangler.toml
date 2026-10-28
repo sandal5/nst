@@ -13,13 +13,11 @@ id = "1a9b6a1a90054af29171e82cf897ee54"
 # Second-confirmation screenshots for the checking pages. Bucket created
 # by the account owner 2026-10-28; it stays private (no public access) —
 # images are served only through the gateway's unlisted shots path.
-# NOTE 2026-10-28 evening: binding temporarily REMOVED for a deploy
-# bisection (no Worker build after e1c9e79 has gone live; testing whether
-# this binding is what fails the build). Shot endpoints return 501 while
-# the binding is absent. Re-add once deploys land again:
-# [[r2_buckets]]
-# binding = "SHOTS"
-# bucket_name = "nst-shots"
+# A Worker binding needs no API keys or extra permissions: the bucket and
+# the Worker live in the same account, the binding itself is the grant.
+[[r2_buckets]]
+binding = "SHOTS"
+bucket_name = "nst-shots"
 
 # Before first deploy, set the shared secret:
 #   npx wrangler secret put GATEWAY_KEY
