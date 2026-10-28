@@ -39,7 +39,7 @@ export const TEMPLATES_PAGE_HTML = `<!DOCTYPE html>
 <div class="wrap">
   <a class="back" href="/sandal">← 返回任务状态</a>
   <h1>模板分类与对象全景</h1>
-  <div class="upd">快照更新于 2026-10-28 14:05 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 14:24 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">3,974</div><div class="l">主清单对象（已确定 3,310，83.3%）</div></div>
