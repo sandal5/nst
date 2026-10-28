@@ -304,7 +304,7 @@ def build_objects_page(master, open_items):
                     f'{inner}</details>')
         return out
 
-    nat = [r for r in master if (r["level"] or "").startswith("国")]
+    nat = [r for r in master if (r["level"] or "") == "国・独立行政法人等"]
     doku = [r for r in nat if (r.get("group_ministry") or "") in DOKU_GROUPS]
     ministries = [r for r in nat if (r.get("group_ministry") or "") not in DOKU_GROUPS]
     prefs = [r for r in master if r["level"] == "都道府県"]
@@ -461,7 +461,7 @@ def main():
         level_rows += (f'<tr><td>{html.escape(lv)}</td><td class="num">{n:,}</td>'
                        f'<td class="num">{c:,}</td><td class="num">{pct(c, n)}</td><td>{bar(c / n * 100 if n else 0)}</td></tr>')
 
-    nat = [r for r in master if (r["level"] or "").startswith("国")]
+    nat = [r for r in master if (r["level"] or "") == "国・独立行政法人等"]
     gm_counts = Counter((r["group_ministry"] or "(未分类)") for r in nat)
     gm_rows = "".join(
         f'<tr><td>{html.escape(k)}</td><td class="num">{n:,}</td><td class="num">{pct(n, len(nat))}</td></tr>'

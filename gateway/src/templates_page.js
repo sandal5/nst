@@ -98,9 +98,9 @@ export const TEMPLATES_PAGE_HTML = `<!DOCTYPE html>
   <h2>按机构归属（国家层按省庁・機関）</h2>
   <table>
     <tr><th>省庁・機関</th><th class="num">对象数</th><th class="num">占国家层</th></tr>
-    <tr><td>独立行政法人等</td><td class="num">875</td><td class="num">40.4%</td></tr><tr><td>国土交通省</td><td class="num">361</td><td class="num">16.7%</td></tr><tr><td>防衛省</td><td class="num">205</td><td class="num">9.5%</td></tr><tr><td>法務省</td><td class="num">200</td><td class="num">9.2%</td></tr><tr><td>農林水産省</td><td class="num">110</td><td class="num">5.1%</td></tr><tr><td>警察庁</td><td class="num">108</td><td class="num">5.0%</td></tr><tr><td>厚生労働省</td><td class="num">105</td><td class="num">4.8%</td></tr><tr><td>裁判所</td><td class="num">46</td><td class="num">2.1%</td></tr><tr><td>財務省</td><td class="num">35</td><td class="num">1.6%</td></tr><tr><td>総務省</td><td class="num">27</td><td class="num">1.2%</td></tr><tr><td>環境省</td><td class="num">20</td><td class="num">0.9%</td></tr><tr><td>経済産業省</td><td class="num">13</td><td class="num">0.6%</td></tr><tr><td>人事院</td><td class="num">10</td><td class="num">0.5%</td></tr><tr><td>内閣府</td><td class="num">10</td><td class="num">0.5%</td></tr>
+    <tr><td>独立行政法人等</td><td class="num">875</td><td class="num">40.5%</td></tr><tr><td>国土交通省</td><td class="num">361</td><td class="num">16.7%</td></tr><tr><td>防衛省</td><td class="num">205</td><td class="num">9.5%</td></tr><tr><td>法務省</td><td class="num">200</td><td class="num">9.3%</td></tr><tr><td>農林水産省</td><td class="num">110</td><td class="num">5.1%</td></tr><tr><td>警察庁</td><td class="num">108</td><td class="num">5.0%</td></tr><tr><td>厚生労働省</td><td class="num">105</td><td class="num">4.9%</td></tr><tr><td>裁判所</td><td class="num">46</td><td class="num">2.1%</td></tr><tr><td>財務省</td><td class="num">35</td><td class="num">1.6%</td></tr><tr><td>総務省</td><td class="num">27</td><td class="num">1.2%</td></tr><tr><td>環境省</td><td class="num">20</td><td class="num">0.9%</td></tr><tr><td>経済産業省</td><td class="num">13</td><td class="num">0.6%</td></tr><tr><td>人事院</td><td class="num">10</td><td class="num">0.5%</td></tr><tr><td>内閣府</td><td class="num">10</td><td class="num">0.5%</td></tr>
   </table>
-  <div class="sub">国家层共 2,165 个对象；地方层见上「按分层」表（市区町村 1,744、都道府县 65）。</div>
+  <div class="sub">国家层共 2,162 个对象；地方层见上「按分层」表（市区町村 1,744、都道府县 65）。</div>
 
   <h2>按地区（都道府县，登记值）</h2>
   <table>
