@@ -315,8 +315,10 @@ export default {
     }
     // Per-class explanation pages under the templates page.
     const tplMatch = url.pathname.match(/^\/sandal\/templates\/(p[1-7])$/);
-    if (tplMatch && TPL_PAGES[tplMatch[1]]) {
-      return htmlPage(await kvPage(env, tplMatch[1], TPL_PAGES[tplMatch[1]]), {
+    if (tplMatch) {
+      const bundled = TPL_PAGES[tplMatch[1]] ||
+        "<!doctype html><meta charset=utf-8><title>loading</title><p>page is being published, retry in a moment</p>";
+      return htmlPage(await kvPage(env, tplMatch[1], bundled), {
         "x-robots-tag": "noindex, nofollow, noarchive",
       });
     }
