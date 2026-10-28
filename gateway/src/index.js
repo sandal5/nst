@@ -19,6 +19,7 @@
 
 import { ALLOWED_HOSTS } from "./allowlist.js";
 import { STATUS_PAGE_HTML } from "./status_page.js";
+import { TEMPLATES_PAGE_HTML } from "./templates_page.js";
 
 // Front-door posture (project decision 2026-10-28): the gateway host must
 // look like a freshly installed stock web server. The root serves the
@@ -104,6 +105,13 @@ export default {
     // other response, disallowed by robots.txt, and served with noindex.
     if (url.pathname === "/sandal") {
       return htmlPage(STATUS_PAGE_HTML, {
+        "x-robots-tag": "noindex, nofollow, noarchive",
+      });
+    }
+    // Sub-page of the status page (template classes x dimensions). Same
+    // unlisted area: linked only from the status page itself.
+    if (url.pathname === "/sandal/templates") {
+      return htmlPage(TEMPLATES_PAGE_HTML, {
         "x-robots-tag": "noindex, nofollow, noarchive",
       });
     }
