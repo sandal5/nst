@@ -69,6 +69,7 @@ export const TEMPLATES_PAGE_HTML = `<!DOCTYPE html>
   .chip.ok { background: #e5f4ea; color: #1d7a3a; }
   .chip.ok.undoable { cursor: pointer; text-decoration: underline dotted; }
   .chip.re { background: #fdf0e2; color: #b3541e; }
+  .chip.retc { background: #e3ecfd; color: #2f6fed; }
   .notebox { flex: none; display: inline-flex; gap: 6px; }
   .notebox[hidden] { display: none; }
   .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
@@ -89,7 +90,7 @@ export const TEMPLATES_PAGE_HTML = `<!DOCTYPE html>
 <div class="wrap">
   <a class="back" href="/sandal">← 返回任务状态</a>
   <h1>模板分类与对象全景</h1>
-  <div class="upd">快照更新于 2026-10-28 17:14 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 17:33 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">3,974</div><div class="l">主清单对象（已确定 3,310，83.3%）</div></div>

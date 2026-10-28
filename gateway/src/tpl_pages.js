@@ -70,6 +70,7 @@ export const TPL_PAGES = {
   .chip.ok { background: #e5f4ea; color: #1d7a3a; }
   .chip.ok.undoable { cursor: pointer; text-decoration: underline dotted; }
   .chip.re { background: #fdf0e2; color: #b3541e; }
+  .chip.retc { background: #e3ecfd; color: #2f6fed; }
   .notebox { flex: none; display: inline-flex; gap: 6px; }
   .notebox[hidden] { display: none; }
   .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
@@ -90,7 +91,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P1　入札情報一覧型</h1>
-  <div class="upd">快照更新于 2026-10-28 17:14 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 17:33 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">792</div><div class="l">该类对象数（占已归类 25.9%）</div></div>
@@ -191,6 +192,7 @@ export const TPL_PAGES = {
   .chip.ok { background: #e5f4ea; color: #1d7a3a; }
   .chip.ok.undoable { cursor: pointer; text-decoration: underline dotted; }
   .chip.re { background: #fdf0e2; color: #b3541e; }
+  .chip.retc { background: #e3ecfd; color: #2f6fed; }
   .notebox { flex: none; display: inline-flex; gap: 6px; }
   .notebox[hidden] { display: none; }
   .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
@@ -211,7 +213,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P2　調達情報型</h1>
-  <div class="upd">快照更新于 2026-10-28 17:14 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 17:33 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">207</div><div class="l">该类对象数（占已归类 6.8%）</div></div>
@@ -312,6 +314,7 @@ export const TPL_PAGES = {
   .chip.ok { background: #e5f4ea; color: #1d7a3a; }
   .chip.ok.undoable { cursor: pointer; text-decoration: underline dotted; }
   .chip.re { background: #fdf0e2; color: #b3541e; }
+  .chip.retc { background: #e3ecfd; color: #2f6fed; }
   .notebox { flex: none; display: inline-flex; gap: 6px; }
   .notebox[hidden] { display: none; }
   .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
@@ -332,7 +335,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P3　公告・公募掲示板型</h1>
-  <div class="upd">快照更新于 2026-10-28 17:14 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 17:33 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">30</div><div class="l">该类对象数（占已归类 1.0%）</div></div>
@@ -433,6 +436,7 @@ export const TPL_PAGES = {
   .chip.ok { background: #e5f4ea; color: #1d7a3a; }
   .chip.ok.undoable { cursor: pointer; text-decoration: underline dotted; }
   .chip.re { background: #fdf0e2; color: #b3541e; }
+  .chip.retc { background: #e3ecfd; color: #2f6fed; }
   .notebox { flex: none; display: inline-flex; gap: 6px; }
   .notebox[hidden] { display: none; }
   .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
@@ -453,7 +457,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P4　電子調達システム型</h1>
-  <div class="upd">快照更新于 2026-10-28 17:14 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 17:33 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">112</div><div class="l">该类对象数（占已归类 3.7%）</div></div>
@@ -554,6 +558,7 @@ export const TPL_PAGES = {
   .chip.ok { background: #e5f4ea; color: #1d7a3a; }
   .chip.ok.undoable { cursor: pointer; text-decoration: underline dotted; }
   .chip.re { background: #fdf0e2; color: #b3541e; }
+  .chip.retc { background: #e3ecfd; color: #2f6fed; }
   .notebox { flex: none; display: inline-flex; gap: 6px; }
   .notebox[hidden] { display: none; }
   .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
@@ -574,7 +579,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P5　契約情報型</h1>
-  <div class="upd">快照更新于 2026-10-28 17:14 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 17:33 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">282</div><div class="l">该类对象数（占已归类 9.2%）</div></div>
@@ -675,6 +680,7 @@ export const TPL_PAGES = {
   .chip.ok { background: #e5f4ea; color: #1d7a3a; }
   .chip.ok.undoable { cursor: pointer; text-decoration: underline dotted; }
   .chip.re { background: #fdf0e2; color: #b3541e; }
+  .chip.retc { background: #e3ecfd; color: #2f6fed; }
   .notebox { flex: none; display: inline-flex; gap: 6px; }
   .notebox[hidden] { display: none; }
   .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
@@ -695,7 +701,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P6　機関トップ/汎用ページ型</h1>
-  <div class="upd">快照更新于 2026-10-28 17:14 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 17:33 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">1,630</div><div class="l">该类对象数（占已归类 53.4%）</div></div>
@@ -796,6 +802,7 @@ export const TPL_PAGES = {
   .chip.ok { background: #e5f4ea; color: #1d7a3a; }
   .chip.ok.undoable { cursor: pointer; text-decoration: underline dotted; }
   .chip.re { background: #fdf0e2; color: #b3541e; }
+  .chip.retc { background: #e3ecfd; color: #2f6fed; }
   .notebox { flex: none; display: inline-flex; gap: 6px; }
   .notebox[hidden] { display: none; }
   .notein { padding: 4px 8px; font-size: 13px; border: 1px solid #cfd6df; border-radius: 6px; width: 220px; }
@@ -816,7 +823,7 @@ export const TPL_PAGES = {
 <div class="wrap">
   <a class="back" href="/sandal/templates">← 返回模板分类总览</a>
   <h1>P7　PDF直接リンク型</h1>
-  <div class="upd">快照更新于 2026-10-28 17:14 JST（每小时自动更新）</div>
+  <div class="upd">快照更新于 2026-10-28 17:33 JST（每小时自动更新）</div>
 
   <div class="cards">
     <div class="card"><div class="n">1</div><div class="l">该类对象数（占已归类 0.0%）</div></div>
