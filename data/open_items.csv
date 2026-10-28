@@ -447,7 +447,7 @@
 奈良県,奈良県,都道府県,www.pref.nara.lg.jp,http://www.pref.nara.jp/dd_aspx_menuid-11241.htm,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 葛城市,奈良県,市区町村,www.city.katsuragi.nara.jp,"http://www.city.katsuragi.nara.jp/index.cfm/16,0,74,html",manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 宇陀市,奈良県,市区町村,www.city.uda.nara.jp,http://www.city.uda.nara.jp/sangyou/nyuusatsu/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
-三宅町,奈良県,市区町村,www.town.miyake.nara.jp,,unverified,未検証,待首次验证
+三宅町,奈良県,市区町村,www.town.miyake.nara.jp,,conn_error,接続エラー 未確認 (再検証队列),纳入端点重新验证队列，慢速长间隔重试
 河合町,奈良県,市区町村,www.town.kawai.nara.jp,http://www.town.kawai.nara.jp/chosei/sonota/index.html,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 上北山村,奈良県,市区町村,vill.kamikitayama.nara.jp,http://vill.kamikitayama.nara.jp/kurashi/tetsuduki/nyusatsu/,manual_unresolved,404 現行ページ未確定 (要手動),人工沿官网栏目/站内搜索找公告页
 東吉野村,奈良県,市区町村,www.vill.higashiyoshino.nara.jp,http://www.vill.higashiyoshino.nara.jp/,reverify,要再検証 (跳转复核失敗),择日再验证
