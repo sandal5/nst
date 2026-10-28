@@ -108,6 +108,7 @@ CSS = """
   .bre { border-color: #b3541e; color: #b3541e; font-weight: 600; }
   .chip { flex: none; font-size: 12px; border-radius: 4px; padding: 2px 8px; }
   .chip.ok { background: #e5f4ea; color: #1d7a3a; }
+  .chip.ok.undoable { cursor: pointer; text-decoration: underline dotted; }
   .chip.re { background: #fdf0e2; color: #b3541e; }
   .notebox { flex: none; display: inline-flex; gap: 6px; }
   .notebox[hidden] { display: none; }
@@ -266,7 +267,8 @@ OBJ_SCRIPT = """
     if (acts) acts.hidden = true;
     if (chip) {
       chip.hidden = false;
-      chip.className = "chip " + (e.s === "ok" ? "ok" : "re");
+      chip.className = "chip " + (e.s === "ok" ? "ok undoable" : "re");
+      chip.title = e.s === "ok" ? "误点可撤销：点击此标记取消「正确」" : "";
       chip.textContent = e.s === "ok"
         ? "\\u2713 正确 " + fmt(e.at)
         : "\\u21bb 再确认 第" + (e.round || 1) + "轮 " + fmt(e.at) + (e.note ? "（" + e.note + "）" : "");
@@ -301,6 +303,13 @@ OBJ_SCRIPT = """
   }
   rows.forEach(function (r) {
     var k = r.getAttribute("data-k");
+    var chipEl = r.querySelector(".chip");
+    if (chipEl) chipEl.addEventListener("click", function (ev) {
+      ev.preventDefault(); ev.stopPropagation();
+      if (st[k] && st[k].s === "ok" && confirm("撤销这条「正确」标记？该行将回到未核对状态。")) {
+        delete st[k]; persist(); renderAll();
+      }
+    });
     var bok = r.querySelector(".bok"), bre = r.querySelector(".bre"),
         nb = r.querySelector(".notebox"), bin = r.querySelector(".notein"), bc = r.querySelector(".bnote");
     if (bok) bok.addEventListener("click", function (ev) {
@@ -553,7 +562,7 @@ def build_objects_page(master, open_items):
     <span class="prog">已标正确 <b id="chkTotal">0</b> / {total:,}</span>
   </div>
   {body}
-  <div class="note">用法：逐行点「公告页」打开核对 → 对了点「正确」，存疑点「再确认」（可备注核对方向，不备注则默认：{DEFAULT_RECHECK_METHOD}）。两种标记点下即记录、不可反选。每层标题旁有「本节全部正确」可批量标记（只作用于未标记行）。标记都存在本浏览器里，每小时数据刷新不清；「再确认」的行汇总在页面顶部队列里，导出 CSV 发我处理，处理完的回到「再核对」区等你集中确认。目录源对象待去重核实后并入本清单。</div>
+  <div class="note">用法：逐行点「公告页」打开核对 → 对了点「正确」，存疑点「再确认」（可备注核对方向，不备注则默认：{DEFAULT_RECHECK_METHOD}；若备注本身是一个 URL，即视为你已找到的正确公告地址）。「正确」误点可撤销（点绿色标记条确认即可）；「再确认」点下即入队、不可反选。每层标题旁有「本节全部正确」可批量标记（只作用于未标记行）。标记都存在本浏览器里，每小时数据刷新不清；「再确认」的行汇总在页面顶部队列里，导出 CSV 发我处理，处理完的回到「再核对」区等你集中确认。目录源对象待去重核实后并入本清单。</div>
 </div>
 {OBJ_SCRIPT}
 </body>
