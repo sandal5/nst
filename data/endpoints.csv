@@ -2,7 +2,7 @@
 EP-0001,https://www.moj.go.jp/kyousei1/chotatsu_local_kyousei_index.html,www.moj.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0002,https://www.courts.go.jp/about/tyotatu/index.html,www.courts.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0003,https://www.cbr.mlit.go.jp/contract/index.htm,www.cbr.mlit.go.jp,32,OBJ-K1908 OBJ-K1909 OBJ-K1910 OBJ-K1911 OBJ-K2016 OBJ-K2017 OBJ-K2018 OBJ-K2019 OBJ-K2020 OBJ-K2021 OBJ-K2022 OBJ-K2092 OBJ-K2093 OBJ-K2094 OBJ-K2095 OBJ-K2096 OBJ-K2097 OBJ-K2098 OBJ-K2189 OBJ-K2190,B (default; auto-adjusts),unverified,candidate
-EP-0004,https://www.mod.go.jp/asdf/kumagaya/procurement_info.html,www.mod.go.jp,30,OBJ-K1039 OBJ-K1040 OBJ-K1147 OBJ-K1148 OBJ-K1322 OBJ-K1323 OBJ-K1325 OBJ-K1326 OBJ-K1328 OBJ-K1330 OBJ-K1333 OBJ-K1336 OBJ-K1343 OBJ-K1344 OBJ-K1550 OBJ-K2023 OBJ-K2100 OBJ-K2104 OBJ-K2204 OBJ-K2205,B (default; auto-adjusts),unverified,candidate
+EP-0004,https://www.mod.go.jp/asdf/kumagaya/procurement_info.html,www.mod.go.jp,27,OBJ-K1039 OBJ-K1040 OBJ-K1147 OBJ-K1148 OBJ-K1322 OBJ-K1323 OBJ-K1325 OBJ-K1326 OBJ-K1328 OBJ-K1330 OBJ-K1333 OBJ-K1336 OBJ-K1343 OBJ-K1344 OBJ-K1550 OBJ-K2023 OBJ-K2100 OBJ-K2104 OBJ-K2204 OBJ-K2205,B (default; auto-adjusts),unverified,candidate
 EP-0005,https://www.naro.affrc.go.jp/supply/index.html,www.naro.affrc.go.jp,23,OBJ-K0111 OBJ-K0348 OBJ-K0419 OBJ-K0712 OBJ-K0826 OBJ-K0905 OBJ-K0964 OBJ-K1055 OBJ-K1429 OBJ-K1926 OBJ-K2121 OBJ-K2323 OBJ-K2439 OBJ-K2878 OBJ-K2932 OBJ-K3030 OBJ-K3206 OBJ-K3421 OBJ-K3568 OBJ-K3636,B (default; auto-adjusts),unverified,candidate
 EP-0006,https://www.mod.go.jp/msdf/bukei/nyusatsu_idx.html,www.mod.go.jp,19,OBJ-K0059 OBJ-K0332 OBJ-K1146 OBJ-K1338 OBJ-K1544 OBJ-K1545 OBJ-K1546 OBJ-K1654 OBJ-K2420 OBJ-K2622 OBJ-K2770 OBJ-K3005 OBJ-K3006 OBJ-K3073 OBJ-K3127 OBJ-K3555 OBJ-K3702 OBJ-K3808 OBJ-K3900,B (default; auto-adjusts),unverified,candidate
 EP-0007,https://www.mod.go.jp/gsdf/mae/mafin/,www.mod.go.jp,19,OBJ-K1720 OBJ-K1762 OBJ-K1814 OBJ-K2203 OBJ-K2311 OBJ-K2368 OBJ-K2418 OBJ-K2512 OBJ-K2620 OBJ-K2769 OBJ-K2823 OBJ-K2868 OBJ-K2917 OBJ-K3004 OBJ-K3072 OBJ-K3129 OBJ-K3193 OBJ-K3244 OBJ-K3293,B (default; auto-adjusts),unverified,candidate
@@ -17,7 +17,7 @@ EP-0015,https://www.maff.go.jp/kanto/shinsei/order/index.html,www.maff.go.jp,10,
 EP-0016,https://www.chugokushikoku.npa.go.jp/,www.chugokushikoku.npa.go.jp,10,OBJ-K2811 OBJ-K2856 OBJ-K2857 OBJ-K2900 OBJ-K2966 OBJ-K3060 OBJ-K3114 OBJ-K3165 OBJ-K3230 OBJ-K3279,B (default; auto-adjusts),unverified,candidate
 EP-0017,https://www.jftc.go.jp/soshiki/tyoutatsu/index.html,www.jftc.go.jp,9,OBJ-K0002 OBJ-K0458 OBJ-K1238 OBJ-K2161 OBJ-K2471 OBJ-K2965 OBJ-K3163 OBJ-K3340 OBJ-K3876,B (default; auto-adjusts),unverified,candidate
 EP-0018,https://www.moj.go.jp/psia/index.html,www.moj.go.jp,9,OBJ-K0025 OBJ-K0469 OBJ-K1266 OBJ-K1267 OBJ-K2174 OBJ-K2485 OBJ-K2977 OBJ-K3175 OBJ-K3351,B (default; auto-adjusts),unverified,candidate
-EP-0019,https://www.mod.go.jp/pco/sapporo/about_contract.html,www.mod.go.jp,9,OBJ-K0061 OBJ-K0331 OBJ-K0405 OBJ-K0577 OBJ-K0695 OBJ-K0696 OBJ-K0803 OBJ-K0898 OBJ-K1037,B (default; auto-adjusts),unverified,candidate
+EP-0019,https://www.mod.go.jp/pco/sapporo/about_contract.html,www.mod.go.jp,7,OBJ-K0061 OBJ-K0331 OBJ-K0405 OBJ-K0577 OBJ-K0695 OBJ-K0696 OBJ-K1037,B (default; auto-adjusts),unverified,candidate
 EP-0020,https://www.jaea.go.jp/for_company/supply/,www.jaea.go.jp,9,OBJ-K0089 OBJ-K0341 OBJ-K0705 OBJ-K0819 OBJ-K1394 OBJ-K1819 OBJ-K2033 OBJ-K2429 OBJ-K2923,B (default; auto-adjusts),unverified,candidate
 EP-0021,https://www.jmets.ac.jp/procurement/index.html,www.jmets.ac.jp,9,OBJ-K0105 OBJ-K0421 OBJ-K1170 OBJ-K1588 OBJ-K2122 OBJ-K2645 OBJ-K3256 OBJ-K3518 OBJ-K3570,B (default; auto-adjusts),unverified,candidate
 EP-0022,https://www.aist.go.jp/aist_j/procure/index.html,www.aist.go.jp,10,OBJ-K0114 OBJ-K0522 OBJ-K0713 OBJ-K0831 OBJ-K1439 OBJ-K2235 OBJ-K2541 OBJ-K3033 OBJ-K3208 OBJ-K3517,B (default; auto-adjusts),unverified,candidate
@@ -86,7 +86,7 @@ EP-0084,https://sisetuweb1.mext.go.jp/procure/index.html,sisetuweb1.mext.go.jp,2
 EP-0085,https://www.mhlw.go.jp/shinsei_boshu/choutatsujouhou/,www.mhlw.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0086,https://www.mod.go.jp/atla/data/info/ny_kenkyu_kantei/index.html,www.mod.go.jp,2,OBJ-K1321 OBJ-K1549,B (default; auto-adjusts),unverified,candidate
 EP-0087,https://www.okinawakouko.go.jp/procurement/,www.okinawakouko.go.jp,2,OBJ-K1350 OBJ-K3904,B (default; auto-adjusts),unverified,candidate
-EP-0088,https://www.jica.go.jp/about/announce/notice/index.html,www.jica.go.jp,2,OBJ-K1356 OBJ-K1357,B (default; auto-adjusts),unverified,candidate
+EP-0088,https://www.jica.go.jp/about/announce/notice/index.html,www.jica.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0089,https://www.nedo.go.jp/form/event.php?f=koubo.html&state=10000174,www.nedo.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0090,https://www.ur-net.go.jp/orders/honsha/order.html,www.ur-net.go.jp,2,OBJ-K1585 OBJ-K1586,B (default; auto-adjusts),unverified,candidate
 EP-0091,https://saigata.hosp.go.jp/jimubu/chotatsujoho.html,saigata.hosp.go.jp,2,OBJ-K1663 OBJ-K1667,B (default; auto-adjusts),unverified,candidate
@@ -105,7 +105,7 @@ EP-0103,https://www.kensatsu.go.jp/kakuchou/matsuyama/choutatsutop.html,www.kens
 EP-0104,https://kouseikyoku.mhlw.go.jp/kyushu/chotatsu/index.html,kouseikyoku.mhlw.go.jp,1,OBJ-K3357,B (default; auto-adjusts),unverified,candidate
 EP-0105,https://www.mod.go.jp/pco/fukuoka/index.html,www.mod.go.jp,2,OBJ-K3389 OBJ-K3398,B (default; auto-adjusts),unverified,candidate
 EP-0106,https://www.mod.go.jp/rdb/kyushu/,www.mod.go.jp,2,OBJ-K3390 OBJ-K3619,B (default; auto-adjusts),unverified,candidate
-EP-0107,https://www.pref.nagasaki.jp/bunrui/kenseijoho/nyusatsu-chotatsujoho/,www.pref.nagasaki.jp,2,OBJ-K3559 OBJ-K3571,B (default; auto-adjusts),unverified,candidate
+EP-0107,https://www.pref.nagasaki.jp/bunrui/kenseijoho/nyusatsu-chotatsujoho/,www.pref.nagasaki.jp,1,OBJ-K3559,B (default; auto-adjusts),unverified,candidate
 EP-0108,https://www.pa.qsr.mlit.go.jp/keiyaku/index.html,www.pa.qsr.mlit.go.jp,2,OBJ-K3699 OBJ-K3744,B (default; auto-adjusts),unverified,candidate
 EP-0109,https://houmukyoku.moj.go.jp/miyazaki/table/nyuusatsu/all.html,houmukyoku.moj.go.jp,2,OBJ-K3736 OBJ-K3791,B (default; auto-adjusts),unverified,candidate
 EP-0110,https://www.jinji.go.jp/hokaido/oshirase/seihutyotatsu.html,www.jinji.go.jp,1,OBJ-K0001,B (default; auto-adjusts),unverified,candidate
@@ -163,7 +163,7 @@ EP-0161,https://www.mod.go.jp/pco/hakodate/,www.mod.go.jp,1,OBJ-K0062,B (default
 EP-0162,https://www.mod.go.jp/pco/asahikawa/asahikawatinonnnituite.html,www.mod.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0163,https://www.mod.go.jp/pco/obihiro/info_file.html,www.mod.go.jp,1,OBJ-K0064,B (default; auto-adjusts),unverified,candidate
 EP-0164,https://www.hoppou.go.jp/organization/procurement/index.html,www.hoppou.go.jp,2,OBJ-K0067 OBJ-K1349,B (default; auto-adjusts),unverified,candidate
-EP-0165,https://www.jica.go.jp/about/announce/domestic/index.html#obihiro,www.jica.go.jp,1,OBJ-K0068,B (default; auto-adjusts),unverified,candidate
+EP-0165,https://www.jica.go.jp/about/announce/domestic/index.html#obihiro,www.jica.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0166,https://www.jica.go.jp/about/announce/domestic/koji2019.html#sapporo,www.jica.go.jp,1,OBJ-K0069,B (default; auto-adjusts),unverified,candidate
 EP-0167,https://www.hokudai.ac.jp/introduction/nyusatsu/,www.hokudai.ac.jp,1,OBJ-K0070,B (default; auto-adjusts),unverified,candidate
 EP-0168,https://www.hokkyodai.ac.jp/intro/supply/,www.hokkyodai.ac.jp,1,OBJ-K0071,B (default; auto-adjusts),unverified,candidate
@@ -192,7 +192,7 @@ EP-0190,https://asahikawa.hosp.go.jp/procurement/index.html,asahikawa.hosp.go.jp
 EP-0191,https://yakumo.hosp.go.jp/related_info/nyusatsu/index.html,yakumo.hosp.go.jp,1,OBJ-K0095,B (default; auto-adjusts),unverified,candidate
 EP-0192,https://www.jeed.go.jp/location/shibu/hokkaido/chotatsu.html,www.jeed.go.jp,1,OBJ-K0096,B (default; auto-adjusts),unverified,candidate
 EP-0193,https://hokkaido.jcho.go.jp/introduction/various/%E8%AA%BF%E9%81%94%E6%83%85%E5%A0%B1/,hokkaido.jcho.go.jp,1,OBJ-K0097,B (default; auto-adjusts),unverified,candidate
-EP-0194,https://hokushin.jcho.go.jp/choutatsu/,hokushin.jcho.go.jp,1,OBJ-K0098,B (default; auto-adjusts),unverified,candidate
+EP-0194,https://hokushin.jcho.go.jp/choutatsu/,hokushin.jcho.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0195,https://noboribetsu.jcho.go.jp/introduction/various/%E8%AA%BF%E9%81%94%E6%83%85%E5%A0%B1/%E8%AA%BF%E9%81%94%E6%83%85%E5%A0%B1/,noboribetsu.jcho.go.jp,1,OBJ-K0099,B (default; auto-adjusts),unverified,candidate
 EP-0196,https://www.hokkaidoh-s.johas.go.jp/procurement/tender.html,www.hokkaidoh-s.johas.go.jp,1,OBJ-K0100,B (default; auto-adjusts),unverified,candidate
 EP-0197,https://hokkaidoh.johas.go.jp/other/supply.html,hokkaidoh.johas.go.jp,1,OBJ-K0101,B (default; auto-adjusts),unverified,candidate
@@ -200,7 +200,7 @@ EP-0198,http://www.kushiroh.johas.go.jp/procurement/,www.kushiroh.johas.go.jp,1,
 EP-0199,https://www.kushirok.johas.go.jp/tyotatu,www.kushirok.johas.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0200,https://www.hokkaidos.johas.go.jp/pdf/nyusatsu.pdf,www.hokkaidos.johas.go.jp,1,OBJ-K0104,B (default; auto-adjusts),unverified,candidate
 EP-0201,http://www.nlbc.go.jp/tokachi/tyoutatsu/index.html,www.nlbc.go.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-0202,http://www.nlbc.go.jp/nikappu/chotatu/index.html,www.nlbc.go.jp,1,OBJ-K0107,B (default; auto-adjusts),unverified,candidate
+EP-0202,http://www.nlbc.go.jp/nikappu/chotatu/index.html,www.nlbc.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0203,http://www.ffpri.affrc.go.jp/hkd/shishoshokai/chotatsu/index.html,www.ffpri.affrc.go.jp,1,OBJ-K0108,B (default; auto-adjusts),unverified,candidate
 EP-0204,https://www.ffpri.affrc.go.jp/hokuiku/business/cyoutatsu.html,www.ffpri.affrc.go.jp,1,OBJ-K0109,B (default; auto-adjusts),unverified,candidate
 EP-0205,https://www.green.go.jp/keiyaku/index.html,www.green.go.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -303,7 +303,7 @@ EP-0301,https://www.town.hokuryu.hokkaido.jp/chosei/auction/,www.town.hokuryu.ho
 EP-0302,http://www.town.numata.hokkaido.jp/,www.town.numata.hokkaido.jp,1,OBJ-K0213,B (default; auto-adjusts),unverified,candidate
 EP-0303,https://www.town.horokanai.hokkaido.jp/,www.town.horokanai.hokkaido.jp,1,OBJ-K0214,B (default; auto-adjusts),unverified,candidate
 EP-0304,http://www.town.takasu.hokkaido.jp/sangyou/nyuusatsu_keiyaku/index.html,www.town.takasu.hokkaido.jp,1,OBJ-K0215,B (default; auto-adjusts),unverified,candidate
-EP-0305,https://www.town.higashikagura.lg.jp/c1_town/nyusatsu/,www.town.higashikagura.lg.jp,1,OBJ-K0216,B (default; auto-adjusts),unverified,candidate
+EP-0305,https://www.town.higashikagura.lg.jp/c1_town/nyusatsu/,www.town.higashikagura.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0306,https://www.town.tohma.hokkaido.jp/,www.town.tohma.hokkaido.jp,1,OBJ-K0217,B (default; auto-adjusts),unverified,candidate
 EP-0307,https://www.town.pippu.hokkaido.jp/cms/life/qlmcaj0000004qcx.html,www.town.pippu.hokkaido.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0308,https://www.town.aibetsu.hokkaido.jp/07/01,www.town.aibetsu.hokkaido.jp,1,OBJ-K0219,B (default; auto-adjusts),unverified,candidate
@@ -398,7 +398,7 @@ EP-0396,https://www.vill.shosanbetsu.lg.jp/gyosei/nyusatsu/,www.vill.shosanbetsu
 EP-0397,https://www.vill.sarufutsu.hokkaido.jp/,www.vill.sarufutsu.hokkaido.jp,1,OBJ-K0309,B (default; auto-adjusts),unverified,candidate
 EP-0398,https://www.vill.nishiokoppe.lg.jp/kurashi/category/oucsq30000002b6h.html,www.vill.nishiokoppe.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0399,https://www.vill.nakasatsunai.hokkaido.jp/sonsei/nyusatsu/index.html,www.vill.nakasatsunai.hokkaido.jp,1,OBJ-K0311,B (default; auto-adjusts),unverified,candidate
-EP-0400,https://www.sarabetsu.jp/shigoto/nyusatsu/,www.sarabetsu.jp,1,OBJ-K0312,B (default; auto-adjusts),unverified,candidate
+EP-0400,https://www.sarabetsu.jp/shigoto/nyusatsu/,www.sarabetsu.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0401,http://www.vill.tsurui.lg.jp/kurashi/suidou/kouji/,www.vill.tsurui.lg.jp,1,OBJ-K0313,B (default; auto-adjusts),unverified,candidate
 EP-0402,https://www.police.pref.aomori.jp/keimubu/kaikei/index.html,www.police.pref.aomori.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0403,https://houmukyoku.moj.go.jp/aomori/table/nyuusatsu/all.html,houmukyoku.moj.go.jp,1,OBJ-K0318,B (default; auto-adjusts),unverified,candidate
@@ -475,7 +475,7 @@ EP-0473,http://www.thr.mlit.go.jp/minamisanriku/index.html,www.thr.mlit.go.jp,0,
 EP-0474,http://www.thr.mlit.go.jp/kitakato/index.html,www.thr.mlit.go.jp,1,OBJ-K0402,B (default; auto-adjusts),unverified,candidate
 EP-0475,http://www.pa.thr.mlit.go.jp/kamaishi/,www.pa.thr.mlit.go.jp,1,OBJ-K0403,B (default; auto-adjusts),unverified,candidate
 EP-0476,http://www.thr.mlit.go.jp/moriei/,www.thr.mlit.go.jp,1,OBJ-K0404,B (default; auto-adjusts),unverified,candidate
-EP-0477,https://www.mod.go.jp/asdf/choutatsu/,www.mod.go.jp,1,OBJ-K0406,B (default; auto-adjusts),unverified,candidate
+EP-0477,https://www.mod.go.jp/asdf/choutatsu/,www.mod.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0478,https://www.mod.go.jp/pco/iwate/nyuusatsu/index.html,www.mod.go.jp,1,OBJ-K0407,B (default; auto-adjusts),unverified,candidate
 EP-0479,https://www.iwate-u.ac.jp/target/procurement.html,www.iwate-u.ac.jp,1,OBJ-K0408,B (default; auto-adjusts),unverified,candidate
 EP-0480,https://www.iwate-pu.ac.jp/information/recruit/bid,www.iwate-pu.ac.jp,1,OBJ-K0409,B (default; auto-adjusts),unverified,candidate
@@ -505,7 +505,7 @@ EP-0503,https://www.city.ninohe.lg.jp/menu/22,www.city.ninohe.lg.jp,1,OBJ-K0434,
 EP-0504,https://www.city.hachimantai.lg.jp/life/2/25/,www.city.hachimantai.lg.jp,1,OBJ-K0435,B (default; auto-adjusts),unverified,candidate
 EP-0505,http://www.town.shizukuishi.iwate.jp/zokusei/nyusatsu/,www.town.shizukuishi.iwate.jp,1,OBJ-K0436,B (default; auto-adjusts),unverified,candidate
 EP-0506,https://www.town.kuzumaki.lg.jp/docs/2015110500225/,www.town.kuzumaki.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-0507,https://town.iwate.iwate.jp/town/cat-business/nyusatsu/,town.iwate.iwate.jp,1,OBJ-K0438,B (default; auto-adjusts),unverified,candidate
+EP-0507,https://town.iwate.iwate.jp/town/cat-business/nyusatsu/,town.iwate.iwate.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0508,http://www.town.shiwa.iwate.jp/chosei/nyusatsu/index.html,www.town.shiwa.iwate.jp,1,OBJ-K0439,B (default; auto-adjusts),unverified,candidate
 EP-0509,https://www.town.yahaba.iwate.jp/soshiki/soumu/chousei/17459744607962/,www.town.yahaba.iwate.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0510,https://www.town.nishiwaga.lg.jp/gyosei_shigoto_sangyo/nyusatsu_keiyaku/index.html,www.town.nishiwaga.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -584,7 +584,7 @@ EP-0582,http://www.city.natori.miyagi.jp/bunya/business/node_31382,www.city.nato
 EP-0583,https://www.city.kakuda.lg.jp/life/2/24/,www.city.kakuda.lg.jp,1,OBJ-K0531,B (default; auto-adjusts),unverified,candidate
 EP-0584,https://www.city.tagajo.miyagi.jp/shise/shigoto/nyusatsu/index.html,www.city.tagajo.miyagi.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0585,https://www.city.iwanuma.miyagi.jp/business/keiyaku/,www.city.iwanuma.miyagi.jp,1,OBJ-K0533,B (default; auto-adjusts),unverified,candidate
-EP-0586,https://www.city.tome.miyagi.jp/shisejoho/nyusatsukeyaku/index.html,www.city.tome.miyagi.jp,1,OBJ-K0534,B (default; auto-adjusts),unverified,candidate
+EP-0586,https://www.city.tome.miyagi.jp/shisejoho/nyusatsukeyaku/index.html,www.city.tome.miyagi.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0587,https://www.kuriharacity.jp/li/030/190/index.html,www.kuriharacity.jp,1,OBJ-K0535,B (default; auto-adjusts),unverified,candidate
 EP-0588,https://www.city.higashimatsushima.miyagi.jp/jigyosya/keiyaku-nyusatsu/keiyaku-nyusatsu/ippankyosonyusatsu/kanzaikeiyakuk1119.html,www.city.higashimatsushima.miyagi.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0589,https://www.city.osaki.miyagi.jp/shisei/jigyoshamuke/nyusatsu_keiyakujoho/index.html,www.city.osaki.miyagi.jp,1,OBJ-K0537,B (default; auto-adjusts),unverified,candidate
@@ -598,7 +598,7 @@ EP-0596,http://www.town.marumori.miyagi.jp/work/category/?category=47,www.town.m
 EP-0597,https://www.town.watari.miyagi.jp/work/category/?category=196,www.town.watari.miyagi.jp,1,OBJ-K0545,B (default; auto-adjusts),unverified,candidate
 EP-0598,https://www.town.yamamoto.miyagi.jp/life/5/18/,www.town.yamamoto.miyagi.jp,1,OBJ-K0546,B (default; auto-adjusts),unverified,candidate
 EP-0599,"http://www.town.matsushima.miyagi.jp/index.cfm/11,0,40,html",www.town.matsushima.miyagi.jp,1,OBJ-K0547,B (default; auto-adjusts),unverified,candidate
-EP-0600,https://www.shichigahama.com/theme/admin.html,www.shichigahama.com,1,OBJ-K0548,B (default; auto-adjusts),unverified,candidate
+EP-0600,https://www.shichigahama.com/theme/admin.html,www.shichigahama.com,0,,B (default; auto-adjusts),unverified,disabled
 EP-0601,https://www.town.rifu.miyagi.jp/gyosei/chosei/nyusatsu_keiyaku/index.html,www.town.rifu.miyagi.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0602,https://www.town.taiwa.miyagi.jp/news_nyusatsu_keiyaku.html,www.town.taiwa.miyagi.jp,1,OBJ-K0550,B (default; auto-adjusts),unverified,candidate
 EP-0603,https://www.town.miyagi-osato.lg.jp/life/2/19/,www.town.miyagi-osato.lg.jp,1,OBJ-K0551,B (default; auto-adjusts),unverified,candidate
@@ -684,7 +684,7 @@ EP-0682,http://www.city.sagae.yamagata.jp/jigyou/index.html,www.city.sagae.yamag
 EP-0683,http://www.city.kaminoyama.yamagata.jp/life/3/33/,www.city.kaminoyama.yamagata.jp,1,OBJ-K0648,B (default; auto-adjusts),unverified,candidate
 EP-0684,http://www.city.murayama.lg.jp/jigyosha/nyuusatsu/index.html,www.city.murayama.lg.jp,1,OBJ-K0649,B (default; auto-adjusts),unverified,candidate
 EP-0685,https://www.city.nagai.yamagata.jp/shigoto_sangyo/nyusatsu/3/index.html,www.city.nagai.yamagata.jp,1,OBJ-K0650,B (default; auto-adjusts),unverified,candidate
-EP-0686,https://www.city.tendo.yamagata.jp/busiindust/nyusatsu/,www.city.tendo.yamagata.jp,1,OBJ-K0651,B (default; auto-adjusts),unverified,candidate
+EP-0686,https://www.city.tendo.yamagata.jp/busiindust/nyusatsu/,www.city.tendo.yamagata.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0687,https://www.city.higashine.yamagata.jp/section_list/section004/nyusatsujoho/,www.city.higashine.yamagata.jp,1,OBJ-K0652,B (default; auto-adjusts),unverified,candidate
 EP-0688,https://www.city.obanazawa.yamagata.jp/sangyo/bid/,www.city.obanazawa.yamagata.jp,1,OBJ-K0653,B (default; auto-adjusts),unverified,candidate
 EP-0689,http://www.city.nanyo.yamagata.jp/niyuusatukeiyaku/index.html,www.city.nanyo.yamagata.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -724,7 +724,7 @@ EP-0722,http://www.pa.thr.mlit.go.jp/onahama/,www.pa.thr.mlit.go.jp,1,OBJ-K0693,
 EP-0723,https://fukushima.env.go.jp/procure/,fukushima.env.go.jp,1,OBJ-K0694,B (default; auto-adjusts),unverified,candidate
 EP-0724,https://www.jica.go.jp/about/announce/domestic/koji2019.html#nihonmatsu,www.jica.go.jp,1,OBJ-K0697,B (default; auto-adjusts),unverified,candidate
 EP-0725,https://www.fukushima-u.ac.jp/university/,www.fukushima-u.ac.jp,1,OBJ-K0698,B (default; auto-adjusts),unverified,candidate
-EP-0726,https://u-aizu.ac.jp/public/tender/,u-aizu.ac.jp,1,OBJ-K0699,B (default; auto-adjusts),unverified,candidate
+EP-0726,https://u-aizu.ac.jp/public/tender/,u-aizu.ac.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0727,https://www.jc.u-aizu.ac.jp/outline/corporate-info.html,www.jc.u-aizu.ac.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0728,https://www.fmu.ac.jp/univ/kigyo/nyusatu.html,www.fmu.ac.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0729,https://www.fukushima-nct.ac.jp/chiiki_kigyo/chotatsu,www.fukushima-nct.ac.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -810,7 +810,7 @@ EP-0808,https://www.ktr.mlit.go.jp/dousui/index_koukoku.html,www.ktr.mlit.go.jp,
 EP-0809,https://www.ktr.mlit.go.jp/jousou/jousou_index005.html,www.ktr.mlit.go.jp,1,OBJ-K0795,B (default; auto-adjusts),unverified,candidate
 EP-0810,https://www.ktr.mlit.go.jp/kaihin/kaihin_index003.html,www.ktr.mlit.go.jp,1,OBJ-K0796,B (default; auto-adjusts),unverified,candidate
 EP-0811,http://www.pa.ktr.mlit.go.jp/kashima/index.html,www.pa.ktr.mlit.go.jp,1,OBJ-K0797,B (default; auto-adjusts),unverified,candidate
-EP-0812,https://www.gsi.go.jp/SERVICE/keiyaku/jyoho.html,www.gsi.go.jp,4,OBJ-K0053 OBJ-K2509 OBJ-K3190 OBJ-K3382,B (default; auto-adjusts),unverified,candidate
+EP-0812,https://www.gsi.go.jp/SERVICE/keiyaku/jyoho.html,www.gsi.go.jp,5,OBJ-K0053 OBJ-K2509 OBJ-K3003 OBJ-K3190 OBJ-K3382,B (default; auto-adjusts),unverified,candidate
 EP-0813,https://www.nilim.go.jp/,www.nilim.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0814,https://www.mod.go.jp/gsdf/shisetsu/es-hp/index.html,www.mod.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0815,https://www.mod.go.jp/gsdf/ord_sch/07_fin/main.html,www.mod.go.jp,1,OBJ-K0802,B (default; auto-adjusts),unverified,candidate
@@ -853,7 +853,7 @@ EP-0851,https://www.city.hitachiota.ibaraki.jp/page/dir002245.html,www.city.hita
 EP-0852,https://www.city.takahagi.ibaraki.jp/jigyousha/,www.city.takahagi.ibaraki.jp,1,OBJ-K0847,B (default; auto-adjusts),unverified,candidate
 EP-0853,https://www.city.kitaibaraki.lg.jp/docs/2024101800015/,www.city.kitaibaraki.lg.jp,1,OBJ-K0848,B (default; auto-adjusts),unverified,candidate
 EP-0854,https://www.city.kasama.lg.jp/page/dir000017.html,www.city.kasama.lg.jp,1,OBJ-K0849,B (default; auto-adjusts),unverified,candidate
-EP-0855,http://www.city.toride.ibaraki.jp/jigyosha/nyusatsu/index.html,www.city.toride.ibaraki.jp,1,OBJ-K0850,B (default; auto-adjusts),unverified,candidate
+EP-0855,http://www.city.toride.ibaraki.jp/jigyosha/nyusatsu/index.html,www.city.toride.ibaraki.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0856,https://www.city.ushiku.lg.jp/page/dir000119.html,www.city.ushiku.lg.jp,1,OBJ-K0851,B (default; auto-adjusts),unverified,candidate
 EP-0857,https://www.city.tsukuba.lg.jp/nusatsu/index.html,www.city.tsukuba.lg.jp,1,OBJ-K0852,B (default; auto-adjusts),unverified,candidate
 EP-0858,https://www.city.hitachinaka.lg.jp/business/nyusatsu/index.html,www.city.hitachinaka.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -887,7 +887,7 @@ EP-0885,https://www.vill.miho.lg.jp/page/dir000060.html,www.vill.miho.lg.jp,1,OB
 EP-0886,https://www.pref.tochigi.lg.jp/keisatu/nyusatsu/index.html,www.pref.tochigi.lg.jp,1,OBJ-K0883,B (default; auto-adjusts),unverified,candidate
 EP-0887,https://houmukyoku.moj.go.jp/utsunomiya/table/nyuusatsu/all.html,houmukyoku.moj.go.jp,1,OBJ-K0884,B (default; auto-adjusts),unverified,candidate
 EP-0888,https://www.kensatsu.go.jp/kakuchou/utsunomiya/utsunomiya.shtml,www.kensatsu.go.jp,1,OBJ-K0885,B (default; auto-adjusts),unverified,candidate
-EP-0889,https://www.cfa.go.jp/kinugawa/,www.cfa.go.jp,1,OBJ-K0887,B (default; auto-adjusts),unverified,candidate
+EP-0889,https://www.cfa.go.jp/kinugawa/,www.cfa.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0890,https://jsite.mhlw.go.jp/tochigi-roudoukyoku/choutatsu_uriharai.html,jsite.mhlw.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0891,https://www.ktr.mlit.go.jp/utunomiya/utunomiya_index039.html,www.ktr.mlit.go.jp,1,OBJ-K0891,B (default; auto-adjusts),unverified,candidate
 EP-0892,https://www.ktr.mlit.go.jp/nikko/nikko_index014.html,www.ktr.mlit.go.jp,1,OBJ-K0892,B (default; auto-adjusts),unverified,candidate
@@ -937,7 +937,7 @@ EP-0935,https://www.ktr.mlit.go.jp/tonesui/tonesui_index007.html,www.ktr.mlit.go
 EP-0936,https://www.ktr.mlit.go.jp/tonedamu/,www.ktr.mlit.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0937,https://www.ktr.mlit.go.jp/tonedamu/tonedamu_index026.html,www.ktr.mlit.go.jp,2,OBJ-K0946 OBJ-K0947,B (default; auto-adjusts),unverified,candidate
 EP-0938,https://www.ktr.mlit.go.jp/sinaki/index_koukoku.html,www.ktr.mlit.go.jp,1,OBJ-K0948,B (default; auto-adjusts),unverified,candidate
-EP-0939,https://www.mod.go.jp/pco/gunma/,www.mod.go.jp,1,OBJ-K0950,B (default; auto-adjusts),unverified,candidate
+EP-0939,https://www.mod.go.jp/pco/gunma/,www.mod.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0940,http://www.gunma-u.ac.jp/outline/out007/g1896,www.gunma-u.ac.jp,1,OBJ-K0951,B (default; auto-adjusts),unverified,candidate
 EP-0941,https://www.tcue.ac.jp/,www.tcue.ac.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0942,https://www.gpwu.ac.jp/guide/publicnotice/,www.gpwu.ac.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -993,12 +993,12 @@ EP-0991,https://houmukyoku.moj.go.jp/saitama/table/nyuusatsu/all.html,houmukyoku
 EP-0992,https://www.kensatsu.go.jp/kakuchou/saitama/t_menu.html,www.kensatsu.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0993,http://kantou.mof.go.jp/tyoutatsu/index.htm,kantou.mof.go.jp,1,OBJ-K1012,B (default; auto-adjusts),unverified,candidate
 EP-0994,https://www.nta.go.jp/about/organization/ntc/chotatsu/index.htm,www.nta.go.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-0995,https://www.niph.go.jp/report-chotatsu/,www.niph.go.jp,1,OBJ-K1014,B (default; auto-adjusts),unverified,candidate
+EP-0995,https://www.niph.go.jp/report-chotatsu/,www.niph.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0996,https://www.cfa.go.jp/musashino/,www.cfa.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0997,https://kouseikyoku.mhlw.go.jp/kantoshinetsu/chotatsu/index.html,kouseikyoku.mhlw.go.jp,1,OBJ-K1018,B (default; auto-adjusts),unverified,candidate
 EP-0998,https://jsite.mhlw.go.jp/saitama-roudoukyoku/choutatsu_uriharai.html,jsite.mhlw.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0999,https://www.kanto.meti.go.jp/chotatsu/chotatsu/index.html,www.kanto.meti.go.jp,1,OBJ-K1023,B (default; auto-adjusts),unverified,candidate
-EP-1000,https://www.ktr.mlit.go.jp/nyuusatu/index00000013.html,www.ktr.mlit.go.jp,1,OBJ-K1025,B (default; auto-adjusts),unverified,candidate
+EP-1000,https://www.ktr.mlit.go.jp/nyuusatu/index00000013.html,www.ktr.mlit.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1001,https://www.ktr.mlit.go.jp/tonejo/tonejo_index007.html,www.ktr.mlit.go.jp,1,OBJ-K1026,B (default; auto-adjusts),unverified,candidate
 EP-1002,https://www.ktr.mlit.go.jp/arajo/arajo_index006.html,www.ktr.mlit.go.jp,1,OBJ-K1027,B (default; auto-adjusts),unverified,candidate
 EP-1003,https://www.ktr.mlit.go.jp/oomiya/oomiya_index011.html,www.ktr.mlit.go.jp,1,OBJ-K1028,B (default; auto-adjusts),unverified,candidate
@@ -1103,7 +1103,7 @@ EP-1101,https://www.mod.go.jp/pco/chiba/,www.mod.go.jp,1,OBJ-K1149,B (default; a
 EP-1102,https://www.chiba-u.ac.jp/about/supply/index.html,www.chiba-u.ac.jp,1,OBJ-K1151,B (default; auto-adjusts),unverified,candidate
 EP-1103,https://www.kisarazu.ac.jp/kigyou/nyusatsu/,www.kisarazu.ac.jp,1,OBJ-K1152,B (default; auto-adjusts),unverified,candidate
 EP-1104,https://www.mext.go.jp/b_menu/choutatsu/index.htm,www.mext.go.jp,1,OBJ-K1153,B (default; auto-adjusts),unverified,candidate
-EP-1105,https://www.ouj.ac.jp/about/ouj/corporate/,www.ouj.ac.jp,1,OBJ-K1154,B (default; auto-adjusts),unverified,candidate
+EP-1105,https://www.ouj.ac.jp/about/ouj/corporate/,www.ouj.ac.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1106,http://www.hosp.go.jp/~chiba/tyoutatsu/nyuusatu.html,www.hosp.go.jp,1,OBJ-K1155,B (default; auto-adjusts),unverified,candidate
 EP-1107,https://chiba-east.hosp.go.jp/,chiba-east.hosp.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1108,https://www.nsh.gr.jp/keiyaku/,www.nsh.gr.jp,1,OBJ-K1157,B (default; auto-adjusts),unverified,candidate
@@ -1112,7 +1112,7 @@ EP-1110,https://www.chibah.johas.go.jp/guide/relation.html,www.chibah.johas.go.j
 EP-1111,https://chibak.johas.go.jp/choutatsu.php,chibak.johas.go.jp,1,OBJ-K1160,B (default; auto-adjusts),unverified,candidate
 EP-1112,https://www.jeed.go.jp/jeed/information/honbu/index.html,www.jeed.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1113,https://www.jeed.go.jp/location/shibu/chiba/chotatsu.html,www.jeed.go.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-1114,https://chiba.jcho.go.jp/introduction/various/keiyaku-koukai/,chiba.jcho.go.jp,1,OBJ-K1163,B (default; auto-adjusts),unverified,candidate
+EP-1114,https://chiba.jcho.go.jp/introduction/various/keiyaku-koukai/,chiba.jcho.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1115,https://funabashi.jcho.go.jp/choutatsu/,funabashi.jcho.go.jp,1,OBJ-K1164,B (default; auto-adjusts),unverified,candidate
 EP-1116,https://www.ncc.go.jp/jp/chotatsu/kashiwa/index.html,www.ncc.go.jp,1,OBJ-K1166,B (default; auto-adjusts),unverified,candidate
 EP-1117,http://www.pref.chiba.lg.jp/nyuu-kei/index.html,www.pref.chiba.lg.jp,1,OBJ-K1172,B (default; auto-adjusts),unverified,candidate
@@ -1140,7 +1140,7 @@ EP-1138,https://www.city.urayasu.lg.jp/shisei/jigyosha/nyusatsu/index.html,www.c
 EP-1139,https://www.city.yotsukaido.chiba.jp/shisei/jigyoshamuke/nyusatsu/index.html,www.city.yotsukaido.chiba.jp,1,OBJ-K1194,B (default; auto-adjusts),unverified,candidate
 EP-1140,http://www.city.sodegaura.lg.jp/life/3/26/,www.city.sodegaura.lg.jp,1,OBJ-K1195,B (default; auto-adjusts),unverified,candidate
 EP-1141,https://www.city.yachimata.lg.jp/life/2/19/,www.city.yachimata.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-1142,https://www.city.inzai.lg.jp/category/2-16-0-0-0.html,www.city.inzai.lg.jp,1,OBJ-K1197,B (default; auto-adjusts),unverified,candidate
+EP-1142,https://www.city.inzai.lg.jp/category/2-16-0-0-0.html,www.city.inzai.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1143,https://www.city.shiroi.chiba.jp/sangyo/nyusatsu/index.html,www.city.shiroi.chiba.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1144,https://www.city.tomisato.lg.jp/category/3-1-0-0-0-0-0-0-0-0.html,www.city.tomisato.lg.jp,1,OBJ-K1199,B (default; auto-adjusts),unverified,candidate
 EP-1145,https://www.city.minamiboso.chiba.jp/0000025179.html,www.city.minamiboso.chiba.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -1203,7 +1203,7 @@ EP-1201,https://jsite.mhlw.go.jp/tokyo-roudoukyoku/choutatsu_uriharai.html,jsite
 EP-1202,https://www.maff.go.jp/j/supply/index.html,www.maff.go.jp,1,OBJ-K1283,B (default; auto-adjusts),unverified,candidate
 EP-1203,https://www.maff.go.jp/primaff/about/tyotatu/index.html,www.maff.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1204,https://www.maff.go.jp/nval/hattyu/index.html,www.maff.go.jp,1,OBJ-K1285,B (default; auto-adjusts),unverified,candidate
-EP-1205,https://www.rinya.maff.go.jp/,www.rinya.maff.go.jp,1,OBJ-K1287,B (default; auto-adjusts),unverified,candidate
+EP-1205,https://www.rinya.maff.go.jp/,www.rinya.maff.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1206,https://www.rinya.maff.go.jp/j/kensyuu/kensyuuu_zyo.html,www.rinya.maff.go.jp,1,OBJ-K1288,B (default; auto-adjusts),unverified,candidate
 EP-1207,http://www.jfa.maff.go.jp/,www.jfa.maff.go.jp,1,OBJ-K1289,B (default; auto-adjusts),unverified,candidate
 EP-1208,https://www.meti.go.jp/information/publicoffer/index.html,www.meti.go.jp,1,OBJ-K1290,B (default; auto-adjusts),unverified,candidate
@@ -1232,10 +1232,10 @@ EP-1230,https://www.env.go.jp/garden/kokyogaien/4_sup/index.html,www.env.go.jp,1
 EP-1231,https://www.env.go.jp/garden/chidorigafuchi/4_sup/index.html,www.env.go.jp,1,OBJ-K1316,B (default; auto-adjusts),unverified,candidate
 EP-1232,https://www.nra.go.jp/nra/chotatsu/buppin-itaku/index.html,www.nra.go.jp,1,OBJ-K1317,B (default; auto-adjusts),unverified,candidate
 EP-1233,https://www.mod.go.jp/j/procurement/chotatsu/naikyoku/index.html,www.mod.go.jp,1,OBJ-K1318,B (default; auto-adjusts),unverified,candidate
-EP-1234,https://www.nids.mod.go.jp/procurement/index.html,www.nids.mod.go.jp,1,OBJ-K1319,B (default; auto-adjusts),unverified,candidate
+EP-1234,https://www.nids.mod.go.jp/procurement/index.html,www.nids.mod.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1235,https://www.mod.go.jp/atla/data/info/ny_kenkyu_koukuu/index.html,www.mod.go.jp,1,OBJ-K1324,B (default; auto-adjusts),unverified,candidate
 EP-1236,https://www.mod.go.jp/dih/,www.mod.go.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-1237,https://www.mod.go.jp/gsdf/eae/kaikei/index.html,www.mod.go.jp,1,OBJ-K1329,B (default; auto-adjusts),unverified,candidate
+EP-1237,https://www.mod.go.jp/gsdf/eae/kaikei/index.html,www.mod.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1238,https://www.mod.go.jp/gsdf/gmcc/index.html,www.mod.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1239,https://www.mod.go.jp/gsdf/tercom/procurement.html,www.mod.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1240,https://www.mod.go.jp/gsdf/chosp/fin/index.html,www.mod.go.jp,1,OBJ-K1334,B (default; auto-adjusts),unverified,candidate
@@ -1305,7 +1305,7 @@ EP-1303,https://www.tokyor.johas.go.jp/supply.html,www.tokyor.johas.go.jp,1,OBJ-
 EP-1304,https://www.tokyos.johas.go.jp/,www.tokyos.johas.go.jp,1,OBJ-K1411,B (default; auto-adjusts),unverified,candidate
 EP-1305,https://www.jeed.go.jp/location/shibu/tokyo/chotatsu.html,www.jeed.go.jp,1,OBJ-K1412,B (default; auto-adjusts),unverified,candidate
 EP-1306,https://www.uitec.jeed.go.jp/topics/tender/ka7cok0000005u3v.html,www.uitec.jeed.go.jp,1,OBJ-K1413,B (default; auto-adjusts),unverified,candidate
-EP-1307,https://www.ncc.go.jp/jp/other/chotatsu/index.html,www.ncc.go.jp,1,OBJ-K1415,B (default; auto-adjusts),unverified,candidate
+EP-1307,https://www.ncc.go.jp/jp/other/chotatsu/index.html,www.ncc.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1308,https://www.ncnp.go.jp/procurement-info/index.php,www.ncnp.go.jp,1,OBJ-K1417,B (default; auto-adjusts),unverified,candidate
 EP-1309,https://takanawa.jcho.go.jp/introduction/various/,takanawa.jcho.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1310,https://shinjuku.jcho.go.jp/introduction/various/%e8%aa%bf%e9%81%94%e6%83%85%e5%a0%b1/,shinjuku.jcho.go.jp,1,OBJ-K1421,B (default; auto-adjusts),unverified,candidate
@@ -1317,7 +1317,7 @@ EP-1315,https://www.jaffic.go.jp/procurement/index.html,www.jaffic.go.jp,0,,B (d
 EP-1316,https://www.ffpri.affrc.go.jp/tmk/kagakuenshokai/kankobutsu/index.html,www.ffpri.affrc.go.jp,1,OBJ-K1430,B (default; auto-adjusts),unverified,candidate
 EP-1317,https://www.rieti.go.jp/jp/procurement/index.html,www.rieti.go.jp,1,OBJ-K1432,B (default; auto-adjusts),unverified,candidate
 EP-1318,https://www.inpit.go.jp/kobo/anken/index.html,www.inpit.go.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-1319,https://www.ipa.go.jp/choutatsu/index.html,www.ipa.go.jp,1,OBJ-K1434,B (default; auto-adjusts),unverified,candidate
+EP-1319,https://www.ipa.go.jp/choutatsu/index.html,www.ipa.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1320,https://www.smrj.go.jp/procurement/bid/,www.smrj.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1321,https://www.smrj.go.jp/procurement/bid/list/?search=kanto,www.smrj.go.jp,1,OBJ-K1437,B (default; auto-adjusts),unverified,candidate
 EP-1322,http://www.jogmec.go.jp/news/bid/index.html,www.jogmec.go.jp,1,OBJ-K1438,B (default; auto-adjusts),unverified,candidate
@@ -1342,7 +1342,7 @@ EP-1340,http://www.city.kodaira.lg.jp/kurashi/index07016002.html,www.city.kodair
 EP-1341,https://www.city.hino.lg.jp/shisei/nyusatsu/index.html,www.city.hino.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1342,http://www.city.higashimurayama.tokyo.jp/shisei/gyozaisei/keiyaku/index.html,www.city.higashimurayama.tokyo.jp,1,OBJ-K1462,B (default; auto-adjusts),unverified,candidate
 EP-1343,https://www.city.kokubunji.tokyo.jp/business/jigyousha/nyusatsu/index.html,www.city.kokubunji.tokyo.jp,1,OBJ-K1463,B (default; auto-adjusts),unverified,candidate
-EP-1344,https://www.city.kunitachi.tokyo.jp/machi/nyusatsu/1/index.html,www.city.kunitachi.tokyo.jp,1,OBJ-K1464,B (default; auto-adjusts),unverified,candidate
+EP-1344,https://www.city.kunitachi.tokyo.jp/machi/nyusatsu/1/index.html,www.city.kunitachi.tokyo.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1345,http://www.city.fussa.tokyo.jp/enterprise/index.html,www.city.fussa.tokyo.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1346,"https://www.city.komae.tokyo.jp/index.cfm/46,0,372,html",www.city.komae.tokyo.jp,1,OBJ-K1466,B (default; auto-adjusts),unverified,candidate
 EP-1347,https://www.city.higashiyamato.lg.jp/business/nyusatsu/index.html,www.city.higashiyamato.lg.jp,1,OBJ-K1467,B (default; auto-adjusts),unverified,candidate
@@ -1374,7 +1374,7 @@ EP-1372,https://www.city.kita.lg.jp/city-information/contract/index.html,www.cit
 EP-1373,https://www.city.arakawa.tokyo.jp/a005/jigyousha/nyusatsu/keiyakukitei.html,www.city.arakawa.tokyo.jp,1,OBJ-K1493,B (default; auto-adjusts),unverified,candidate
 EP-1374,https://www.city.itabashi.tokyo.jp/bunka/nyusatsu/index.html,www.city.itabashi.tokyo.jp,1,OBJ-K1494,B (default; auto-adjusts),unverified,candidate
 EP-1375,https://www.city.nerima.tokyo.jp/jigyoshamuke/keiyaku/index.html,www.city.nerima.tokyo.jp,1,OBJ-K1495,B (default; auto-adjusts),unverified,candidate
-EP-1376,https://www.city.adachi.tokyo.jp/shigoto/nyusatsu/jigyosha/index.html,www.city.adachi.tokyo.jp,1,OBJ-K1496,B (default; auto-adjusts),unverified,candidate
+EP-1376,https://www.city.adachi.tokyo.jp/shigoto/nyusatsu/jigyosha/index.html,www.city.adachi.tokyo.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1377,https://www.city.katsushika.lg.jp/business/1000011/1000067/1005055/index.html,www.city.katsushika.lg.jp,1,OBJ-K1497,B (default; auto-adjusts),unverified,candidate
 EP-1378,https://www.city.edogawa.tokyo.jp/shigotosangyo/index.html,www.city.edogawa.tokyo.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1379,https://www.town.mizuho.tokyo.jp/jigyousya/001/index.html,www.town.mizuho.tokyo.jp,1,OBJ-K1499,B (default; auto-adjusts),unverified,candidate
@@ -1590,7 +1590,7 @@ EP-1588,https://www.nta.go.jp/about/organization/kanazawa/chotatsu/index.htm,www
 EP-1589,https://jsite.mhlw.go.jp/ishikawa-roudoukyoku/choutatsu_uriharai.html,jsite.mhlw.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1590,https://www.hrr.mlit.go.jp/kanazawa/mb8_keiyaku/index.html,www.hrr.mlit.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1591,http://www.kanazawa.pa.hrr.mlit.go.jp/,www.kanazawa.pa.hrr.mlit.go.jp,1,OBJ-K1761,B (default; auto-adjusts),unverified,candidate
-EP-1592,https://www.mod.go.jp/asdf/komatsu/6/6.html,www.mod.go.jp,1,OBJ-K1763,B (default; auto-adjusts),unverified,candidate
+EP-1592,https://www.mod.go.jp/asdf/komatsu/6/6.html,www.mod.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1593,https://www.mod.go.jp/pco/ishikawa/nyusatsu/index.html,www.mod.go.jp,1,OBJ-K1764,B (default; auto-adjusts),unverified,candidate
 EP-1594,https://www.jica.go.jp/about/announce/domestic/koji2019.html#hokuriku,www.jica.go.jp,1,OBJ-K1765,B (default; auto-adjusts),unverified,candidate
 EP-1595,https://www.kanazawa-u.ac.jp/university/jyouhoukoukai/public_notice,www.kanazawa-u.ac.jp,1,OBJ-K1766,B (default; auto-adjusts),unverified,candidate
@@ -1610,7 +1610,7 @@ EP-1608,http://www.smrj.go.jp/regional_hq/hokuriku/index.html,www.smrj.go.jp,1,O
 EP-1609,https://www.pref.ishikawa.lg.jp/kensei/shinsei/index.html,www.pref.ishikawa.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1610,https://www4.city.kanazawa.lg.jp/soshikikarasagasu/kanrika/gyomuannai/1/6511.html,www4.city.kanazawa.lg.jp,1,OBJ-K1782,B (default; auto-adjusts),unverified,candidate
 EP-1611,https://www.city.nanao.lg.jp/kanri/jigyosha/nyusatsu/index.html,www.city.nanao.lg.jp,1,OBJ-K1783,B (default; auto-adjusts),unverified,candidate
-EP-1612,https://www.city.komatsu.lg.jp/sangyo_business/nyusatsu_keiyaku/index.html,www.city.komatsu.lg.jp,1,OBJ-K1784,B (default; auto-adjusts),unverified,candidate
+EP-1612,https://www.city.komatsu.lg.jp/sangyo_business/nyusatsu_keiyaku/index.html,www.city.komatsu.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1613,https://www.city.wajima.ishikawa.jp/categories/bunya/nyusatsu/,www.city.wajima.ishikawa.jp,1,OBJ-K1785,B (default; auto-adjusts),unverified,candidate
 EP-1614,http://www.city.suzu.ishikawa.jp/soumu/nyusatsu_keiyaku.html,www.city.suzu.ishikawa.jp,1,OBJ-K1786,B (default; auto-adjusts),unverified,candidate
 EP-1615,https://www.city.kaga.ishikawa.jp/sangyo_iju/nyusatsu/index.html,www.city.kaga.ishikawa.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -1747,7 +1747,7 @@ EP-1745,https://www.city.chino.lg.jp/life/3/25/,www.city.chino.lg.jp,1,OBJ-K1942
 EP-1746,https://www.city.shiojiri.lg.jp/site/nyusatsu-keiyaku/,www.city.shiojiri.lg.jp,1,OBJ-K1943,B (default; auto-adjusts),unverified,candidate
 EP-1747,https://www.city.saku.nagano.jp/machizukuri/jigyosha/index.html,www.city.saku.nagano.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1748,https://www.city.chikuma.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/index.html,www.city.chikuma.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-1749,https://www.city.tomi.nagano.jp/category/nyuusatsuyotei/131314.html,www.city.tomi.nagano.jp,1,OBJ-K1946,B (default; auto-adjusts),unverified,candidate
+EP-1749,https://www.city.tomi.nagano.jp/category/nyuusatsuyotei/131314.html,www.city.tomi.nagano.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1750,http://www.city.azumino.nagano.jp/life/2/16/,www.city.azumino.nagano.jp,1,OBJ-K1947,B (default; auto-adjusts),unverified,candidate
 EP-1751,https://www.koumi-town.jp/office2/archives/political-info/nyusatsu/,www.koumi-town.jp,1,OBJ-K1948,B (default; auto-adjusts),unverified,candidate
 EP-1752,https://www.town.sakuho.nagano.jp/shigoto_sangyo/nyusatsu_keiyaku/,www.town.sakuho.nagano.jp,1,OBJ-K1949,B (default; auto-adjusts),unverified,candidate
@@ -1788,7 +1788,7 @@ EP-1786,http://www.urugi.jp/g/shiryou/news/,www.urugi.jp,1,OBJ-K1984,B (default;
 EP-1787,https://www.vill-tenryu.jp/category/administrative/work-village-building/business-owners/,www.vill-tenryu.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1788,http://w1.avis.ne.jp/~kyouinsc/owabi204145.html,w1.avis.ne.jp,1,OBJ-K1986,B (default; auto-adjusts),unverified,candidate
 EP-1789,http://www.vill.takagi.nagano.jp/bunya/forBusiness/,www.vill.takagi.nagano.jp,1,OBJ-K1987,B (default; auto-adjusts),unverified,candidate
-EP-1790,https://www.vill.nagano-toyooka.lg.jp/20jigyousya/index.html,www.vill.nagano-toyooka.lg.jp,1,OBJ-K1988,B (default; auto-adjusts),unverified,candidate
+EP-1790,https://www.vill.nagano-toyooka.lg.jp/20jigyousya/index.html,www.vill.nagano-toyooka.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1791,https://www.vill.ooshika.nagano.jp/category/corporation/,www.vill.ooshika.nagano.jp,1,OBJ-K1989,B (default; auto-adjusts),unverified,candidate
 EP-1792,https://www.vill.kiso.nagano.jp/jigyosha/nyusatsu/,www.vill.kiso.nagano.jp,1,OBJ-K1990,B (default; auto-adjusts),unverified,candidate
 EP-1793,https://www.vill.otaki.nagano.jp/index.html,www.vill.otaki.nagano.jp,1,OBJ-K1991,B (default; auto-adjusts),unverified,candidate
@@ -1930,7 +1930,7 @@ EP-1928,https://www.kensatsu.go.jp/kakuchou/nagoya/page1000041.html,www.kensatsu
 EP-1929,http://tokai.mof.go.jp/nyuusatu/nyuusatu.htm,tokai.mof.go.jp,1,OBJ-K2175,B (default; auto-adjusts),unverified,candidate
 EP-1930,https://www.customs.go.jp/kyotsu/chotatsu/nagoya.htm,www.customs.go.jp,1,OBJ-K2176,B (default; auto-adjusts),unverified,candidate
 EP-1931,https://kouseikyoku.mhlw.go.jp/tokaihokuriku/chotatsu/index.html,kouseikyoku.mhlw.go.jp,1,OBJ-K2179,B (default; auto-adjusts),unverified,candidate
-EP-1932,https://jsite.mhlw.go.jp/aichi-roudoukyoku/choutatsu_uriharai.html,jsite.mhlw.go.jp,1,OBJ-K2180,B (default; auto-adjusts),unverified,candidate
+EP-1932,https://jsite.mhlw.go.jp/aichi-roudoukyoku/choutatsu_uriharai.html,jsite.mhlw.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-1933,https://www.maff.go.jp/pps/j/guidance/supply/nag.html,www.maff.go.jp,1,OBJ-K2184,B (default; auto-adjusts),unverified,candidate
 EP-1934,https://www.chubu.meti.go.jp/nyuusatsu_kobo/nyuusatsu.html,www.chubu.meti.go.jp,1,OBJ-K2185,B (default; auto-adjusts),unverified,candidate
 EP-1935,https://wwwtb.mlit.go.jp/chubu/nusatsu/index.html,wwwtb.mlit.go.jp,1,OBJ-K2186,B (default; auto-adjusts),unverified,candidate
@@ -2076,7 +2076,7 @@ EP-2074,https://higashiomi.hosp.go.jp/nyusatu.html,higashiomi.hosp.go.jp,1,OBJ-K
 EP-2075,https://shigaraki.hosp.go.jp/html/tender/buppin_ekimu.html,shigaraki.hosp.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2076,https://www.jeed.go.jp/location/shibu/shiga/chotatsu.html,www.jeed.go.jp,1,OBJ-K2375,B (default; auto-adjusts),unverified,candidate
 EP-2077,https://shiga.jcho.go.jp/introduction/various/keiyaku-koukai/,shiga.jcho.go.jp,1,OBJ-K2376,B (default; auto-adjusts),unverified,candidate
-EP-2078,https://www.pref.shiga.lg.jp/menu/14968.html,www.pref.shiga.lg.jp,1,OBJ-K2379,B (default; auto-adjusts),unverified,candidate
+EP-2078,https://www.pref.shiga.lg.jp/menu/14968.html,www.pref.shiga.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2079,https://www.city.otsu.lg.jp/b/nk/index.html,www.city.otsu.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2080,https://www.city.hikone.lg.jp/jigyosha/index.html,www.city.hikone.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2081,https://www.city.nagahama.lg.jp/category/4-10-0-0-0-0-0-0-0-0.html,www.city.nagahama.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -2224,8 +2224,8 @@ EP-2222,https://www.city.kadoma.osaka.jp/shisei/nyusatsu/index.html,www.city.kad
 EP-2223,https://www.city.settsu.osaka.jp/sangyou/nyuusatsu/index.html,www.city.settsu.osaka.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2224,https://www.city.takaishi.lg.jp/business/nyusatsu/index.html,www.city.takaishi.lg.jp,1,OBJ-K2576,B (default; auto-adjusts),unverified,candidate
 EP-2225,https://www.city.fujiidera.lg.jp/jigyosha/nyusatsukeiyakushiharai/index.html,www.city.fujiidera.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-2226,https://www.city.higashiosaka.lg.jp/category/19-3-0-0-0-0-0-0-0-0.html,www.city.higashiosaka.lg.jp,1,OBJ-K2578,B (default; auto-adjusts),unverified,candidate
-EP-2227,https://www.city.sennan.lg.jp/business/nyusatu/index.html,www.city.sennan.lg.jp,1,OBJ-K2579,B (default; auto-adjusts),unverified,candidate
+EP-2226,https://www.city.higashiosaka.lg.jp/category/19-3-0-0-0-0-0-0-0-0.html,www.city.higashiosaka.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
+EP-2227,https://www.city.sennan.lg.jp/business/nyusatu/index.html,www.city.sennan.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2228,https://www.city.shijonawate.lg.jp/life/8/50/,www.city.shijonawate.lg.jp,1,OBJ-K2580,B (default; auto-adjusts),unverified,candidate
 EP-2229,https://www.city.katano.osaka.jp/navi/jigyosha/,www.city.katano.osaka.jp,1,OBJ-K2581,B (default; auto-adjusts),unverified,candidate
 EP-2230,https://www.city.osakasayama.osaka.jp/machizukuri_shisei/nyusatsu_keiyaku/index.html,www.city.osakasayama.osaka.jp,1,OBJ-K2582,B (default; auto-adjusts),unverified,candidate
@@ -2469,10 +2469,10 @@ EP-2467,http://www.matsue-ct.jp/m/index.php/submenu-list-company/submenu-list-ny
 EP-2468,https://hamada.hosp.go.jp/bid_index.html,hamada.hosp.go.jp,1,OBJ-K2874,B (default; auto-adjusts),unverified,candidate
 EP-2469,https://matsue.hosp.go.jp/supply/,matsue.hosp.go.jp,1,OBJ-K2875,B (default; auto-adjusts),unverified,candidate
 EP-2470,https://www.jeed.go.jp/location/shibu/shimane/chotatsu.html,www.jeed.go.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-2471,https://tamatsukuri.jcho.go.jp/introduction/various/keiyaku-koukai/,tamatsukuri.jcho.go.jp,1,OBJ-K2877,B (default; auto-adjusts),unverified,candidate
+EP-2471,https://tamatsukuri.jcho.go.jp/introduction/various/keiyaku-koukai/,tamatsukuri.jcho.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2472,http://www.pref.shimane.lg.jp/bid_info/,www.pref.shimane.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2473,http://www1.city.matsue.shimane.jp/jigyousha/index.html,www1.city.matsue.shimane.jp,1,OBJ-K2880,B (default; auto-adjusts),unverified,candidate
-EP-2474,https://www.city.hamada.shimane.jp/www/genre/1000170010271/index.html,www.city.hamada.shimane.jp,1,OBJ-K2881,B (default; auto-adjusts),unverified,candidate
+EP-2474,https://www.city.hamada.shimane.jp/www/genre/1000170010271/index.html,www.city.hamada.shimane.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2475,https://www.city.izumo.shimane.jp/www/genre/1000000000116/index.html,www.city.izumo.shimane.jp,1,OBJ-K2882,B (default; auto-adjusts),unverified,candidate
 EP-2476,https://www.city.masuda.lg.jp/shigoto_sangyo/nyusatsu_keiyaku/nyusatsu/1/index.html,www.city.masuda.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2477,http://www.city.ohda.lg.jp/tag/konnatoki_nyusatu/,www.city.ohda.lg.jp,1,OBJ-K2884,B (default; auto-adjusts),unverified,candidate
@@ -2567,7 +2567,7 @@ EP-2565,https://www.cgr.mlit.go.jp/haji/,www.cgr.mlit.go.jp,1,OBJ-K2997,B (defau
 EP-2566,http://www.cgr.mlit.go.jp/yasaka/info/order/index.htm,www.cgr.mlit.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2567,http://www.pa.cgr.mlit.go.jp/hiroshima/,www.pa.cgr.mlit.go.jp,1,OBJ-K3001,B (default; auto-adjusts),unverified,candidate
 EP-2568,http://www.pa.cgr.mlit.go.jp/gicyo/,www.pa.cgr.mlit.go.jp,1,OBJ-K3002,B (default; auto-adjusts),unverified,candidate
-EP-2569,https://www.gsi.go.jp/chugoku/chugoku40007.html,www.gsi.go.jp,1,OBJ-K3003,B (default; auto-adjusts),unverified,candidate
+EP-2569,https://www.gsi.go.jp/chugoku/chugoku40007.html,www.gsi.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2570,https://www.mod.go.jp/pco/hiroshima/,www.mod.go.jp,1,OBJ-K3007,B (default; auto-adjusts),unverified,candidate
 EP-2571,https://www.jica.go.jp/about/announce/domestic/koji2019.html#chugoku,www.jica.go.jp,1,OBJ-K3009,B (default; auto-adjusts),unverified,candidate
 EP-2572,https://www.nrib.go.jp/gui/bid/bid01.html,www.nrib.go.jp,1,OBJ-K3010,B (default; auto-adjusts),unverified,candidate
@@ -2603,7 +2603,7 @@ EP-2601,https://www.city.shobara.hiroshima.jp/main/government/keiyaku/,www.city.
 EP-2602,https://www.city.otake.hiroshima.jp/soshiki/kensetsu/kanri/gyomu/4/index.html,www.city.otake.hiroshima.jp,1,OBJ-K3045,B (default; auto-adjusts),unverified,candidate
 EP-2603,https://www.city.higashihiroshima.lg.jp/scene/11/index.html,www.city.higashihiroshima.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2604,https://www.city.hatsukaichi.hiroshima.jp/life/2/19/,www.city.hatsukaichi.hiroshima.jp,1,OBJ-K3047,B (default; auto-adjusts),unverified,candidate
-EP-2605,https://www.akitakata.jp/ja/jigyou/nyusatsu/,www.akitakata.jp,1,OBJ-K3048,B (default; auto-adjusts),unverified,candidate
+EP-2605,https://www.akitakata.jp/ja/jigyou/nyusatsu/,www.akitakata.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2606,http://www.city.etajima.hiroshima.jp/cms/categories/show/14,www.city.etajima.hiroshima.jp,1,OBJ-K3049,B (default; auto-adjusts),unverified,candidate
 EP-2607,https://www.town.fuchu.hiroshima.jp/life/3/25/,www.town.fuchu.hiroshima.jp,1,OBJ-K3050,B (default; auto-adjusts),unverified,candidate
 EP-2608,https://www.town.kaita.lg.jp/life/2/16/,www.town.kaita.lg.jp,1,OBJ-K3051,B (default; auto-adjusts),unverified,candidate
@@ -2637,7 +2637,7 @@ EP-2635,https://yamaguchiube.hosp.go.jp/profession/bid2-1_00003.html,yamaguchiub
 EP-2636,https://yanai.hosp.go.jp/kigyou/index.html,yanai.hosp.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2637,https://yamaguchih.johas.go.jp/pris-etc/purchase_info.html,yamaguchih.johas.go.jp,1,OBJ-K3088,B (default; auto-adjusts),unverified,candidate
 EP-2638,https://www.jeed.go.jp/location/shibu/yamaguchi/chotatsu.html,www.jeed.go.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-2639,https://shimonoseki.jcho.go.jp/introduction/various/keiyaku-koukai-2/,shimonoseki.jcho.go.jp,1,OBJ-K3090,B (default; auto-adjusts),unverified,candidate
+EP-2639,https://shimonoseki.jcho.go.jp/introduction/various/keiyaku-koukai-2/,shimonoseki.jcho.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2640,https://tokuyama.jcho.go.jp/%E8%AA%BF%E9%81%94%E6%83%85%E5%A0%B1/,tokuyama.jcho.go.jp,1,OBJ-K3091,B (default; auto-adjusts),unverified,candidate
 EP-2641,https://www.fish-u.ac.jp/,www.fish-u.ac.jp,1,OBJ-K3092,B (default; auto-adjusts),unverified,candidate
 EP-2642,https://www.pref.yamaguchi.lg.jp/soshiki/list8-1.html,www.pref.yamaguchi.lg.jp,1,OBJ-K3093,B (default; auto-adjusts),unverified,candidate
@@ -2652,7 +2652,7 @@ EP-2650,https://www.city.hikari.lg.jp/jigyosha/nyusatsu/index.html,www.city.hika
 EP-2651,https://www.city.nagato.yamaguchi.jp/life/3/14/,www.city.nagato.yamaguchi.jp,1,OBJ-K3102,B (default; auto-adjusts),unverified,candidate
 EP-2652,http://www.city-yanai.jp/life/2/17/,www.city-yanai.jp,1,OBJ-K3103,B (default; auto-adjusts),unverified,candidate
 EP-2653,https://www2.city.mine.lg.jp/soshiki/somubu/kanrika/kobo/11380.html,www2.city.mine.lg.jp,1,OBJ-K3104,B (default; auto-adjusts),unverified,candidate
-EP-2654,https://www.city.shunan.lg.jp/life/6/,www.city.shunan.lg.jp,1,OBJ-K3105,B (default; auto-adjusts),unverified,candidate
+EP-2654,https://www.city.shunan.lg.jp/life/6/,www.city.shunan.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2655,https://www.city.sanyo-onoda.lg.jp/life/8/58/,www.city.sanyo-onoda.lg.jp,1,OBJ-K3106,B (default; auto-adjusts),unverified,candidate
 EP-2656,https://www.town.suo-oshima.lg.jp/life/2/18/,www.town.suo-oshima.lg.jp,1,OBJ-K3107,B (default; auto-adjusts),unverified,candidate
 EP-2657,http://www.town.waki.lg.jp/,www.town.waki.lg.jp,1,OBJ-K3108,B (default; auto-adjusts),unverified,candidate
@@ -2683,7 +2683,7 @@ EP-2681,https://www.city.anan.tokushima.jp/nyusatsu/,www.city.anan.tokushima.jp,
 EP-2682,https://www.city.yoshinogawa.lg.jp/navi/jigyosha/,www.city.yoshinogawa.lg.jp,1,OBJ-K3142,B (default; auto-adjusts),unverified,candidate
 EP-2683,https://www.city.awa.lg.jp/category/bunya/nyusatsu/,www.city.awa.lg.jp,1,OBJ-K3143,B (default; auto-adjusts),unverified,candidate
 EP-2684,https://www.city.mima.lg.jp/gyosei/nyusatsu/,www.city.mima.lg.jp,1,OBJ-K3144,B (default; auto-adjusts),unverified,candidate
-EP-2685,https://www.miyoshi.i-tokushima.jp/,www.miyoshi.i-tokushima.jp,1,OBJ-K3145,B (default; auto-adjusts),unverified,candidate
+EP-2685,https://www.miyoshi.i-tokushima.jp/,www.miyoshi.i-tokushima.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2686,http://www.town.katsuura.lg.jp/,www.town.katsuura.lg.jp,1,OBJ-K3146,B (default; auto-adjusts),unverified,candidate
 EP-2687,https://www.kamikatsu.jp/category/zokusei/nyusatsu/,www.kamikatsu.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2688,https://www.town.ishii.lg.jp/navi/sangyo/,www.town.ishii.lg.jp,1,OBJ-K3148,B (default; auto-adjusts),unverified,candidate
@@ -2723,7 +2723,7 @@ EP-2721,https://www.mod.go.jp/pco/kagawa/,www.mod.go.jp,1,OBJ-K3194,B (default; 
 EP-2722,https://www.jica.go.jp/about/announce/domestic/koji2019.html#shikoku,www.jica.go.jp,1,OBJ-K3195,B (default; auto-adjusts),unverified,candidate
 EP-2723,https://www.kagawa-u.ac.jp/public/foundation/procurement/,www.kagawa-u.ac.jp,1,OBJ-K3196,B (default; auto-adjusts),unverified,candidate
 EP-2724,https://www.kagawa-puhs.ac.jp/,www.kagawa-puhs.ac.jp,1,OBJ-K3197,B (default; auto-adjusts),unverified,candidate
-EP-2725,https://www.pref.kagawa.lg.jp/nodai/,www.pref.kagawa.lg.jp,1,OBJ-K3198,B (default; auto-adjusts),unverified,candidate
+EP-2725,https://www.pref.kagawa.lg.jp/nodai/,www.pref.kagawa.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2726,https://www.kagawa-nct.ac.jp/information/procuration/tyotatu-joho.html,www.kagawa-nct.ac.jp,1,OBJ-K3199,B (default; auto-adjusts),unverified,candidate
 EP-2727,https://shikoku-mc.hosp.go.jp/about/contract.html,shikoku-mc.hosp.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2728,https://takamatsu.hosp.go.jp/medical/information/index.html,takamatsu.hosp.go.jp,1,OBJ-K3201,B (default; auto-adjusts),unverified,candidate
@@ -2733,7 +2733,7 @@ EP-2731,https://www.jeed.go.jp/location/shibu/kagawa/chotatsu.html,www.jeed.go.j
 EP-2732,https://ritsurin.jcho.go.jp/%e5%85%a5%e6%9c%ad%e5%85%ac%e5%91%8a/,ritsurin.jcho.go.jp,1,OBJ-K3205,B (default; auto-adjusts),unverified,candidate
 EP-2733,https://www.smrj.go.jp/procurement/bid/index.html,www.smrj.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2734,http://www.water.go.jp/yoshino/kagawa/nyusatu/index.html,www.water.go.jp,1,OBJ-K3210,B (default; auto-adjusts),unverified,candidate
-EP-2735,https://www.pref.kagawa.lg.jp/cgi-bin/page/list.php?tpl_type=2&page_type=5,www.pref.kagawa.lg.jp,1,OBJ-K3211,B (default; auto-adjusts),unverified,candidate
+EP-2735,https://www.pref.kagawa.lg.jp/cgi-bin/page/list.php?tpl_type=2&page_type=5,www.pref.kagawa.lg.jp,2,OBJ-K3198 OBJ-K3211,B (default; auto-adjusts),unverified,candidate
 EP-2736,https://www.city.takamatsu.kagawa.jp/jigyosha/nyusatsu/index.html,www.city.takamatsu.kagawa.jp,1,OBJ-K3212,B (default; auto-adjusts),unverified,candidate
 EP-2737,http://www.city.marugame.kagawa.jp/itwinfo/cl460/,www.city.marugame.kagawa.jp,1,OBJ-K3213,B (default; auto-adjusts),unverified,candidate
 EP-2738,https://www.city.sakaide.lg.jp/life/4/21/,www.city.sakaide.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -2758,7 +2758,7 @@ EP-2756,https://jsite.mhlw.go.jp/ehime-roudoukyoku/choutatsu_uriharai.html,jsite
 EP-2757,https://www.skr.mlit.go.jp/matsuyam/nyukei/index.html,www.skr.mlit.go.jp,1,OBJ-K3239,B (default; auto-adjusts),unverified,candidate
 EP-2758,https://www.skr.mlit.go.jp/oozu/keiyaku/index.html,www.skr.mlit.go.jp,1,OBJ-K3240,B (default; auto-adjusts),unverified,candidate
 EP-2759,https://www.skr.mlit.go.jp/yamatosa/infor/index.html,www.skr.mlit.go.jp,1,OBJ-K3241,B (default; auto-adjusts),unverified,candidate
-EP-2760,https://www.skr.mlit.go.jp/hijikawadam/index.html,www.skr.mlit.go.jp,1,OBJ-K3242,B (default; auto-adjusts),unverified,candidate
+EP-2760,https://www.skr.mlit.go.jp/hijikawadam/index.html,www.skr.mlit.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2761,http://www.pa.skr.mlit.go.jp/matsuyama/bid/index.html,www.pa.skr.mlit.go.jp,1,OBJ-K3243,B (default; auto-adjusts),unverified,candidate
 EP-2762,https://www.mod.go.jp/pco/ehime/bid.html,www.mod.go.jp,1,OBJ-K3245,B (default; auto-adjusts),unverified,candidate
 EP-2763,https://www.ehime-u.ac.jp,www.ehime-u.ac.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -2911,14 +2911,14 @@ EP-2909,http://www.water.go.jp/chikugo/koishi/bids/index.html,www.water.go.jp,1,
 EP-2910,https://www.water.go.jp/chikugo/chikugo/index.html,www.water.go.jp,1,OBJ-K3431,B (default; auto-adjusts),unverified,candidate
 EP-2911,http://www.water.go.jp/chikugo/terauchi/keiyaku/kei_info.html,www.water.go.jp,1,OBJ-K3432,B (default; auto-adjusts),unverified,candidate
 EP-2912,https://www.pref.fukuoka.lg.jp/life/8/63/,www.pref.fukuoka.lg.jp,1,OBJ-K3433,B (default; auto-adjusts),unverified,candidate
-EP-2913,http://www.k-nyusatsu.city.kitakyushu.jp/index.html,www.k-nyusatsu.city.kitakyushu.jp,1,OBJ-K3434,B (default; auto-adjusts),unverified,candidate
+EP-2913,http://www.k-nyusatsu.city.kitakyushu.jp/index.html,www.k-nyusatsu.city.kitakyushu.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2914,https://keiyaku.city.fukuoka.lg.jp/maintenance.html,keiyaku.city.fukuoka.lg.jp,1,OBJ-K3435,B (default; auto-adjusts),unverified,candidate
 EP-2915,https://www.city.omuta.lg.jp/kiji00318367/index.html,www.city.omuta.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2916,https://www.city.kurume.fukuoka.jp/1090sangyou/2010nyuusatsu/,www.city.kurume.fukuoka.jp,1,OBJ-K3437,B (default; auto-adjusts),unverified,candidate
 EP-2917,http://www.city.nogata.fukuoka.jp/sangyo/_1231.html,www.city.nogata.fukuoka.jp,1,OBJ-K3438,B (default; auto-adjusts),unverified,candidate
 EP-2918,https://www.city.iizuka.lg.jp/life/5/24/,www.city.iizuka.lg.jp,1,OBJ-K3439,B (default; auto-adjusts),unverified,candidate
 EP-2919,https://www.joho.tagawa.fukuoka.jp/list00695.html,www.joho.tagawa.fukuoka.jp,1,OBJ-K3440,B (default; auto-adjusts),unverified,candidate
-EP-2920,https://www.city.yanagawa.fukuoka.jp/sangyo/nyusatsu/kensetsukoji/14229.html,www.city.yanagawa.fukuoka.jp,1,OBJ-K3441,B (default; auto-adjusts),unverified,candidate
+EP-2920,https://www.city.yanagawa.fukuoka.jp/sangyo/nyusatsu/kensetsukoji/14229.html,www.city.yanagawa.fukuoka.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2921,https://www.city.yame.fukuoka.jp/jigyosha/1/index.html,www.city.yame.fukuoka.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2922,https://www.city.chikugo.lg.jp/shigoto/_3716.html,www.city.chikugo.lg.jp,1,OBJ-K3443,B (default; auto-adjusts),unverified,candidate
 EP-2923,http://www.city.okawa.lg.jp/100/130/,www.city.okawa.lg.jp,1,OBJ-K3444,B (default; auto-adjusts),unverified,candidate
@@ -2981,7 +2981,7 @@ EP-2979,https://www.mod.go.jp/pco/saga/,www.mod.go.jp,1,OBJ-K3508,B (default; au
 EP-2980,https://www.saga-u.ac.jp/other/tyotatsu.html,www.saga-u.ac.jp,1,OBJ-K3509,B (default; auto-adjusts),unverified,candidate
 EP-2981,https://saga.hosp.go.jp/profession/bid.html,saga.hosp.go.jp,1,OBJ-K3510,B (default; auto-adjusts),unverified,candidate
 EP-2982,https://ureshino.hosp.go.jp/profession/bid.html,ureshino.hosp.go.jp,1,OBJ-K3511,B (default; auto-adjusts),unverified,candidate
-EP-2983,https://higashisaga.hosp.go.jp/profession/bid.html,higashisaga.hosp.go.jp,1,OBJ-K3512,B (default; auto-adjusts),unverified,candidate
+EP-2983,https://higashisaga.hosp.go.jp/profession/bid.html,higashisaga.hosp.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2984,https://hizen.hosp.go.jp/profession/recruiting/,hizen.hosp.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2985,https://www.jeed.go.jp/location/shibu/saga/chotatsu.html,www.jeed.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2986,https://saga.jcho.go.jp/introduction/various/%E8%AA%BF%E9%81%94%E6%83%85%E5%A0%B1/keiyaku-koukai/,saga.jcho.go.jp,1,OBJ-K3515,B (default; auto-adjusts),unverified,candidate
@@ -3055,14 +3055,14 @@ EP-3053,https://www.kensatsu.go.jp/kakuchou/kumamoto/tyoutatu.html,www.kensatsu.
 EP-3054,http://kyusyu.mof.go.jp/soumu/pagehrhp00200006.html,kyusyu.mof.go.jp,1,OBJ-K3600,B (default; auto-adjusts),unverified,candidate
 EP-3055,https://www.mhlw.go.jp/seisakunitsuite/bunya/kenkou_iryou/iryou/hansen/keifuen/ippan_kyousou_nyuusatu.html,www.mhlw.go.jp,1,OBJ-K3602,B (default; auto-adjusts),unverified,candidate
 EP-3056,https://jsite.mhlw.go.jp/kumamoto-roudoukyoku/choutatsu_uriharai.html,jsite.mhlw.go.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-3057,http://www.qsr.mlit.go.jp/kumamoto/nyuusatsu_keiyaku/,www.qsr.mlit.go.jp,1,OBJ-K3606,B (default; auto-adjusts),unverified,candidate
+EP-3057,http://www.qsr.mlit.go.jp/kumamoto/nyuusatsu_keiyaku/,www.qsr.mlit.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-3058,http://www.qsr.mlit.go.jp/kumamoto_r/bid.html,www.qsr.mlit.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-3059,http://www.qsr.mlit.go.jp/yatusiro/nyusatsu/index.html,www.qsr.mlit.go.jp,1,OBJ-K3608,B (default; auto-adjusts),unverified,candidate
 EP-3060,http://www.qsr.mlit.go.jp/kawabe/,www.qsr.mlit.go.jp,1,OBJ-K3609,B (default; auto-adjusts),unverified,candidate
 EP-3061,http://www.qsr.mlit.go.jp/kumaei/,www.qsr.mlit.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-3062,https://www.pa.qsr.mlit.go.jp/kumamoto/nyusatsu/index.html,www.pa.qsr.mlit.go.jp,1,OBJ-K3614,B (default; auto-adjusts),unverified,candidate
 EP-3063,https://kyushu.env.go.jp/procure/,kyushu.env.go.jp,1,OBJ-K3615,B (default; auto-adjusts),unverified,candidate
-EP-3064,https://nimd.env.go.jp/404.html,nimd.env.go.jp,1,OBJ-K3616,B (default; auto-adjusts),unverified,candidate
+EP-3064,https://nimd.env.go.jp/404.html,nimd.env.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-3065,https://www.mod.go.jp/pco/kumamoto/,www.mod.go.jp,1,OBJ-K3618,B (default; auto-adjusts),unverified,candidate
 EP-3066,https://www.kumamoto-u.ac.jp/daigakujouhou/jouhoukoukai/tyoutatu,www.kumamoto-u.ac.jp,1,OBJ-K3620,B (default; auto-adjusts),unverified,candidate
 EP-3067,https://www.pu-kumamoto.ac.jp/corporation/bid/,www.pu-kumamoto.ac.jp,1,OBJ-K3621,B (default; auto-adjusts),unverified,candidate
@@ -3179,7 +3179,7 @@ EP-3177,https://miyazaki.hosp.go.jp/nyusatukoukoku.html,miyazaki.hosp.go.jp,1,OB
 EP-3178,http://www.mhigashi1.jp/bid/,www.mhigashi1.jp,1,OBJ-K3754,B (default; auto-adjusts),unverified,candidate
 EP-3179,https://www.jeed.go.jp/location/shibu/miyazaki/chotatsu.html,www.jeed.go.jp,1,OBJ-K3755,B (default; auto-adjusts),unverified,candidate
 EP-3180,https://miyazaki.jcho.go.jp/introduction/various/%E8%AA%BF%E9%81%94%E6%83%85%E5%A0%B1%E3%83%BB%E5%A5%91%E7%B4%84%E6%83%85%E5%A0%B1%E5%85%AC%E9%96%8B/,miyazaki.jcho.go.jp,1,OBJ-K3756,B (default; auto-adjusts),unverified,candidate
-EP-3181,http://www.nlbc.go.jp/miyazaki/tyotatu/index.html,www.nlbc.go.jp,1,OBJ-K3757,B (default; auto-adjusts),unverified,candidate
+EP-3181,http://www.nlbc.go.jp/miyazaki/tyotatu/index.html,www.nlbc.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-3182,http://www.kouku-dai.ac.jp/cgi-bin/05_supply/view.cgi?print=20&sort=down4%20down5%20down6&keys2=1&word=0&tid=list3,www.kouku-dai.ac.jp,1,OBJ-K3760,B (default; auto-adjusts),unverified,candidate
 EP-3183,http://www.pref.miyazaki.lg.jp/kense/chotatsu/index.html,www.pref.miyazaki.lg.jp,1,OBJ-K3761,B (default; auto-adjusts),unverified,candidate
 EP-3184,https://www.city.miyazaki.miyazaki.jp/business/bid/,www.city.miyazaki.miyazaki.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -3236,7 +3236,7 @@ EP-3234,https://www.city.kagoshima.lg.jp/shise/nyusatsu/index.html,www.city.kago
 EP-3235,https://www.city.kanoya.lg.jp/kouhou/shise/nyusatsu/index.html,www.city.kanoya.lg.jp,1,OBJ-K3823,B (default; auto-adjusts),unverified,candidate
 EP-3236,https://www.city.makurazaki.lg.jp/life/2/30/,www.city.makurazaki.lg.jp,1,OBJ-K3824,B (default; auto-adjusts),unverified,candidate
 EP-3237,http://www.city.akune.kagoshima.jp/shigotosangyo/nyusatsu.html,www.city.akune.kagoshima.jp,1,OBJ-K3825,B (default; auto-adjusts),unverified,candidate
-EP-3238,https://www.city.kagoshima-izumi.lg.jp/sangyo/nyusatsu/index.html,www.city.kagoshima-izumi.lg.jp,1,OBJ-K3826,B (default; auto-adjusts),unverified,candidate
+EP-3238,https://www.city.kagoshima-izumi.lg.jp/sangyo/nyusatsu/index.html,www.city.kagoshima-izumi.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-3239,https://www.city.ibusuki.lg.jp/main/shisei/nyusatsu/,www.city.ibusuki.lg.jp,1,OBJ-K3827,B (default; auto-adjusts),unverified,candidate
 EP-3240,https://www.city.nishinoomote.lg.jp/admin/jigyousha/nyusatu/index.html,www.city.nishinoomote.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-3241,http://www.city.tarumizu.lg.jp/hisho/kurashi/sangyo/nyusatsu/index.html,www.city.tarumizu.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -3276,7 +3276,7 @@ EP-3274,https://www.tokara.jp/jigyo/,www.tokara.jp,1,OBJ-K3862,B (default; auto-
 EP-3275,http://www.vill.yamato.lg.jp/hpkanri/sonse/nyusatsu-keyaku/index.html,www.vill.yamato.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-3276,http://www.uken.net/kouhoutoukei/sangyo/nyusatsu/index.html,www.uken.net,1,OBJ-K3864,B (default; auto-adjusts),unverified,candidate
 EP-3277,https://www.ogb.go.jp/soumu/soumu_tyouta.html,www.ogb.go.jp,1,OBJ-K3866,B (default; auto-adjusts),unverified,candidate
-EP-3278,https://www.ogb.go.jp/o/nousui/nns/miyakoirabu/index.html,www.ogb.go.jp,1,OBJ-K3874,B (default; auto-adjusts),unverified,candidate
+EP-3278,https://www.ogb.go.jp/o/nousui/nns/miyakoirabu/index.html,www.ogb.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-3279,http://www.jinji.go.jp/saiyo/saiyo/sonota/koubo_joho.html,www.jinji.go.jp,1,OBJ-K3875,B (default; auto-adjusts),unverified,candidate
 EP-3280,http://www.kyushu.npa.go.jp/0900_choutatsu.html,www.kyushu.npa.go.jp,1,OBJ-K3877,B (default; auto-adjusts),unverified,candidate
 EP-3281,http://www.police.pref.okinawa.jp/category/shinchaku/nyusatsu/,www.police.pref.okinawa.jp,1,OBJ-K3878,B (default; auto-adjusts),unverified,candidate
@@ -3284,11 +3284,11 @@ EP-3282,https://www.soumu.go.jp/kanku/okinawa/chotatujoho.html,www.soumu.go.jp,1
 EP-3283,https://www.soumu.go.jp/soutsu/okinawa/sougou/tiyoutatu_top.html,www.soumu.go.jp,1,OBJ-K3880,B (default; auto-adjusts),unverified,candidate
 EP-3284,https://houmukyoku.moj.go.jp/naha/table/nyuusatsu/all.html,houmukyoku.moj.go.jp,1,OBJ-K3881,B (default; auto-adjusts),unverified,candidate
 EP-3285,https://www.kensatsu.go.jp/kakuchou/naha/page1000035.html,www.kensatsu.go.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-3286,https://www.customs.go.jp/kyotsu/chotatsu/okinawa.htm,www.customs.go.jp,1,OBJ-K3885,B (default; auto-adjusts),unverified,candidate
+EP-3286,https://www.customs.go.jp/kyotsu/chotatsu/okinawa.htm,www.customs.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-3287,https://www.mhlw.go.jp/seisakunitsuite/bunya/kenkou_iryou/iryou/hansen/airakuen/site/cyotatsu.html,www.mhlw.go.jp,1,OBJ-K3887,B (default; auto-adjusts),unverified,candidate
 EP-3288,https://www.mhlw.go.jp/seisakunitsuite/bunya/kenkou_iryou/iryou/hansen/miyako/welcome.html,www.mhlw.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-3289,https://www.forth.go.jp/keneki/naha/,www.forth.go.jp,0,,B (default; auto-adjusts),unverified,disabled
-EP-3290,https://jsite.mhlw.go.jp/okinawa-roudoukyoku/choutatsu_uriharai.html,jsite.mhlw.go.jp,1,OBJ-K3891,B (default; auto-adjusts),unverified,candidate
+EP-3290,https://jsite.mhlw.go.jp/okinawa-roudoukyoku/choutatsu_uriharai.html,jsite.mhlw.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-3291,https://www.maff.go.jp/pps/j/guidance/supply/nah.html,www.maff.go.jp,1,OBJ-K3892,B (default; auto-adjusts),unverified,candidate
 EP-3292,https://www.safety-naha.meti.go.jp/,www.safety-naha.meti.go.jp,1,OBJ-K3894,B (default; auto-adjusts),unverified,candidate
 EP-3293,https://www.kaiho.mlit.go.jp/11kanku/nyusatu/nyus_top.htm,www.kaiho.mlit.go.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -3379,8 +3379,8 @@ EP-3377,http://www.city.tarumizu.lg.jp/keiyaku/kurashi/sangyo/nyusatsu/zaisan/ko
 EP-3378,http://www.gsi.go.jp/SERVICE/keiyaku/jyoho.html,www.gsi.go.jp,1,OBJ-K1310,B (default; auto-adjusts),unverified,candidate
 EP-3379,http://www.jeed.go.jp/jeed/information/honbu/chotatsu_buppin.html,www.jeed.go.jp,1,OBJ-K2321,B (default; auto-adjusts),unverified,candidate
 EP-3380,http://www.nagasaki-u.ac.jp/ja/guidance/procurement/contractor/index.html,www.nagasaki-u.ac.jp,1,OBJ-K3557,B (default; auto-adjusts),unverified,candidate
-EP-3381,http://www.nlbc.go.jp/chotatsujoho/kohyo/index.html,www.nlbc.go.jp,1,OBJ-K2230,B (default; auto-adjusts),unverified,candidate
-EP-3382,http://www.qsr.mlit.go.jp/nyusatu_joho/buppin-ekimu-nyuusatukoukoku/,www.qsr.mlit.go.jp,1,OBJ-K3743,B (default; auto-adjusts),unverified,candidate
+EP-3381,http://www.nlbc.go.jp/chotatsujoho/kohyo/index.html,www.nlbc.go.jp,3,OBJ-K0107 OBJ-K2230 OBJ-K3757,B (default; auto-adjusts),unverified,candidate
+EP-3382,http://www.qsr.mlit.go.jp/nyusatu_joho/buppin-ekimu-nyuusatukoukoku/,www.qsr.mlit.go.jp,2,OBJ-K3606 OBJ-K3743,B (default; auto-adjusts),unverified,candidate
 EP-3383,http://www.qsr.mlit.go.jp/nyusatu_joho/buppin-ekimu-nyuusatukoukoku/index.html,www.qsr.mlit.go.jp,1,OBJ-K3607,B (default; auto-adjusts),unverified,candidate
 EP-3384,http://www.qsr.mlit.go.jp/nyusatu_joho/nyusatsu_kanshi/index.html,www.qsr.mlit.go.jp,1,OBJ-K3802,B (default; auto-adjusts),unverified,candidate
 EP-3385,http://www.qsr.mlit.go.jp/oitagawa/index.html,www.qsr.mlit.go.jp,1,OBJ-K3696,B (default; auto-adjusts),unverified,candidate
@@ -3540,7 +3540,7 @@ EP-3538,https://www.mhlw.go.jp/seisakunitsuite/bunya/kenkou_iryou/iryou/hansen/s
 EP-3539,https://www.mint.go.jp/about/bid/koubo,www.mint.go.jp,1,OBJ-K2516,B (default; auto-adjusts),unverified,candidate
 EP-3540,https://www.miyakonojo-nct.ac.jp/tender/goods/,www.miyakonojo-nct.ac.jp,1,OBJ-K3751,B (default; auto-adjusts),unverified,candidate
 EP-3541,https://www.mod.go.jp/asdf/iruma/bosyu/index.html,www.mod.go.jp,1,OBJ-K1036,B (default; auto-adjusts),unverified,candidate
-EP-3542,https://www.mod.go.jp/gsdf/eae/eadep/tyokai/honsyo/R08_nyusatsu-koukoku.html,www.mod.go.jp,2,OBJ-K0800 OBJ-K0807,B (default; auto-adjusts),unverified,candidate
+EP-3542,https://www.mod.go.jp/gsdf/eae/eadep/tyokai/honsyo/R08_nyusatsu-koukoku.html,www.mod.go.jp,3,OBJ-K0800 OBJ-K0807 OBJ-K1329,B (default; auto-adjusts),unverified,candidate
 EP-3543,https://www.mod.go.jp/gsdf/eae/kaikei/eafin/koubo.html,www.mod.go.jp,10,OBJ-K0896 OBJ-K0949 OBJ-K1035 OBJ-K1145 OBJ-K1335 OBJ-K1543 OBJ-K1653 OBJ-K1856 OBJ-K1913 OBJ-K2101,B (default; auto-adjusts),unverified,candidate
 EP-3544,https://www.mod.go.jp/gsdf/jieikanbosyu/index.html,www.mod.go.jp,1,OBJ-K1345,B (default; auto-adjusts),unverified,candidate
 EP-3545,https://www.mod.go.jp/gsdf/neae/neahq/index.html,www.mod.go.jp,4,OBJ-K0496 OBJ-K0498 OBJ-K0576 OBJ-K0632,B (default; auto-adjusts),unverified,candidate
@@ -4160,3 +4160,56 @@ EP-4158,https://www2.town.asahi.mie.jp/www/genre/1780990367451/index.html,www2.t
 EP-4159,https://wwwtb.mlit.go.jp/chugoku/txt/nyusatsukeiyaku.html,wwwtb.mlit.go.jp,1,OBJ-K2987,B (default; auto-adjusts),unverified,candidate
 EP-4160,https://wwwtb.mlit.go.jp/hokushin/bid/bid2.html,wwwtb.mlit.go.jp,1,OBJ-K1636,B (default; auto-adjusts),unverified,candidate
 EP-4161,https://wwwtb.mlit.go.jp/kanto/soumu/kaikei/bid/service/index.html,wwwtb.mlit.go.jp,1,OBJ-K1528,B (default; auto-adjusts),unverified,candidate
+EP-4162,http://www.city.toride.ibaraki.jp/jigyosha/nyusatsu/nyusatsu/index.html,www.city.toride.ibaraki.jp,1,OBJ-K0850,B (default; auto-adjusts),unverified,candidate
+EP-4163,http://www.k-nyusatsu.city.kitakyushu.jp/oshirase/oshirase.html,www.k-nyusatsu.city.kitakyushu.jp,1,OBJ-K3434,B (default; auto-adjusts),unverified,candidate
+EP-4164,https://chiba.jcho.go.jp/introduction/various/%E8%AA%BF%E9%81%94%E6%83%85%E5%A0%B1-3,chiba.jcho.go.jp,1,OBJ-K1163,B (default; auto-adjusts),unverified,candidate
+EP-4165,https://higashisaga.hosp.go.jp/profession/bid03.html,higashisaga.hosp.go.jp,1,OBJ-K3512,B (default; auto-adjusts),unverified,candidate
+EP-4166,https://hokushin.jcho.go.jp/introduction/various/choutatsu/choutatsu,hokushin.jcho.go.jp,1,OBJ-K0098,B (default; auto-adjusts),unverified,candidate
+EP-4167,https://jsite.mhlw.go.jp/aichi-roudoukyoku/choutatsu_uriharai/nyusatsu.html,jsite.mhlw.go.jp,1,OBJ-K2180,B (default; auto-adjusts),unverified,candidate
+EP-4168,https://jsite.mhlw.go.jp/okinawa-roudoukyoku/choutatsu_uriharai/choutatsu_shinsa.html,jsite.mhlw.go.jp,1,OBJ-K3891,B (default; auto-adjusts),unverified,candidate
+EP-4169,https://nimd.env.go.jp/news/procurement/,nimd.env.go.jp,1,OBJ-K3616,B (default; auto-adjusts),unverified,candidate
+EP-4170,https://shimonoseki.jcho.go.jp/news/%E8%AA%BF%E9%81%94%E6%83%85%E5%A0%B1,shimonoseki.jcho.go.jp,1,OBJ-K3090,B (default; auto-adjusts),unverified,candidate
+EP-4171,https://tamatsukuri.jcho.go.jp/introduction/various/%E8%AA%BF%E9%81%94%E6%83%85%E5%A0%B1,tamatsukuri.jcho.go.jp,1,OBJ-K2877,B (default; auto-adjusts),unverified,candidate
+EP-4172,https://town.iwate.iwate.jp/town/,town.iwate.iwate.jp,1,OBJ-K0438,B (default; auto-adjusts),unverified,candidate
+EP-4173,https://u-aizu.ac.jp/public/tender/koukoku.html,u-aizu.ac.jp,1,OBJ-K0699,B (default; auto-adjusts),unverified,candidate
+EP-4174,https://www.akitakata.jp/ja/,www.akitakata.jp,1,OBJ-K3048,B (default; auto-adjusts),unverified,candidate
+EP-4175,https://www.cfa.go.jp/kinugawa/chotatsu,www.cfa.go.jp,1,OBJ-K0887,B (default; auto-adjusts),unverified,candidate
+EP-4176,https://www.city.adachi.tokyo.jp/keyaku/shigoto/nyusatsu/jigyosha-keyakuka.html,www.city.adachi.tokyo.jp,1,OBJ-K1496,B (default; auto-adjusts),unverified,candidate
+EP-4177,https://www.city.hamada.shimane.jp/www/index.html,www.city.hamada.shimane.jp,1,OBJ-K2881,B (default; auto-adjusts),unverified,candidate
+EP-4178,https://www.city.higashiosaka.lg.jp/category/19-3-1-0-0-0-0-0-0-0.html,www.city.higashiosaka.lg.jp,1,OBJ-K2578,B (default; auto-adjusts),unverified,candidate
+EP-4179,https://www.city.inzai.lg.jp/category/2-16-1-0-0.html,www.city.inzai.lg.jp,1,OBJ-K1197,B (default; auto-adjusts),unverified,candidate
+EP-4180,https://www.city.kagoshima-izumi.lg.jp/page/page_012819.html,www.city.kagoshima-izumi.lg.jp,1,OBJ-K3826,B (default; auto-adjusts),unverified,candidate
+EP-4181,https://www.city.komatsu.lg.jp/sangyo_business/nyusatsu_keiyaku/7159.html,www.city.komatsu.lg.jp,1,OBJ-K1784,B (default; auto-adjusts),unverified,candidate
+EP-4182,https://www.city.kunitachi.tokyo.jp/machi/nyusatsu/1/5938.html,www.city.kunitachi.tokyo.jp,1,OBJ-K1464,B (default; auto-adjusts),unverified,candidate
+EP-4183,https://www.city.sennan.lg.jp/business/nyusatu/1633307116412.html,www.city.sennan.lg.jp,1,OBJ-K2579,B (default; auto-adjusts),unverified,candidate
+EP-4184,https://www.city.shunan.lg.jp/life/6/27/132/,www.city.shunan.lg.jp,1,OBJ-K3105,B (default; auto-adjusts),unverified,candidate
+EP-4185,https://www.city.tendo.yamagata.jp/busiindust/nyusatsu/nyuusatukeiyakunikakarusinnseisyo.html,www.city.tendo.yamagata.jp,1,OBJ-K0651,B (default; auto-adjusts),unverified,candidate
+EP-4186,https://www.city.tome.miyagi.jp/kaikei/shisejoho/nyusatsukeyaku/sedogaiyo/nyusatsukeiyakuseidokaisei.html,www.city.tome.miyagi.jp,1,OBJ-K0534,B (default; auto-adjusts),unverified,candidate
+EP-4187,https://www.city.tomi.nagano.jp/contents/sitemap/index.html,www.city.tomi.nagano.jp,1,OBJ-K1946,B (default; auto-adjusts),unverified,candidate
+EP-4188,https://www.city.yanagawa.fukuoka.jp/oshirase/b1-nyusatsu,www.city.yanagawa.fukuoka.jp,1,OBJ-K3441,B (default; auto-adjusts),unverified,candidate
+EP-4189,https://www.customs.go.jp/kyotsu/chotatsu/nyusatsu/n_okinawa.htm,www.customs.go.jp,1,OBJ-K3885,B (default; auto-adjusts),unverified,candidate
+EP-4190,https://www.ipa.go.jp/choutatsu/nyusatsu/index.html,www.ipa.go.jp,1,OBJ-K1434,B (default; auto-adjusts),unverified,candidate
+EP-4191,https://www.jica.go.jp/about/announce/buppin/koji2026.html,www.jica.go.jp,2,OBJ-K1356 OBJ-K1357,B (default; auto-adjusts),unverified,candidate
+EP-4192,https://www.jica.go.jp/about/announce/domestic/koji2025.html,www.jica.go.jp,1,OBJ-K0068,B (default; auto-adjusts),unverified,candidate
+EP-4193,https://www.ktr.mlit.go.jp/nyuusatu/index00000014.html,www.ktr.mlit.go.jp,1,OBJ-K1025,B (default; auto-adjusts),unverified,candidate
+EP-4194,https://www.miyoshi.i-tokushima.jp/sangyo/nyusatsu,www.miyoshi.i-tokushima.jp,1,OBJ-K3145,B (default; auto-adjusts),unverified,candidate
+EP-4195,https://www.mod.go.jp/asdf/hyakuri/acs/2-7_procurement/2-7_procurement.html,www.mod.go.jp,2,OBJ-K0406 OBJ-K0803,B (default; auto-adjusts),unverified,candidate
+EP-4196,https://www.mod.go.jp/asdf/komatsu/6/third/62.html,www.mod.go.jp,1,OBJ-K1763,B (default; auto-adjusts),unverified,candidate
+EP-4197,https://www.mod.go.jp/pco/gunma/ippan_n.html,www.mod.go.jp,1,OBJ-K0950,B (default; auto-adjusts),unverified,candidate
+EP-4198,https://www.mod.go.jp/pco/shiga/to-companies/bidding/,www.mod.go.jp,1,OBJ-K2369,B (default; auto-adjusts),unverified,candidate
+EP-4199,https://www.mod.go.jp/pco/tochigi/index.html,www.mod.go.jp,1,OBJ-K0898,B (default; auto-adjusts),unverified,candidate
+EP-4200,https://www.mod.go.jp/rdb/chushi/index.html,www.mod.go.jp,1,OBJ-K3008,B (default; auto-adjusts),unverified,candidate
+EP-4201,https://www.mod.go.jp/rdb/kinchu/index.html,www.mod.go.jp,1,OBJ-K2514,B (default; auto-adjusts),unverified,candidate
+EP-4202,https://www.ncc.go.jp/jp/chotatsu/tsukiji/index.html,www.ncc.go.jp,1,OBJ-K1415,B (default; auto-adjusts),unverified,candidate
+EP-4203,https://www.nids.mod.go.jp/procurement/ippan/ippan.html,www.nids.mod.go.jp,1,OBJ-K1319,B (default; auto-adjusts),unverified,candidate
+EP-4204,https://www.niph.go.jp/report-chotatsu/report-wtogainyusatsu/,www.niph.go.jp,1,OBJ-K1014,B (default; auto-adjusts),unverified,candidate
+EP-4205,https://www.ogb.go.jp/soumu/soumu_tyouta,www.ogb.go.jp,1,OBJ-K3874,B (default; auto-adjusts),unverified,candidate
+EP-4206,https://www.ouj.ac.jp/about/procurement/general/,www.ouj.ac.jp,1,OBJ-K1154,B (default; auto-adjusts),unverified,candidate
+EP-4207,https://www.pref.nagasaki.jp/nyusatsu-chotatsu/gyomuitaku-kokoku/,www.pref.nagasaki.jp,1,OBJ-K3571,B (default; auto-adjusts),unverified,candidate
+EP-4208,https://www.pref.shiga.lg.jp/menu/14970.html,www.pref.shiga.lg.jp,1,OBJ-K2379,B (default; auto-adjusts),unverified,candidate
+EP-4209,https://www.rinya.maff.go.jp/j/supply/kansi.html,www.rinya.maff.go.jp,1,OBJ-K1287,B (default; auto-adjusts),unverified,candidate
+EP-4210,https://www.sarabetsu.jp/shigoto/nyusatsu/shikaku/r7_2/,www.sarabetsu.jp,1,OBJ-K0312,B (default; auto-adjusts),unverified,candidate
+EP-4211,https://www.shichigahama.com/benricho/keyword/kigyo_key01.html,www.shichigahama.com,1,OBJ-K0548,B (default; auto-adjusts),unverified,candidate
+EP-4212,https://www.skr.mlit.go.jp/hijikawadam/auction.html,www.skr.mlit.go.jp,1,OBJ-K3242,B (default; auto-adjusts),unverified,candidate
+EP-4213,https://www.town.higashikagura.lg.jp/docs/2119.html,www.town.higashikagura.lg.jp,1,OBJ-K0216,B (default; auto-adjusts),unverified,candidate
+EP-4214,https://www.vill.nagano-toyooka.lg.jp/20jigyousya/02hattyuu/index.html,www.vill.nagano-toyooka.lg.jp,1,OBJ-K1988,B (default; auto-adjusts),unverified,candidate
