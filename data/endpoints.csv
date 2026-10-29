@@ -98,7 +98,7 @@ EP-0096,https://www.city.iwata.shizuoka.jp/sangyou_business/nyuusatsu_keiyaku/in
 EP-0097,https://www.puc.aichi-pu.ac.jp/index.html,www.puc.aichi-pu.ac.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0098,https://www.jcho.go.jp/chikunishi,www.jcho.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0099,https://www.city.takahama.lg.jp/life/2/24/,www.city.takahama.lg.jp,2,OBJ-K2267 OBJ-K2270,B (default; auto-adjusts),unverified,candidate
-EP-0100,https://www.police.pref.hyogo.lg.jp/chotatu/index_a.htm,www.police.pref.hyogo.lg.jp,2,OBJ-K2596 OBJ-K2759,B (default; auto-adjusts),unverified,candidate
+EP-0100,https://www.police.pref.hyogo.lg.jp/chotatu/index_a.htm,www.police.pref.hyogo.lg.jp,1,OBJ-K2596,B (default; auto-adjusts),unverified,candidate
 EP-0101,http://www.town.hirokawa.fukuoka.jp/hp/node_120/node_958,www.town.hirokawa.fukuoka.jp,2,OBJ-K2794 OBJ-K3480,B (default; auto-adjusts),unverified,candidate
 EP-0102,https://www.city.hiroshima.lg.jp/business/nyusatsu/index.html,www.city.hiroshima.lg.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-0103,https://www.kensatsu.go.jp/kakuchou/matsuyama/choutatsutop.html,www.kensatsu.go.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -4568,3 +4568,4 @@ EP-4566,https://www.centrair.jp/corporate/business/procurement/kobetsu.html,www.
 EP-4567,https://www.kiac.co.jp/order/,www.kiac.co.jp,1,OBJ-K3986,B (default; auto-adjusts),unverified,candidate
 EP-4568,https://www.mod.go.jp/pco/kagawa/nyuusatsu/nyuusatsu.html,www.mod.go.jp,1,OBJ-K3194,B (default; auto-adjusts),unverified,candidate
 EP-4569,https://www.kpu.ac.jp/guidance/bid/index.html,www.kpu.ac.jp,1,OBJ-K2423,B (default; auto-adjusts),unverified,candidate
+EP-4570,https://www.police.pref.wakayama.lg.jp/nyusatu/kenkouji.html,www.police.pref.wakayama.lg.jp,1,OBJ-K2759,B (default; auto-adjusts),unverified,candidate
