@@ -2719,7 +2719,7 @@ EP-2717,https://www.skr.mlit.go.jp/yongi/,www.skr.mlit.go.jp,0,,B (default; auto
 EP-2718,https://www.gsi.go.jp/sikoku/index.html,www.gsi.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2719,http://www.pa.skr.mlit.go.jp/takamatsu/main/nyusatu/nyusatu.html,www.pa.skr.mlit.go.jp,1,OBJ-K3191,B (default; auto-adjusts),unverified,disabled
 EP-2720,http://www.pa.skr.mlit.go.jp/tkgityou/bid/index.htm,www.pa.skr.mlit.go.jp,1,OBJ-K3192,B (default; auto-adjusts),unverified,disabled
-EP-2721,https://www.mod.go.jp/pco/kagawa/,www.mod.go.jp,1,OBJ-K3194,B (default; auto-adjusts),unverified,candidate
+EP-2721,https://www.mod.go.jp/pco/kagawa/,www.mod.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2722,https://www.jica.go.jp/about/announce/domestic/koji2019.html#shikoku,www.jica.go.jp,1,OBJ-K3195,B (default; auto-adjusts),unverified,candidate
 EP-2723,https://www.kagawa-u.ac.jp/public/foundation/procurement/,www.kagawa-u.ac.jp,1,OBJ-K3196,B (default; auto-adjusts),unverified,candidate
 EP-2724,https://www.kagawa-puhs.ac.jp/,www.kagawa-puhs.ac.jp,1,OBJ-K3197,B (default; auto-adjusts),unverified,candidate
@@ -4566,3 +4566,4 @@ EP-4564,https://www.jrkyushu.co.jp/company/business/kouji/index.html,www.jrkyush
 EP-4565,https://www.jrfreight.co.jp/about/other/construction.html,www.jrfreight.co.jp,1,OBJ-K3984,B (default; auto-adjusts),unverified,candidate
 EP-4566,https://www.centrair.jp/corporate/business/procurement/kobetsu.html,www.centrair.jp,1,OBJ-K3985,B (default; auto-adjusts),unverified,candidate
 EP-4567,https://www.kiac.co.jp/order/,www.kiac.co.jp,1,OBJ-K3986,B (default; auto-adjusts),unverified,candidate
+EP-4568,https://www.mod.go.jp/pco/kagawa/nyuusatsu/nyuusatsu.html,www.mod.go.jp,1,OBJ-K3194,B (default; auto-adjusts),unverified,candidate
