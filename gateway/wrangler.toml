@@ -19,6 +19,15 @@ id = "1a9b6a1a90054af29171e82cf897ee54"
 binding = "SHOTS"
 bucket_name = "nst-shots"
 
+# Registry snapshot store (D1). Database created by the account owner
+# 2026-10-29; the id is an identifier, not a credential. Tables are
+# defined in worker/schema_registry.sql and loaded through the gateway's
+# key-protected d1exec endpoint (no API token exists on the assistant VM).
+[[d1_databases]]
+binding = "REGISTRY_DB"
+database_name = "nst-registry"
+database_id = "d9c57c9e-5efc-4590-85a6-e3837434ad85"
+
 # Before first deploy, set the shared secret:
 #   npx wrangler secret put GATEWAY_KEY
 # The calling clients send it as the X-Gateway-Key header.

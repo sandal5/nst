@@ -282,6 +282,97 @@ async function checkApi(request, env, action) {
   return json({ error: "unknown action" }, 404);
 }
 
+// ---------------------------------------------------------------------------
+// Registry D1 store (binding REGISTRY_DB). The assistant VM holds no
+// Cloudflare API token, so registry loads go through the gateway exactly
+// like the KV page publishing: key-protected endpoints under the unlisted
+// API path. d1exec runs a small batch of caller-supplied statements one by
+// one and reports the first failure with its index; the registry import
+// SQL is idempotent (each table section starts with a DELETE), so a
+// failed batch is fixed by re-running that table. d1query is read-only:
+// anything that is not a single SELECT/WITH statement is refused.
+// ---------------------------------------------------------------------------
+async function d1Api(request, env, action) {
+  if (!env.REGISTRY_DB) return json({ error: "d1_pending" }, 501);
+  if (!keyGuard(request, env)) return json({ error: "unauthorized" }, 401);
+  const db = env.REGISTRY_DB;
+  if (action === "d1exec") {
+    if (request.method !== "POST") return json({ error: "post required" }, 405);
+    let statements = null;
+    const ctype = request.headers.get("content-type") || "";
+    if (ctype.includes("application/json")) {
+      let body = {};
+      try {
+        body = await request.json();
+      } catch {
+        return json({ error: "bad json" }, 400);
+      }
+      if (Array.isArray(body.statements)) statements = body.statements;
+    } else {
+      // Plain-text SQL: the D1 exec() path splits and runs the whole
+      // string server-side (intended for one-shot DDL such as the
+      // registry schema file, which carries no semicolons in literals).
+      const text = await request.text();
+      if (!text.trim()) return json({ error: "empty body" }, 400);
+      try {
+        const res = await db.exec(text);
+        return json({ ok: true, mode: "exec", count: res.count, duration: res.duration });
+      } catch (e) {
+        return json({ ok: false, mode: "exec", error: String(e).slice(0, 500) }, 500);
+      }
+    }
+    if (!statements) return json({ error: "missing statements" }, 400);
+    if (statements.length > 200) return json({ error: "too many statements" }, 400);
+    const results = [];
+    for (let i = 0; i < statements.length; i++) {
+      const sql = statements[i];
+      if (typeof sql !== "string" || !sql.trim()) {
+        return json({ ok: false, failed_index: i, error: "empty statement", results }, 400);
+      }
+      if (/^\s*(begin|commit|rollback)\b/i.test(sql)) {
+        results.push({ index: i, skipped: "transaction control handled by D1" });
+        continue;
+      }
+      try {
+        const r = await db.prepare(sql).run();
+        results.push({ index: i, changes: r.meta ? r.meta.changes : null });
+      } catch (e) {
+        return json({ ok: false, failed_index: i, error: String(e).slice(0, 500), results }, 500);
+      }
+    }
+    return json({ ok: true, results });
+  }
+  if (action === "d1query") {
+    let sql = "";
+    let params = [];
+    if (request.method === "POST") {
+      let body = {};
+      try {
+        body = await request.json();
+      } catch {
+        return json({ error: "bad json" }, 400);
+      }
+      sql = body.sql || "";
+      if (Array.isArray(body.params)) params = body.params;
+    } else {
+      sql = request.url ? new URL(request.url).searchParams.get("sql") || "" : "";
+    }
+    const head = sql.trim().replace(/^--[^\n]*\n/, "").trimStart();
+    if (!/^(select|with)\b/i.test(head) || sql.includes(";") && sql.trim().replace(/;\s*$/, "").includes(";")) {
+      return json({ error: "only a single SELECT statement is allowed" }, 400);
+    }
+    try {
+      let stmt = db.prepare(sql);
+      if (params.length) stmt = stmt.bind(...params);
+      const r = await stmt.all();
+      return json({ ok: true, results: r.results || [] });
+    } catch (e) {
+      return json({ ok: false, error: String(e).slice(0, 500) }, 500);
+    }
+  }
+  return json({ error: "unknown action" }, 404);
+}
+
 async function kvPage(env, name, bundled) {
   // Generated pages are published to KV by the page generator (see
   // /sandal/api/pageput): the KV copy is the live one, so hourly page
@@ -353,6 +444,11 @@ export default {
     const apiMatch = url.pathname.match(/^\/sandal\/api\/(state|mark|ack|return|pull|import|pageput)$/);
     if (apiMatch) {
       return checkApi(request, env, apiMatch[1]);
+    }
+    // Registry D1 load/query API (see d1Api). Same unlisted area.
+    const d1Match = url.pathname.match(/^\/sandal\/api\/(d1exec|d1query)$/);
+    if (d1Match) {
+      return d1Api(request, env, d1Match[1]);
     }
     // Screenshot uploads (assistant-side, gateway key): raw image body,
     // object key in ?k=. Stored in the R2 bucket bound as SHOTS.
