@@ -2108,7 +2108,7 @@ EP-2106,https://www.env.go.jp/garden/kyotogyoen/4_sup/index.html,www.env.go.jp,1
 EP-2107,https://www.mod.go.jp/gsdf/mae/3d/katsura/sp/invitation_to_tender.html,www.mod.go.jp,1,OBJ-K2419,B (default; auto-adjusts),unverified,candidate
 EP-2108,https://www.mod.go.jp/pco/kyoto/jimusho/aboutkyoto/nyusatsu.html,www.mod.go.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2109,http://www.kyokyo-u.ac.jp/jyohokokai/tyoutatsukanren/tyoutatsu/tyoutatsu-link.html,www.kyokyo-u.ac.jp,1,OBJ-K2422,B (default; auto-adjusts),unverified,candidate
-EP-2110,https://www.kpu.ac.jp/404.html,www.kpu.ac.jp,1,OBJ-K2423,B (default; auto-adjusts),unverified,candidate
+EP-2110,https://www.kpu.ac.jp/404.html,www.kpu.ac.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2111,https://www.kit.ac.jp/national_university_corporation/provide/,www.kit.ac.jp,0,,B (default; auto-adjusts),unverified,disabled
 EP-2112,https://www.kpu-m.ac.jp/doc/nyusatu/index.html,www.kpu-m.ac.jp,1,OBJ-K2425,B (default; auto-adjusts),unverified,candidate
 EP-2113,https://www.kyoto-u.ac.jp/ja/about/procurance,www.kyoto-u.ac.jp,0,,B (default; auto-adjusts),unverified,disabled
@@ -4567,3 +4567,4 @@ EP-4565,https://www.jrfreight.co.jp/about/other/construction.html,www.jrfreight.
 EP-4566,https://www.centrair.jp/corporate/business/procurement/kobetsu.html,www.centrair.jp,1,OBJ-K3985,B (default; auto-adjusts),unverified,candidate
 EP-4567,https://www.kiac.co.jp/order/,www.kiac.co.jp,1,OBJ-K3986,B (default; auto-adjusts),unverified,candidate
 EP-4568,https://www.mod.go.jp/pco/kagawa/nyuusatsu/nyuusatsu.html,www.mod.go.jp,1,OBJ-K3194,B (default; auto-adjusts),unverified,candidate
+EP-4569,https://www.kpu.ac.jp/guidance/bid/index.html,www.kpu.ac.jp,1,OBJ-K2423,B (default; auto-adjusts),unverified,candidate
