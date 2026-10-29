@@ -17,7 +17,7 @@ EP-0015,https://www.maff.go.jp/kanto/shinsei/order/index.html,www.maff.go.jp,10,
 EP-0016,https://www.chugokushikoku.npa.go.jp/,www.chugokushikoku.npa.go.jp,10,OBJ-K2811 OBJ-K2856 OBJ-K2857 OBJ-K2900 OBJ-K2966 OBJ-K3060 OBJ-K3114 OBJ-K3165 OBJ-K3230 OBJ-K3279,B (default; auto-adjusts),unverified,candidate
 EP-0017,https://www.jftc.go.jp/soshiki/tyoutatsu/index.html,www.jftc.go.jp,9,OBJ-K0002 OBJ-K0458 OBJ-K1238 OBJ-K2161 OBJ-K2471 OBJ-K2965 OBJ-K3163 OBJ-K3340 OBJ-K3876,B (default; auto-adjusts),unverified,disabled
 EP-0018,https://www.moj.go.jp/psia/index.html,www.moj.go.jp,9,OBJ-K0025 OBJ-K0469 OBJ-K1266 OBJ-K1267 OBJ-K2174 OBJ-K2485 OBJ-K2977 OBJ-K3175 OBJ-K3351,B (default; auto-adjusts),unverified,candidate
-EP-0019,https://www.mod.go.jp/pco/sapporo/about_contract.html,www.mod.go.jp,4,OBJ-K0061 OBJ-K0577 OBJ-K0696 OBJ-K1037,B (default; auto-adjusts),unverified,candidate
+EP-0019,https://www.mod.go.jp/pco/sapporo/about_contract.html,www.mod.go.jp,3,OBJ-K0061 OBJ-K0577 OBJ-K1037,B (default; auto-adjusts),unverified,candidate
 EP-0020,https://www.jaea.go.jp/for_company/supply/,www.jaea.go.jp,9,OBJ-K0089 OBJ-K0341 OBJ-K0705 OBJ-K0819 OBJ-K1394 OBJ-K1819 OBJ-K2033 OBJ-K2429 OBJ-K2923,B (default; auto-adjusts),unverified,candidate
 EP-0021,https://www.jmets.ac.jp/procurement/index.html,www.jmets.ac.jp,9,OBJ-K0105 OBJ-K0421 OBJ-K1170 OBJ-K1588 OBJ-K2122 OBJ-K2645 OBJ-K3256 OBJ-K3518 OBJ-K3570,B (default; auto-adjusts),unverified,candidate
 EP-0022,https://www.aist.go.jp/aist_j/procure/index.html,www.aist.go.jp,10,OBJ-K0114 OBJ-K0522 OBJ-K0713 OBJ-K0831 OBJ-K1439 OBJ-K2235 OBJ-K2541 OBJ-K3033 OBJ-K3208 OBJ-K3517,B (default; auto-adjusts),unverified,candidate
@@ -4417,7 +4417,7 @@ EP-4415,https://www.mod.go.jp/gsdf/fsh/index.html,www.mod.go.jp,1,OBJ-K2100,B (d
 EP-4416,https://www.mod.go.jp/gsdf/mss/finance-PC.html,www.mod.go.jp,1,OBJ-K1333,B (default; auto-adjusts),unverified,candidate
 EP-4417,https://www.mod.go.jp/gsdf/nae/nadep/nyuusatujouhou/nyuusatujouhou.html,www.mod.go.jp,1,OBJ-K0057,B (default; auto-adjusts),unverified,candidate
 EP-4418,https://www.mod.go.jp/gsdf/neae/koukoku/dep/gaiyou26.html,www.mod.go.jp,1,OBJ-K0497,B (default; auto-adjusts),unverified,candidate
-EP-4419,https://www.mod.go.jp/gsdf/neae/koukoku/fin/index_r.html,www.mod.go.jp,3,OBJ-K0331 OBJ-K0405 OBJ-K0695,B (default; auto-adjusts),unverified,candidate
+EP-4419,https://www.mod.go.jp/gsdf/neae/koukoku/fin/index_r.html,www.mod.go.jp,4,OBJ-K0331 OBJ-K0405 OBJ-K0695 OBJ-K0696,B (default; auto-adjusts),unverified,candidate
 EP-4420,https://www.mod.go.jp/gsdf/ocsh/disclosure/,www.mod.go.jp,1,OBJ-K3383,B (default; auto-adjusts),unverified,candidate
 EP-4421,https://www.mod.go.jp/gsdf/wae/info/nyusatu/dep/index.files/sheet001.htm,www.mod.go.jp,1,OBJ-K3507,B (default; auto-adjusts),unverified,candidate
 EP-4422,https://www.mod.go.jp/js/supply/index.html,www.mod.go.jp,1,OBJ-K1326,B (default; auto-adjusts),unverified,candidate
