@@ -1,0 +1,27 @@
+# Extra gateway allowlist hosts that are not in the registry yet.
+# Intake candidates whose official homepages were confirmed from official
+# prefecture link pages (2026-10-28); they graduate into the registry (and
+# thus into the generated set) when their intake completes.
+www.city.choshi.chiba.jp
+www.city.tateyama.chiba.jp
+www.city.tamba.lg.jp
+www.pref.nara.lg.jp
+www.nyusatsu.e-hyogo.jp
+www.town.miyake.nara.jp
+www.e-nexco.co.jp
+contract.c-nexco.co.jp
+corp.w-nexco.co.jp
+www.shutoko.co.jp
+www.hanshin-exp.co.jp
+www.jb-honshi.co.jp
+www.jrhokkaido.co.jp
+www.jreast.co.jp
+company.jr-central.co.jp
+www.westjr.co.jp
+www.jr-shikoku.co.jp
+www.jrkyushu.co.jp
+www.jrfreight.co.jp
+www.tokyometro.jp
+www.naa.jp
+www.centrair.jp
+www.kiac.co.jp
